@@ -17,3 +17,4 @@ Contents
 
    usage.md
    api.md
+   getting_started.md
