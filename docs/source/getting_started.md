@@ -1,16 +1,24 @@
 # Getting Started With UCB Flywheel
 
 ## Overview
-Flywheel.io is an imaging platform that provides a range of services for researchers in the life sciences. Flywheel provides a platform to streamline data aggregation, curation, and management and supports clinical and academic research performance and collaboration. The intermountain neuroimaging consortium (INC) at CU Boulder has leveraged the power of Flywheel.io and the considerable resources available through University of Colorado Research Computing to provide a seamless experience for all researchers from data collection at our MRI facilities to data analysis, visualization, and publication.
+Flywheel.io is an imaging platform used to receive, curate, manage, and analyze data from scientific facilities. Intermountain neuroimaging consortium (INC) is excited to host an “on premise” instance of Flywheel.io for clinical, industry, and academic researchers within the region. The “on premise” instance means all data storage as well as computation is completed using University of Colorado services. INC at CU Boulder has leveraged the power of Flywheel.io and the considerable resources available through University of Colorado Research Computing to provide a seamless experience for all researchers from data collection at our MRI facilities to data analysis, visualization, and publication.  
+
+For those familiar with other “PACS” systems, flywheel also provides a service to receive and view data directly from the Intermountain Neuroimaging Consortium's 3T Prisma Fit MR scanner.  
+
+Most importantly, flywheel is a FAIR compliant platform. **F-A-I-R** is a data principle adopted by both the National Science Foundation (NSF) and National Institute of Health (NIH, beginning 2023) to prompt transparency and reproducibility. **F**indability, **A**ccessibility, **I**nteroperability, and **R**euse cornerstone this principle. Flywheel supports the FAIR data practice mission by ensuring rich metadata for all data stored within the platform. Flywheel also enforces the use of provenance, meaning the storage of information about "who, what, when, how" in data creation and management. By conforming to these best data practices, INC hopes to elevate the importance of transparent and reproducible research in the neuroimaging community.
 
 ## How To Cite Us
-…(CURC citations), AWS citations, flywheel… commercial citations  
+…(CURC citations), AWS citations, flywheel… commercial citations
 
 ## Logging Into Flywheel
 
 **UNIVERSITY OF COLORADO AT BOULDER USER** <br>
 To logon as a UCB user, you need only a University of Colorado Identikey, not sure if you have one? Contact us… 
-1. From your web browser, go to Flywheel (flywheel.rc.colorado.edu)
+---
+Note  
+*Warning: Experiancing issues logging in?*  **Try changing browsers, for more info visit our FAQs page**
+---
+1. From your web browser, go to Flywheel [flywheel.rc.colorado.edu](flywheel.rc.colorado.edu)
 2. Select University Credentials via CILogon
 
 ![Flywheel landing page](imgs/getting_started/logging_in_1.png)
@@ -33,7 +41,7 @@ If you do not have a CILogon account, contact your collaborator and ask for a Un
 
 ## Navigating The User Interface
 Flywheel.io is an imaging platform used to receive, curate, manage, and analyze data from MRI facilities. Intermountain neuroimaging consortium (INC) is excited to host an “on premise” instance of flywheel for clinical and academic researchers within the region. The “on premise” instance means all data storage as well as computation is completed using University of Colorado services. For those familiar with other “PACS” systems, flywheel provides a service to receive and view data directly from our MRI scanner, but additionally provides opportunity to view, interact, analyze, and publish your data from the flywheel platform.
-<br>Most importantly, flywheel is a FAIR compliant platform. F-A-I-R is a data principle adopted by both the National Science Foundation (NSF) and National Institute of Health (NIH, beginning 2023) to prompt transparency and reproducibility. **F**indability, **A**ccessibility, **I**nteroperability, and **R**euse cornerstone this principle.  Flywheel supports the FAIR data practice mission by ensuring rich metadata for all data stored within the platform, in addition to detailed provenance meaning who made or changed the data in what way. By conforming to best data practices, INC hopes to elevate the importance of transparent and reproducible research in the neuroimaging community.
+<br>Most importantly, flywheel is a FAIR compliant platform. **F-A-I-R** is a data principle adopted by both the National Science Foundation (NSF) and National Institute of Health (NIH, beginning 2023) to prompt transparency and reproducibility. **F**indability, **A**ccessibility, **I**nteroperability, and **R**euse cornerstone this principle.  Flywheel supports the FAIR data practice mission by ensuring rich metadata for all data stored within the platform, in addition to detailed provenance meaning who made or changed the data in what way. By conforming to best data practices, INC hopes to elevate the importance of transparent and reproducible research in the neuroimaging community.
 <br><br>Haven't gotten started with flywheel yet? Check out documentation about logging in to get started <docs link>. 
 
 **What is a hierarchy?** <br>

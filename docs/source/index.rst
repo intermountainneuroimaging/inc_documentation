@@ -17,4 +17,9 @@ Contents
 
    usage.md
    api.md
-   getting_started.md
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Getting Started
+
+   getting_started.rst
