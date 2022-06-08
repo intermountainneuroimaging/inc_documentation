@@ -142,6 +142,8 @@ Flyhwheel.io's user interface is a flexible powerful platform where users can do
 .. note::
     Haven't gotten started with flywheel yet? Check out documentation about logging in to get started `Logging Into Flywheel`_.
 
+Video! <...>
+
 What is a hierarchy?
 *********************
 
@@ -219,3 +221,23 @@ Interesting in getting started? Contact us <here> to request a copy of INC's Mem
 
 That’s it folks! Tune in for more information and tutorial regarding Flywheel at UCB!
 .. sectionauthor:: Amy Hegarty <amy.hegarty@colorado.edu>
+
+Check out our video `https://drive.google.com/file/d/1FCiZYavrKjdAtSEqsS8U8n22i-on53zS/view?usp=sharing>`_
+
+Check out our video `here <https://o365coloradoedu-my.sharepoint.com/:v:/g/personal/amhe4269_colorado_edu/Eb82R8WB0z5PsHw-JVZtqHABR16aowVAcf0Lqx6zalExjg?e=Y8iFs7>`_
+
+
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://drive.google.com/file/d/1FCiZYavrKjdAtSEqsS8U8n22i-on53zS/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://o365coloradoedu-my.sharepoint.com/:v:/g/personal/amhe4269_colorado_edu/Eb82R8WB0z5PsHw-JVZtqHABR16aowVAcf0Lqx6zalExjg?e=Y8iFs7" frameborder="0" allowfullscreen></iframe>
+
+
+.. raw:: html
+
+    <video controls src="_static/tutorial.mp4"></video>
