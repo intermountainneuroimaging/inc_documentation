@@ -8,55 +8,13 @@ For those familiar with other “PACS” systems, flywheel also provides a servi
 
 Most importantly, flywheel is a FAIR compliant platform. **F-A-I-R** is a data principle adopted by both the National Science Foundation (NSF) and National Institute of Health (NIH, beginning 2023) to prompt transparency and reproducibility. **F**\indability, **A**\ccessibility, **I**\nteroperability, and **R**\euse cornerstone this principle. Flywheel supports the FAIR data practice mission by ensuring rich metadata for all data stored within the platform. Flywheel also enforces the use of provenance, meaning the storage of information about "who, what, when, how" in data creation and management. By conforming to these best data practices, INC hopes to elevate the importance of transparent and reproducible research in the neuroimaging community.
 
-Logging Into Flywheel
-=====================
-Flywheel uses CILogon service to manage access to their platform. CILogon is used by most academic instiutions around the world to manage institutional usership and therefore makes it very easy to add users, and log in with externally managed University credentials!
-
-University of Colorado Users
-*********************
-    To logon as a UCB user, you need only a University of Colorado identikey, not sure if you have one? Contact us…
-
-    .. warning::
-       Experiencing issues logging in? **Try changing browsers, for more info visit our FAQs page <link-here>**
-
-1. From your web browser, go to Flywheel flywheel.rc.colorado.edu_
-
-2. Select University Credentials via CILogon
-
-.. _flywheel.rc.colorado.edu: https://flywheel.rc.colorado.edu
-
-.. image:: imgs/getting_started/logging_in_1.png
-   :alt: flywheel landing page
-
-3. If this is your first time logging on, you will be redirected to the CILogon portal to select your organization.
-
-    - Find University of Colorado Boulder
-    - Check “Remember this Selection"
-    - Click “Log on”
-
-.. image:: imgs/getting_started/logging_in_2.png
-   :alt: CILogon interface can be searched by institution
-
-4. You will be directed to the CU Boulder logon page. Enter your identikey and password
-5. You are now on the CU Boulder Flywheel Instance!
-
-External Users
-*********************
-    Do you have an account with a University, ORCID, or another organization apart of CILogon system? If you are not sure, you can check here_.
-
-    **If you have a CILogon account, contact your collaborator at University of Colorado Boulder with those credentials. Once you are added to our flywheel instance, you can follow the instructions above. Selecting your CILogon system instead of CU Boulder**
-
-    If you do not have a CILogon account, contact your collaborator and ask for a University of Colorado Boulder Affiliate Account. These accounts will provide you access to the UCB systems for a period of one year, and usually can be generated within 5 buisness days.
-
-.. _here: https://cilogon.org/
+Interested in learning more? Check out our introductory video `here <https://o365coloradoedu-my.sharepoint.com/:v:/g/personal/amhe4269_colorado_edu/Eb82R8WB0z5PsHw-JVZtqHABR16aowVAcf0Lqx6zalExjg?e=Y8iFs7>`_.
 
 At the Scanner
 ==============
-Before starting a new or existing study in flywheel, please set up a meeting with the Intermountian Neuroimaging Consortium Staff (website_) who can help discuss your specific needs. While flywheel.io provides almost endless flexibility in implementation of the platform, there are a few **critical** actions that must take place to ensure every image  collected at INC lands in flywheel seamlessly.
+Before starting a new or existing study in flywheel, please set up a meeting with the Intermountain Neuroimaging Consortium Staff (`website <https://www.colorado.edu/mri/people>`_) who can help discuss your specific needs. While flywheel.io provides almost endless flexibility in implementation of the platform, there are a few **critical** actions that must take place to ensure every image  collected at INC lands in flywheel seamlessly.
 
-.. _website: https://www.colorado.edu/mri/people
-
-Naming your Flywheel session
+Naming your Flywheel Session
 *****************************
 In order to ensure acquisitions are assigned to the correct Project, Subject, and Session this information **MUST** be entered at the scanner console correctly, using the following convention:
 ::
@@ -122,7 +80,7 @@ I Started my Study in COINS, What Happens Now?
 **********************************************
 All studies who wish to continue pre-registering and importing your data into COINS has the option to do so. All studies opting to continue using COINS will also have all new acquisitions stored in Flywheel. All scanner fields necessary for COINS convention are compatible with Flywheel convention. The one notable exception, while COINS has no restrictions on the value entered into "Accession Number", this field **MUST** conform to the Flywheel naming convention to comply with both COINS and Flywheel requirements.
 
-What information Can I Include in Flywheel?
+What Information Can I Include in Flywheel?
 *******************************************
 INC at University of Colorado supports an "on premise" deployment Flywheel.io. As all data and compute is conducted within UCB systems, we must conform to all data and privacy polices set forth by University of Colorado Research Computing (CURC) and Flywheel.io. As such data must be de-identified before entering Flywheel. **NO** protected health information (PHI) and **NO** personally identifiable information (PII) may be stored in Flywheel. Examples of protected information includes:
 
@@ -137,14 +95,51 @@ Not sure if your data is correctly de-identified?  Please contact your IRB repre
 
 Navigating The User Interface
 =============================
-Flyhwheel.io's user interface is a flexible powerful platform where users can do almost anything from creating and viewing data, to running analyses, and inviting collaborators to participate. The following provides a *brief* sample of the actions that can be taken within the flywheel user interface. Please attend INC Courses on Using Flywheel to learn more!
+Flywheel.io's user interface is a flexible powerful platform where users can do almost anything from creating and viewing data, to running analyses, and inviting collaborators to participate. The following provides a *brief* sample of the actions that can be taken within the flywheel user interface. Please attend INC Courses on Using Flywheel to learn more!
 
-.. note::
-    Haven't gotten started with flywheel yet? Check out documentation about logging in to get started `Logging Into Flywheel`_.
+Logging Into Flywheel
+**********************
+Flywheel uses CILogon service to manage access to their platform. CILogon is used by most academic institutions around the world to manage institutional usership and therefore makes it very easy to add users, and log in with externally managed University credentials!
 
-Video! <...>
+University of Colorado Users
+++++++++++++++++++++++++++++++
+    To logon as a UCB user, you need only a University of Colorado identikey, not sure if you have one? Contact us…
 
-What is a hierarchy?
+    .. warning::
+       Experiencing issues logging in? **Try changing browsers**. For more info visit our :ref:`faqs` page.
+
+
+1. From your web browser, go to Flywheel `flywheel.rc.colorado.edu <https://flywheel.rc.colorado.edu>`_
+
+2. Select University Credentials via CILogon
+
+.. image:: imgs/getting_started/logging_in_1.png
+   :alt: flywheel landing page
+
+3. If this is your first time logging on, you will be redirected to the CILogon portal to select your organization.
+
+    - Find University of Colorado Boulder
+    - Check “Remember this Selection"
+    - Click “Log on”
+
+.. image:: imgs/getting_started/logging_in_2.png
+   :alt: CILogon interface can be searched by institution
+
+4. You will be directed to the CU Boulder logon page. Enter your identikey and password
+5. You are now on the CU Boulder Flywheel Instance!
+
+External Users
++++++++++++++++++
+    Do you have an account with a University, ORCID, or another organization apart of CILogon system? If you are not sure, you can check `here <https://cilogon.org/>`_.
+
+    :I already have a CILogon Connected Account:
+
+        Contact your collaborator at UCB with the appropriate credentials. Follow the instructions above to log in.
+
+    :I do not have a CILogon Connected Account:
+        Request a University of Colorado Boulder Affiliate Account through your UCB collaborator. These accounts will provide you access to the UCB systems for a period of one year, and usually can be generated within 5 business days.
+
+What Is a Hierarchy?
 *********************
 
 A hierarchy is simply the system we rank or organize data according to a parent-child relationship. You might think of this as a folder on your computer that contains other folders and files. In this case the ‘parent’ folder has other ‘child’ sub-folders and files.
@@ -161,13 +156,17 @@ Containers are the data storage building blocks within Flywheel. Why does this m
 
 In flywheel containers are used to store “groups”, “projects”, “subjects”, “sessions”, “acquisitions”, and “analyses”. We get into the meaning of each of these containers below, but you can think of these containers as folders of flywheel that bundle metadata and data together.
 
-<image of flywheel architecture>
+.. image:: imgs/getting_started/flywheel_architecture.png
+   :alt: Basic Schematic describing flywheel architecture
+   :width: 200pt
 
-Accessing my Groups
+Image duplicated from docs.flywheel.io
+
+Accessing My Groups
 *********************
-At INC, we use “Groups” to assign a principal investigator or laboratory. Here “Groups” can store multiple different projects or “studies”, have specific users and user permissions, and have administrative roles to add / edit / delete data and metadata for everything container within. In Flywheel, you can identify Groups by the “tag” associated with any of your projects. As a Admin, you can also make changes to user permissions and projects within your “Group”. For more information on this topic, please refer to our tutorial on “User Permissions” <link>.
+At INC, we use “Groups” to assign a principal investigator or laboratory. Here “Groups” can store multiple different projects or “studies”, have specific users and user permissions, and have administrative roles to add / edit / delete data and metadata for everything container within. In Flywheel, you can identify Groups by the “tag” associated with any of your projects. As a Admin, you can also make changes to user permissions and projects within your “Group”. For more information on this topic, please refer to our tutorial on ":ref:`User Permissions`".
 
-Accessing my Projects
+Accessing My Projects
 *********************
 At INC, “Projects” are used to differentiate studies conducted within a Principal Investigator’s laboratory. Users can access all projects they have permissions to view from the left hand ribbon on the projects page:
 
@@ -179,8 +178,8 @@ In the second column of the project list you will find the parent Group for each
 .. image:: imgs/getting_started/accessing_my_projects_2.png
    :alt: Flywheel projects view highlighting project attributes
 
-Accessing Subjects or Sessions
-*******************************
+Accessing My Subjects or Sessions
+*********************************
 If this is a new project, you may not see any subjects or session linked to your project. If you have already started scanning, or have uploaded historical data from your project you should see each scan session in “sessions.”
 
 “Subjects” are used to bundle sessions together collected on the same participant across multiple days or “sessions”. We identify subjects using a single Subject ID. This ID should be unique to the participant in the current study. If this ID needs to be “coded” with a reference to any personal identifiable information (PII), that info MUST be stored outside flywheel in a database such as COINS or REDCap. If you have questions about storing participant information, please contact INC!
@@ -195,8 +194,8 @@ Within the sessions panel, you may notice the sessions are sorted by date of col
 .. image:: imgs/getting_started/accessing_subjects_and_sessions_2.png
    :alt: Flywheel projects view highlighting subjects panel
 
-Accessing Acquisitions and Files
-*********************************
+Accessing My Acquisitions and Files
+***********************************
 Finally, acquisitions are Flywheel containers within a session, and hold any files and metadata associated with a scanner sequence. For example, an acquisition may contain a set of dicoms, the nifti converted file for the same image, and task or behavioral data for the same task. As you may recall from earlier, these “containers” in layman's terms are just like folders or directories that hold relevant files. In Flywheel, we can see acquisitions and files within the project view, as shown below:
 
 .. image:: imgs/getting_started/accessing_subjects_and_sessions_3.png
@@ -216,28 +215,9 @@ How To Cite Us
 …(CURC citations), AWS citations, flywheel… commercial citations
 
 Contact Us
-===========
+***********
 Interesting in getting started? Contact us <here> to request a copy of INC's Memorandum of Use and to set up a one on one consultation.
 
 That’s it folks! Tune in for more information and tutorial regarding Flywheel at UCB!
+
 .. sectionauthor:: Amy Hegarty <amy.hegarty@colorado.edu>
-
-Check out our video `https://drive.google.com/file/d/1FCiZYavrKjdAtSEqsS8U8n22i-on53zS/view?usp=sharing>`_
-
-Check out our video `here <https://o365coloradoedu-my.sharepoint.com/:v:/g/personal/amhe4269_colorado_edu/Eb82R8WB0z5PsHw-JVZtqHABR16aowVAcf0Lqx6zalExjg?e=Y8iFs7>`_
-
-
-
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://drive.google.com/file/d/1FCiZYavrKjdAtSEqsS8U8n22i-on53zS/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://o365coloradoedu-my.sharepoint.com/:v:/g/personal/amhe4269_colorado_edu/Eb82R8WB0z5PsHw-JVZtqHABR16aowVAcf0Lqx6zalExjg?e=Y8iFs7" frameborder="0" allowfullscreen></iframe>
-
-
-.. raw:: html
-
-    <video controls src="_static/tutorial.mp4"></video>

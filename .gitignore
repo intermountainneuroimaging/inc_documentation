@@ -157,3 +157,8 @@ cython_debug/
 
 # PyCharm
 .idea
+
+#mac specific
+.DS_Store
+*/.DS_Store
+**/.DS_Store
