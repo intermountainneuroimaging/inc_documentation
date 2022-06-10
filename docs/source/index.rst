@@ -12,12 +12,6 @@ how to :ref:`installation` the project.
 
 Contents
 --------
-
-.. toctree::
-
-   usage.md
-   api.md
-
 .. toctree::
    :maxdepth: 1
    :caption: Getting Started

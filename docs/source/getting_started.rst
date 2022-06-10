@@ -8,7 +8,9 @@ For those familiar with other “PACS” systems, flywheel also provides a servi
 
 Most importantly, flywheel is a FAIR compliant platform. **F-A-I-R** is a data principle adopted by both the National Science Foundation (NSF) and National Institute of Health (NIH, beginning 2023) to prompt transparency and reproducibility. **F**\indability, **A**\ccessibility, **I**\nteroperability, and **R**\euse cornerstone this principle. Flywheel supports the FAIR data practice mission by ensuring rich metadata for all data stored within the platform. Flywheel also enforces the use of provenance, meaning the storage of information about "who, what, when, how" in data creation and management. By conforming to these best data practices, INC hopes to elevate the importance of transparent and reproducible research in the neuroimaging community.
 
-Interested in learning more? Check out our introductory video `here <https://o365coloradoedu-my.sharepoint.com/:v:/g/personal/amhe4269_colorado_edu/Eb82R8WB0z5PsHw-JVZtqHABR16aowVAcf0Lqx6zalExjg?e=Y8iFs7>`_.
+Interested in learning more? Check out our introductory video `here <https://o365coloradoedu.sharepoint.com/:v:/s/INC-microsoft-teams/EcA4VTfuZzdAiCAvN19Y1qkBazUkLHGT9A-LddKcIKgoUQ?e=qGclwA>`_.
+
+Also, check out Introduction to Flywheel Webinar `here <https://docs.flywheel.io/hc/en-us/articles/4536038984595-Webinar-series-Intro-to-Flywheel>`_.
 
 At the Scanner
 ==============
@@ -203,12 +205,22 @@ Finally, acquisitions are Flywheel containers within a session, and hold any fil
 
 Collections
 ***********
+Collections in Flywheel allow users to curate data from a range of projects or based on specific criteria. For example the ‘Radiologist Review’ collection will be used at UCB to curate images required incidental finding reviews for a radiologist. Further, collections can have a separate set of users and permissions in order to share specific sessions with users outside your study team. This feature can be found by clicking the collections view as seen here:
+<image>
 
-Project Reports
-****************
+Data Views and Project Reports
+*******************************
+Data Views and Project Reports can be used to compile metadata from any project. Data Views provide the most flexibility to generate tabular views of any metadata within flywheel such as age, race, sex, acquisition info, and more. These views can be shared or exported for 3rd party statistical packages.
 
-Users and User Permissions
-***************************
+Project Reports provide a summary of all sessions collected over a specific time range. Basic descriptive statistics are computed on all demographic information described in each session.
+
+<imge>
+
+Usage Reports
+*******************
+Usage Reports outline overall computing metrics for each project. Basic metrics include disk usage and number of gears (or Analyses) run.
+
+<img>
 
 How To Cite Us
 ==============
