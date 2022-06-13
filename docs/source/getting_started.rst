@@ -206,7 +206,9 @@ Finally, acquisitions are Flywheel containers within a session, and hold any fil
 Collections
 ***********
 Collections in Flywheel allow users to curate data from a range of projects or based on specific criteria. For example the ‘Radiologist Review’ collection will be used at UCB to curate images required incidental finding reviews for a radiologist. Further, collections can have a separate set of users and permissions in order to share specific sessions with users outside your study team. This feature can be found by clicking the collections view as seen here:
-<image>
+.. image:: imgs/getting_started/collections_1.png
+   :alt: Flywheel collections panel.
+
 
 Data Views and Project Reports
 *******************************
@@ -214,13 +216,16 @@ Data Views and Project Reports can be used to compile metadata from any project.
 
 Project Reports provide a summary of all sessions collected over a specific time range. Basic descriptive statistics are computed on all demographic information described in each session.
 
-<imge>
+.. image:: imgs/getting_started/project_reports_1.png
+   :alt: Flywheel project reports view.
 
 Usage Reports
 *******************
 Usage Reports outline overall computing metrics for each project. Basic metrics include disk usage and number of gears (or Analyses) run.
 
-<img>
+.. image:: imgs/getting_started/usage_reports_1.png
+   :alt: Flywheel project reports view.
+
 
 How To Cite Us
 ==============

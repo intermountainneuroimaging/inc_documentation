@@ -25,6 +25,7 @@ Contents
    user_permissions.rst
    hierarchy.rst
    viewing_data.rst
+   version_control.rst
 
 .. toctree::
    :maxdepth: 1
