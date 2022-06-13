@@ -206,6 +206,7 @@ Finally, acquisitions are Flywheel containers within a session, and hold any fil
 Collections
 ***********
 Collections in Flywheel allow users to curate data from a range of projects or based on specific criteria. For example the ‘Radiologist Review’ collection will be used at UCB to curate images required incidental finding reviews for a radiologist. Further, collections can have a separate set of users and permissions in order to share specific sessions with users outside your study team. This feature can be found by clicking the collections view as seen here:
+
 .. image:: imgs/getting_started/collections_1.png
    :alt: Flywheel collections panel.
 
