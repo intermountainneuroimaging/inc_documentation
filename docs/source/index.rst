@@ -3,8 +3,7 @@ INC FLywheel has its documentation hosted on Read the Docs.
 Welcome to INC Flywheel documentation!
 ======================================
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Check out the :doc:`getting_started` section for introductory information.
 
 .. note::
 
@@ -25,6 +24,7 @@ Contents
    user_permissions.rst
    hierarchy.rst
    viewing_data.rst
+   version_control.rst
 
 .. toctree::
    :maxdepth: 1

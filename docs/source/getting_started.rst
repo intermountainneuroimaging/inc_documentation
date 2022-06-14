@@ -2,11 +2,11 @@
 
 Overview
 ========
-Flywheel.io is an imaging platform used to receive, curate, manage, and analyze data from scientific facilities. Intermountain neuroimaging consortium (INC) is excited to host an “on premise” instance of Flywheel.io for clinical, industry, and academic researchers within the region. The “on premise” instance means all data storage as well as computation is completed using University of Colorado services. INC at CU Boulder has leveraged the power of Flywheel.io and the considerable resources available through University of Colorado Research Computing to provide a seamless experience for all researchers from data collection at our MRI facilities to data analysis, visualization, and publication.  
+Flywheel.io is an imaging platform used to receive, curate, manage, and analyze data from scientific facilities. Intermountain Neuroimaging Consortium (INC) is excited to host an “on premise” instance of Flywheel.io for clinical, industry, and academic researchers within the region. The “on premise” instance means all data storage as well as computation is completed using University of Colorado services. INC at CU Boulder has leveraged the power of Flywheel.io and the considerable resources available through University of Colorado Research Computing to provide a seamless experience for all researchers from data collection at our MRI facilities to data analysis, visualization, and publication.
 
-For those familiar with other “PACS” systems, flywheel also provides a service to receive and view data directly from the Intermountain Neuroimaging Consortium's 3T Prisma Fit MR scanner.  
+For those familiar with other “PACS” systems, Flywheel also provides a service to receive and view data directly from the Intermountain Neuroimaging Consortium's 3T Prisma Fit MR scanner.
 
-Most importantly, flywheel is a FAIR compliant platform. **F-A-I-R** is a data principle adopted by both the National Science Foundation (NSF) and National Institute of Health (NIH, beginning 2023) to prompt transparency and reproducibility. **F**\indability, **A**\ccessibility, **I**\nteroperability, and **R**\euse cornerstone this principle. Flywheel supports the FAIR data practice mission by ensuring rich metadata for all data stored within the platform. Flywheel also enforces the use of provenance, meaning the storage of information about "who, what, when, how" in data creation and management. By conforming to these best data practices, INC hopes to elevate the importance of transparent and reproducible research in the neuroimaging community.
+Most importantly, Flywheel is a FAIR compliant platform. **F-A-I-R** are a set of data principle adopted by both the National Science Foundation (NSF) and National Institute of Health (NIH, beginning 2023) to prompt transparency and reproducibility. **F**\indability, **A**\ccessibility, **I**\nteroperability, and **R**\euse cornerstone these principles. Flywheel supports the FAIR data practice mission by ensuring rich metadata for all data stored within the platform. Flywheel also enforces the use of provenance, meaning the storage of information about "who, what, when, how" in data creation and management. By conforming to these best data practices, INC hopes to elevate the importance of transparent and reproducible research in the neuroimaging community.
 
 Interested in learning more? Check out our introductory video `here <https://o365coloradoedu.sharepoint.com/:v:/s/INC-microsoft-teams/EcA4VTfuZzdAiCAvN19Y1qkBazUkLHGT9A-LddKcIKgoUQ?e=qGclwA>`_.
 
@@ -14,17 +14,17 @@ Also, check out Introduction to Flywheel Webinar `here <https://docs.flywheel.io
 
 At the Scanner
 ==============
-Before starting a new or existing study in flywheel, please set up a meeting with the Intermountain Neuroimaging Consortium Staff (`website <https://www.colorado.edu/mri/people>`_) who can help discuss your specific needs. While flywheel.io provides almost endless flexibility in implementation of the platform, there are a few **critical** actions that must take place to ensure every image  collected at INC lands in flywheel seamlessly.
+Before starting a new or existing study in Flywheel, please set up a meeting with the Intermountain Neuroimaging Consortium Staff (`website <https://www.colorado.edu/mri/people>`_) who can help discuss your specific needs. While Flywheel.io provides almost endless flexibility in implementation of the platform, there are a few **critical** actions that must take place to ensure every image collected at INC lands in Flywheel in the right place.
 
 Naming your Flywheel Session
 *****************************
-In order to ensure acquisitions are assigned to the correct Project, Subject, and Session this information **MUST** be entered at the scanner console correctly, using the following convention:
+In order to ensure acquisitions are assigned to the correct Project, Subject, and Session this information **MUST** be entered at the scanner console correctly (in the field labelled **Accession Number**), using the following convention:
 ::
 
-    Flywheel Naming Convention:
+    Flywheel Accession Number Naming Convention:
     <project-label> / <subject-label> / <session-label>
 
-While no constraints are placed on the format each label, we highly recommend using BIDS_ compliant naming schemes for subject and session labels.
+While no constraints are placed on the format within each label, we highly recommend using BIDS_ compliant naming schemes for subject and session labels.
 
 .. _BIDS: https://bids-specification.readthedocs.io/en/stable/02-common-principles.html
 
@@ -38,23 +38,23 @@ This information includes:
 +---------------------+-----------------------------+--------------------------------+
 | Accession Number    | Flywheel Naming Convention  | (Required)                     |
 +---------------------+-----------------------------+--------------------------------+
-| ??                  | URSI Identifier             | (Co-Enrollment in COINS Only)  |
+| Patient ID/Name     | URSI Identifier             | (Co-Enrollment in COINS Only)  |
 +---------------------+-----------------------------+--------------------------------+
-| Age                 | Age                         |                                |
+| Age                 | Age                         | (Co-Enrollment in COINS Only)  |
 +---------------------+-----------------------------+--------------------------------+
-| Gender              | Gender                      |                                |
+| Gender              | Gender                      | (Co-Enrollment in COINS Only)  |
 +---------------------+-----------------------------+--------------------------------+
 
-INC currently records this information using the Scanner Requisition Form which should be submitted before each scan session. Have any additional question?... Check out our FAQs <here>
+INC currently records this information using the Scanner Requisition Form which should be submitted before each scan session. Have any additional question? Check out our :ref:`faqs` page.
 
-Examples
-***********
+Examples of Accession Numbers
+*****************************
 
-Study A has enrolled John Snow into their Study, this is a longitudinal study, where the participant will return for 3 separate neuroimaging sessions.
+Study A has enrolled John Snow into their Study, this is a longitudinal study, where the participant will return for 3 separate neuroimaging sessions. Below is an example of what is entered for the Accession Number field on the scanner console.
 
-    :StudyA/101/S01:  We have arbitrarily assigned the participant a subject-id 101 and session-id 01.
+    :StudyA/101/S01:  The participant is assigned a subject-id of 101 and session-id of 01.
 
-Importantly, Flywheel does not allow study teams to pre-register participant **OR** store any personally identifiable information on the platform. In short, this means study teams must retain the key to their *Coded* data in a secure location outside flywheel such as READCap or on paper. Please consult the University of Colorado Institutional Review Board (IRB) regarding appropriate steps that must be taken to secure *Coded* and Personally Identifiable Information for human subject research.
+Importantly, Flywheel is different from COINS in that you do not need to pre-register your participants with his/her ID apriori (before the scan). In fact, INC recommends that the participants are not pre-registered in Flywheel, but rather that the studies check Flywheel after the scan completes to make sure there was no typo at the scanner. **No personally identifiable information can exist on the Flywheel platform (see MOU)**. In short, this means study teams must retain the key to their *Coded* data in a secure location outside Flywheel such as REDCap or on paper. Please consult the University of Colorado Institutional Review Board (IRB) regarding appropriate steps that must be taken to secure *Coded* and Personally Identifiable Information for human subject research.
 
 Study B has enrolled Snow White into their study. This participant has already participated in another study conducted in the same laboratory. This study is cross-sectional with a single cohort, and therefore the study does not want to include a session flag.
 
@@ -62,29 +62,29 @@ Study B has enrolled Snow White into their study. This participant has already p
 
         We have arbitrarily assigned the participant a subject-id 102, no link is required to the prior study **BUT** we are missing a required session label!
 
-Flywheel naming convention is rigid and requires Project, Subject, and Session label all be included to correctly parse the labels during data ingestion.
+Flywheel naming convention is rigid and requires Project, Subject, **and** Session label all be included to correctly ingest and route the data to the correct Flywheel location.
 
     :Correct: StudyB/102/S1
 
-        While this example study has only one session, we must enter all three labels, project, subject, and session every time!
+        While this example study has only one session, we must enter all three labels: project, subject, and session every time!
 
 .. note::
-    *What happens if this naming goes wrong?* If a flywheel session was incorrectly named, all acquisitions associated with that session will be stored in an "Unsorted" project. This project is unique to each Principal Investigator (Flywheel "Group"). Study teams should take great care to ensure any missing or incorrectly named scans are caught quickly!
+    *What happens if this naming goes wrong?* If a flywheel session was incorrectly named, all acquisitions associated with that session will be stored in an "Unsorted" project. This project is unique to each Principal Investigator (Flywheel "Group"). Study teams should take great care to ensure any missing or incorrectly named scans are caught quickly! Once a study has identified an incorrectly-labelled scan, they should contact INC personnel immediately who will correct the error.
 
 What is Pre-Registration? and Why it Matters?
 **********************************************
-For current INC users, you are likely accustom to storing participant information and subject-ids in COINS. COINS uses pre-registration to check that images generated on the scanner "match" coded information already entered into the COINS database. With this protocol, INC staff could immediately identify and flag scanning sessions with incorrectly entered participant codes. Flywheel provides a more streamlined approach that does not allow pre-registration. The bottom line here... In Flywheel, INC staff will no longer be able to play any role in the confirmation all participant information was entered correctly at the scanner.
+For current INC users, you are likely accustom to storing participant information and subject-ids in COINS. COINS uses pre-registration to check that images generated on the scanner "match" coded information already entered into the COINS database. With this protocol, INC staff could immediately identify and flag scanning sessions with incorrectly entered participant codes. Flywheel provides a more streamlined approach that does not necessitate pre-registration. The bottom line here: in Flywheel, INC staff will no longer be able to play any role in the confirmation that all participant information was entered correctly at the scanner.
 
 .. warning::
     Users should check all scans entering Flywheel **immediately** after the scan session is complete. Closely inspect that all participant information is correct and matches the information stored in your participant key outside Flywheel!
 
 I Started my Study in COINS, What Happens Now?
 **********************************************
-All studies who wish to continue pre-registering and importing your data into COINS has the option to do so. All studies opting to continue using COINS will also have all new acquisitions stored in Flywheel. All scanner fields necessary for COINS convention are compatible with Flywheel convention. The one notable exception, while COINS has no restrictions on the value entered into "Accession Number", this field **MUST** conform to the Flywheel naming convention to comply with both COINS and Flywheel requirements.
+All studies who wish to continue pre-registering and importing your data into COINS have the option to do so. All studies opting to continue using COINS will also have all new acquisitions stored in Flywheel. All scanner fields necessary for COINS convention are compatible with Flywheel convention. The one notable exception: while COINS has no restrictions on the value entered into "Accession Number", this field **MUST** conform to the Flywheel naming convention to comply with both COINS and Flywheel requirements.
 
 What Information Can I Include in Flywheel?
 *******************************************
-INC at University of Colorado supports an "on premise" deployment Flywheel.io. As all data and compute is conducted within UCB systems, we must conform to all data and privacy polices set forth by University of Colorado Research Computing (CURC) and Flywheel.io. As such data must be de-identified before entering Flywheel. **NO** protected health information (PHI) and **NO** personally identifiable information (PII) may be stored in Flywheel. Examples of protected information includes:
+INC at University of Colorado supports an "on premise" deployment of Flywheel.io. As all data and compute is conducted within UCB systems, we must conform to all data and privacy polices set forth by University of Colorado Research Computing (CURC) and Flywheel.io. As such, data must be de-identified before entering Flywheel. **NO** protected health information (PHI) and **NO** personally identifiable information (PII) may be stored in Flywheel. Examples of protected information includes:
 
  - first or last name
  - email address
@@ -97,11 +97,11 @@ Not sure if your data is correctly de-identified?  Please contact your IRB repre
 
 Navigating The User Interface
 =============================
-Flywheel.io's user interface is a flexible powerful platform where users can do almost anything from creating and viewing data, to running analyses, and inviting collaborators to participate. The following provides a *brief* sample of the actions that can be taken within the flywheel user interface. Please attend INC Courses on Using Flywheel to learn more!
+Flywheel.io's user interface is a flexible powerful platform where users can do almost anything from creating and viewing data, to running analyses, and inviting collaborators to participate. The following provides a *brief* sample of the actions that can be taken within the Flywheel user interface. Please attend INC Courses on Using Flywheel to learn more!
 
 Logging Into Flywheel
 **********************
-Flywheel uses CILogon service to manage access to their platform. CILogon is used by most academic institutions around the world to manage institutional usership and therefore makes it very easy to add users, and log in with externally managed University credentials!
+Flywheel uses CILogon service to manage access to their platform. CILogon is used by most academic institutions around the world to manage institutional accounts and therefore makes it very easy to add users, and log in with externally managed University credentials!
 
 University of Colorado Users
 ++++++++++++++++++++++++++++++
@@ -206,7 +206,10 @@ Finally, acquisitions are Flywheel containers within a session, and hold any fil
 Collections
 ***********
 Collections in Flywheel allow users to curate data from a range of projects or based on specific criteria. For example the ‘Radiologist Review’ collection will be used at UCB to curate images required incidental finding reviews for a radiologist. Further, collections can have a separate set of users and permissions in order to share specific sessions with users outside your study team. This feature can be found by clicking the collections view as seen here:
-<image>
+
+.. image:: imgs/getting_started/collections_1.png
+   :alt: Flywheel collections panel.
+
 
 Data Views and Project Reports
 *******************************
@@ -214,13 +217,16 @@ Data Views and Project Reports can be used to compile metadata from any project.
 
 Project Reports provide a summary of all sessions collected over a specific time range. Basic descriptive statistics are computed on all demographic information described in each session.
 
-<imge>
+.. image:: imgs/getting_started/project_reports_1.png
+   :alt: Flywheel project reports view.
 
 Usage Reports
 *******************
 Usage Reports outline overall computing metrics for each project. Basic metrics include disk usage and number of gears (or Analyses) run.
 
-<img>
+.. image:: imgs/getting_started/usage_reports_1.png
+   :alt: Flywheel project reports view.
+
 
 How To Cite Us
 ==============
