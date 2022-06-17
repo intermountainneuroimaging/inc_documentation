@@ -6,7 +6,7 @@ Gears
 Overview
 ********************
 In Flywheel, a "Gear" is another name for an analysis or computations run on your data.
-Flywheel Gears are “containers” that package or “bundle” important metadata with the analysis results. Additional information stored within gears includes all of the information about who ran the analysis, when, with what inputs, the analysis software name, version, maintainer, and of course all of the analysis outputs. Gears keep this critical metadata in one place making analyses trackable and easier to review. Gears will already be installed into Flywheel by INC staff, if you wish to add more, see :ref:`Looking For Other Gears?`. You can view all gears installed on the UCB Flywheel Instance in the "Installed Gears" View in the Gears section of the sidebar menu. Interested in learning more about gears? Check out Flywheel's documentation on gears `here <https://docs.flywheel.io/hc/en-us/articles/360008411014-Using-gears>`.
+Flywheel Gears are “containers” that package or “bundle” important metadata with the analysis results. Additional information stored within gears includes all of the information about who ran the analysis, when, with what inputs, the analysis software name, version, maintainer, and of course all of the analysis outputs. Gears keep this critical metadata in one place making analyses trackable and easier to review. Gears will already be installed into Flywheel by INC staff, if you wish to add more, see :ref:`Looking For Other Gears?`. You can view all gears installed on the UCB Flywheel Instance in the "Installed Gears" View in the Gears section of the sidebar menu. Interested in learning more about gears? Check out Flywheel's documentation on gears `here <https://docs.flywheel.io/hc/en-us/articles/360008411014-Using-gears>`_.
 
 Running Gears
 ********************
@@ -154,6 +154,6 @@ After your analysis gear completes successfully you can inspect the results  in 
 
 Looking For Other Gears?
 **************************
-The `Flywheel Gear Exchange <https://flywheel.io/gear-exchange/>` is a place where you can see other gears created for Flywheel. If you wish to add another gear to our Flywheel instance, look on the Gear Exchange and contact a member of the INC staff to request the gear be added to UCB Flywheel instance.
+The `Flywheel Gear Exchange <https://flywheel.io/gear-exchange/>`_ is a place where you can see other gears created for Flywheel. If you wish to add another gear to our Flywheel instance, look on the Gear Exchange and contact a member of the INC staff to request the gear be added to UCB Flywheel instance.
 
 

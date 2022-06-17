@@ -77,7 +77,7 @@ AS UCB users of Flywheel, each Laboratory has autonomy in the types of data and 
     3. :code:`acquisition_label_remapping.csv`  (this file may be excluded in some cases)
 
 Modifying and Creating Files
-***************************
+*****************************
 Creating files is conducted in a similar way to uploading files, as described in detail above. When creating files in Flywheel, a list of supported file type will be provided including "Plain Text", "JSON", "Python". Once you have entered the information you wish to store in the file, select "Save Changes" and provide a meaningful filename.
 
 Modifying files can be accomplished in 2 ways:
