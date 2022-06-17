@@ -23,9 +23,10 @@ Viewing Other File Formats
 Viewing plain text files
 ---------------------------
 Text files can be viewed and edited within Flywheel's User Interface. To view or edit text files:
-1. Navigate to the file of interest
-2. Click the vertical ellipsis to expand the options menu for the file
-3. Select View
+
+    1. Navigate to the file of interest
+    2. Click the vertical ellipsis to expand the options menu for the file
+    3. Select View
 
 .. image:: imgs/viewing_data/accessing_text_viewer_1.png
    :alt: Instructions to view text files
@@ -61,7 +62,7 @@ Acquisition and file metadata can be viewed in Flywheel by first expanding the m
 
 Adding Custom Metadata
 -----------------------
-It is also possible to add your own metadata within the “Custom Information” section. Users may add different “types” of metadata such as strings, lists, boolean values, numbers, and complex objects containing additional metadata. For more information about adding your own metadata visit the flywheel documentation (here).
+It is also possible to add your own metadata within the “Custom Information” section. Users may add different “types” of metadata such as strings, lists, boolean values, numbers, and complex objects containing additional metadata. For more information about adding your own metadata visit the flywheel documentation (`here <https://docs.flywheel.io/hc/en-us/articles/360015412973-Add-and-edit-custom-metadata#:~:text=Subject%20and%20session%20custom%20metadata,click%20%2B%20next%20to%20Custom%20Information.>`_).
 
 .. image:: imgs/viewing_data/custom_metadata_1.png
    :alt: custom metadata
