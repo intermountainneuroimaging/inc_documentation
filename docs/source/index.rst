@@ -25,6 +25,7 @@ Contents
    hierarchy.rst
    viewing_data.rst
    version_control.rst
+   gears_in_UI.rst
 
 .. toctree::
    :maxdepth: 1
