@@ -17,6 +17,7 @@ One important function of Flywheel is its role as a 'PACS' system. The Flywheel 
 
 .. image:: imgs/hierarchy/inc_workflow_diagram.png
    :alt: Basic Schematic for On-Premise INC Flywheel Implementation
+Basic schematic of INC on-premise Flywheel infrastructure. Data is sent from the Scanner at INC to the Flywheel Connector (a virtual machine running on CU Boulder's private hybrid cloud, CUmulus). The Flywheel Connector then passes data to the Flywheel Core (which runs a web instance or user interface of Flywheel). Different types of analysis requests can then trigger jobs to be run on either CUmulus virtual machines, or on our on-premise HPC resources (Blanca, Alpine, Summit). The data backing the Flywheel core is Research Computing's PetaLibrary, while database backups of the data are sent to an INC-managed AWS S3 bucket.
 
 Uploading Files
 *****************
