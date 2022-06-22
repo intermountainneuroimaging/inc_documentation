@@ -63,6 +63,7 @@ Running gears on a single acquisition is generally reserved for light weight "Ut
 4. Select the "Acquisitions" tab
 5. Click the “Run Gear” button in the upper right corner
 6. Select either "Utility Gear" or "Analysis Gear" (gear methods discussed below)
+
 .. note::
     Important! Running an "Analysis Gear" will default to running at a :code:`Session Level` even from this menu!
 
