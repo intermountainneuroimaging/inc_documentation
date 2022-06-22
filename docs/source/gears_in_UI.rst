@@ -6,7 +6,7 @@ Gears
 Overview
 ********************
 In Flywheel, a "Gear" is another name for an analysis or computations run on your data.
-Flywheel Gears are “containers” that package or “bundle” important metadata with the analysis results. Additional information stored within gears includes all of the information about who ran the analysis, when, with what inputs, the analysis software name, version, maintainer, and of course all of the analysis outputs. Gears keep this critical metadata in one place making analyses trackable and easier to review. Gears will already be installed into Flywheel by INC staff, if you wish to add more, see :ref:`Looking For Other Gears?`. You can view all gears installed on the UCB Flywheel Instance in the "Installed Gears" View in the Gears section of the sidebar menu. Interested in learning more about gears? Check out Flywheel's documentation on gears `here <https://docs.flywheel.io/hc/en-us/articles/360008411014-Using-gears>`_.
+Flywheel Gears are “containers” that package or “bundle” important metadata with the analysis results. Additional information stored within gears includes all of the information about who ran the analysis, when, with what inputs, the analysis software name, version, maintainer, and of course all of the analysis outputs. Gears keep this critical metadata in one place making analyses trackable and easier to review. Gears will already be installed into Flywheel by INC staff, if you wish to add more, see :ref:`Looking For Other Gears?` You can view all gears installed on the UCB Flywheel Instance in the "Installed Gears" View in the Gears section of the sidebar menu. Interested in learning more about gears? Check out Flywheel's documentation on gears `here <https://docs.flywheel.io/hc/en-us/articles/360008411014-Using-gears>`_.
 
 Running Gears
 ********************
@@ -63,7 +63,9 @@ Running gears on a single acquisition is generally reserved for light weight "Ut
 4. Select the "Acquisitions" tab
 5. Click the “Run Gear” button in the upper right corner
 6. Select either "Utility Gear" or "Analysis Gear" (gear methods discussed below)
-    - Important! Running an "Analysis Gear" will default to running at a :code:`Session Level` even from this menu!
+
+.. note::
+    Important! Running an "Analysis Gear" will default to running at a :code:`Session Level` even from this menu!
 
 .. image:: imgs/gears_in_UI/running_gears_acquisitionlevel_1.png
    :alt: Running gears from the acquisition level.
@@ -75,17 +77,20 @@ Flywheel Gears are version controlled, meaning both the underlying software vers
 .. code-block::
    :caption: Flywheel Gear Versions
 
+   Example Gear Version:
    1.2.5_20.0.6_inc1.0
+   The meaning of the versioning broken down piece by piece
    1.2.5  --> Flywheel Gear Version
    20.0.6 --> Underlying Pipeline / Software Version
    inc1.0 --> INC Customized Version
+
+If you find that a gear version is missing the :code:`inc` version tag, that simply means that INC did not modify the gear from what Flywheel originally produced.
 
 .. note::
    When starting a new analysis, it is best practice to select the most updated version of the gear. Once a version is selected for a project, we recommend to use the same version for the duration of your project.
 
 Gear Methods
 ****************
-
 
 Running Utility Gears
 ++++++++++++++++++++++
@@ -112,7 +117,9 @@ Utility Gears are lightweight analyses usually used only for converting file typ
 
 Running Analysis Gears
 +++++++++++++++++++++++
-Analysis Gears used for larger analyses and are organized as unique containers (or "folders") in flywheel. Analysis Gears package additional information include the gear inputs, configuration, version, logs, and outputs.
+Analysis Gears are used for larger analyses and are organized as unique containers (or "folders") in Flywheel. These containers are conveniently called Analyses in your Session view. Analysis Gears package additional information including the gear inputs, configuration, version, logs, and outputs.
+
+To run an Analysis Gear, follow the steps below:
 
 1. Navigate to the desired project
 2. Select the "Sessions" tab
@@ -128,7 +135,7 @@ Analysis Gears used for larger analyses and are organized as unique containers (
 
 Running High Performance Compute (HPC) Analysis Gears
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-In order to run Gears on the HPC environment, add a job tag “hpc” when setting up the analysis. This job tag is case sensitive. Additional settings including SLURM resources configurations may be available in the gear's configuration settings.
+In order to run Gears on the HPC environment (instead of the CUmulus virtual machines), add a job tag “hpc” when setting up the analysis. This job tag is case sensitive. Additional settings including SLURM resources configurations may be available in the gear's configuration settings.
 
 .. image:: imgs/gears_in_UI/gear_methods_hpc_1.png
    :alt: Running gears on hpc.
@@ -154,6 +161,6 @@ After your analysis gear completes successfully you can inspect the results  in 
 
 Looking For Other Gears?
 **************************
-The `Flywheel Gear Exchange <https://flywheel.io/gear-exchange/>`_ is a place where you can see other gears created for Flywheel. If you wish to add another gear to our Flywheel instance, look on the Gear Exchange and contact a member of the INC staff to request the gear be added to UCB Flywheel instance.
+The `Flywheel Gear Exchange <https://flywheel.io/gear-exchange/>`_ is a place where you can see other gears created for Flywheel (usually by Flywheel staff). If you wish to add another gear to our Flywheel instance, look on the Gear Exchange and contact a member of the INC staff to request the gear be added to UCB Flywheel instance. If the gear is not in the Gear Exchange, contact INC staff as well for a consultation. INC staff can work with Flywheel to develop the gear, or train/direct you on how to develop your own Flywheel gears.
 
 

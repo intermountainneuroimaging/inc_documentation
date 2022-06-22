@@ -8,13 +8,13 @@ Check out Flywheel's Docs on Version Control to learn more `here <https://docs.f
 
 Provenance
 ============
-Provenance is a term we use to describe the history or source of information. For example, if I received a letter in the mail, we might think of that letter's provenance. The letter was written by someone, and placed in a specific mailbox in a specific city. That letter was then picked up by a mail carrier, went to a central processing facility, and on and on. Finally, the letter was carried by a mail carrier to my door where I opened it. Each step of the letter's journey is part of the provenance. At the letters final destination, we should be able to use the provenance to track exactly what happened to the letter at what time all the way back to when it was placed in the sender's mail box.
+Provenance is a term we use to describe the history or source of information. For example, if I received a letter in the mail, we might think of that letter's provenance. The letter was written by someone, and placed in a specific mailbox in a specific city. That letter was then picked up by a mail carrier, went to a central processing facility, and on and on. Finally, the letter was carried by a mail carrier to my door where I opened it. Each step of the letter's journey is part of the provenance. At the letter's final destination, we should be able to use the provenance to track exactly what happened to the letter at what time all the way back to when it was placed in the sender's mail box.
 
-When we think about data provenance, this includes information about all modifications that were made to original or raw data. Each modification should be documented including what modification was taken, the analyst making the modification, the time and date of the modification, and the tools used to make the modification. This information becomes very cumbersome to maintain independently as a researcher. While our computers store some of this information, such as the time and date a file was created or modified, it falls far short of what provenance is needed to track each step that was taken on the data since inception. Luckily, Flywheel makes this very easy and stores a full provenance for all data!
+When we think about data provenance, this includes information about all modifications that were made to original or raw data. Each modification should be documented including what modification was taken, the analyst making the modification, the time and date of the modification, and the tools used to make the modification. This information becomes very cumbersome to maintain independently as a researcher. While our computers store some of this information, such as the time and date a file was created or modified, the computer falls far short of what provenance is needed to track each step that was taken on the data's journey since inception. Luckily, Flywheel makes this very easy and stores a full provenance for all data!
 
 Viewing Provenance
 ********************
-Provenance can be viewed within the Flywheel User Interface. Provenance cannot be modified, or deleted within Flywheel. One important note, Flywheel does not log changes to metadata. Its critical then to ensure you are not making undesired or accidental changes to metadata fields that may not able to be recovered.
+Provenance can be viewed within the Flywheel User Interface. Provenance cannot be modified, or deleted within Flywheel's Support Team. One important note, Flywheel does not log changes to metadata. It is **critical** to ensure you are not making undesired or accidental changes to metadata fields that cannot be recovered. If accidentally changing metadata is a concern your lab has, please see the section :ref:`User Permissions` and examine what each Role can and can't do to metadata.
 
 To view provenance:
 
@@ -39,6 +39,13 @@ To view the Job ID, open an analysis log and look for the Job ID in the bottom l
 
 .. image:: imgs/version_control_and_provenance/viewing_jobid.png
    :alt: Where to find the Job ID.
+
+Viewing Analysis Container Provenance
++++++++++++++++++++++++++++++++++++++
+    1. Select the session you want to view provenance record from the Sessions list
+    2. Navigate to the "Analyses" Tab
+    3. You will see a list of all analysis containers associated with that session. In addition to Results, Notes, and Custom Information, each analysis container has Gear Configuration, Gear Information, and Gear Logs that tracks the provenance of the analysis. To see more information about what modifications were made to the data and how the analysis ran, select "Gear Logs".
+
 
 
 

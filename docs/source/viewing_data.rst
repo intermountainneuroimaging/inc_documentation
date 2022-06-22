@@ -6,7 +6,7 @@ Flywheel has a range of tools that can be used to view the data within the User 
 
 Viewing DICOMS
 ****************
-Flywheel has an integrated DICOM viewer which allows you to view, interact, and edit DICOMS directly within our instance. Please visit Flywheel Docs for instructions on how to use the viewer `here <https://docs.flywheel.io/hc/en-us/articles/360052083993-View-and-annotate-images>`_.
+Flywheel has an integrated DICOM viewer which allows you to view, interact, and edit DICOMS directly within our instance of Flywheel. Please visit Flywheel Docs for instructions on how to use the viewer `here <https://docs.flywheel.io/hc/en-us/articles/360052083993-View-and-annotate-images>`_.
 
 Using the "Picture" icon located next to subject, session, or file will automatically launch the dicom viewer and load the active dicom images.
 
