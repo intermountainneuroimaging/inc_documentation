@@ -37,4 +37,5 @@ Contents
    :maxdepth: 1
    :caption: Resources
 
+   resources.rst
    FAQs.rst
