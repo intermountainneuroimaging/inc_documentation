@@ -2,7 +2,7 @@
 
 Version Control
 ===============
-Version control is used to ensure a history of changes made to a file are retained. Within Flywheel all data are version controlled including all images (e.g. DICOMs, NIFTIs), as well as file attachments (e.g. logs, behavioral data spreadsheets). Flywheel also uses version control for gears to ensure all analyses are reproducible.
+Version control is used to track all changes made to a file throughout the file's "lifetime." Within Flywheel all data are version controlled including all images (e.g. DICOMs, NIFTIs), as well as file attachments (e.g. logs, behavioral data spreadsheets). Flywheel also uses version control for gears to ensure all analyses are reproducible.
 
 Check out Flywheel's Docs on Version Control to learn more `here <https://docs.flywheel.io/hc/en-us/articles/360061207134-File-versioning>`_!
 
@@ -14,11 +14,11 @@ When we think about data provenance, this includes information about all modific
 
 Viewing Provenance
 ********************
-Provenance can be viewed within the Flywheel User Interface. Provenance cannot be modified, or deleted within Flywheel's Support Team. One important note, Flywheel does not log changes to metadata. It is **critical** to ensure you are not making undesired or accidental changes to metadata fields that cannot be recovered. If accidentally changing metadata is a concern your lab has, please see the section :ref:`User Permissions` and examine what each Role can and can't do to metadata.
+Provenance can be viewed within the Flywheel User Interface. Provenance cannot be modified, or deleted within Flywheel. One important note, Flywheel does not log changes to metadata. It is **critical** to ensure you are not making undesired or accidental changes to metadata fields that cannot be recovered. If accidentally changing metadata is a concern your lab has, please see the section :ref:`User Permissions` and examine how each Role can interact with metadata.
 
 To view provenance:
 
-    1. Select the session you want to view provenance record from Sessions List
+    1. From the Sessions List, Select the session you want to view provenance record
     2. Navigate to the "Provenance" Tab
     3. You will see a list of all jobs using or modifying this session's data. Each job is labeled with an analysis name, version number, the analyst name, and job status (complete, in progress, failed). To see more information about what modifications were made to the data, select "View Log"
 
@@ -35,16 +35,16 @@ Each analysis that was run is also assigned a "Job ID". This is a unique ID with
 To view the Job ID, open an analysis log and look for the Job ID in the bottom left corner of the logs page.
 
 .. Note::
-    To view the Jib ID, start from the provenance tab to look at the logs.
+    To view the Job ID, start from the provenance tab to look at the logs.
 
 .. image:: imgs/version_control_and_provenance/viewing_jobid.png
    :alt: Where to find the Job ID.
 
 Viewing Analysis Container Provenance
 +++++++++++++++++++++++++++++++++++++
-    1. Select the session you want to view provenance record from the Sessions list
+    1. From the Sessions list, Select the session you want to view provenance record
     2. Navigate to the "Analyses" Tab
-    3. You will see a list of all analysis containers associated with that session. In addition to Results, Notes, and Custom Information, each analysis container has Gear Configuration, Gear Information, and Gear Logs that tracks the provenance of the analysis. To see more information about what modifications were made to the data and how the analysis ran, select "Gear Logs".
+    3. You will see a list of all analysis containers associated with that session. In addition to Results, Notes, and Custom Information, each analysis container has Gear Configuration, Gear Information, and Gear Logs that track the provenance of the analysis. To see more information about what modifications were made to the data and how the analysis ran, select "Gear Logs".
 
 
 
