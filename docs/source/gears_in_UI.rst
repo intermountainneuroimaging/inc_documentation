@@ -42,7 +42,7 @@ Running gears at a subject level is most commonly used for analyses that require
 
 Running Gears at the Session Level
 ++++++++++++++++++++++++++++++++++++
-Running gears at a session level is the most common method for running analysis gears. Most Gears including curation, re-naming, and preprocessing gears can be run on a single session. In order to run a gear on a single session, follow the steps below.
+Running gears at a session level is the most common method for running analysis gears. Most gears including curation, re-naming, and preprocessing gears can be run on a single session. In order to run a gear on a single session, follow the steps below.
 
 1. From your project, select "Sessions" panel
 2. Make sure the view is toggled to "List View"
@@ -64,8 +64,8 @@ Running gears on a single acquisition is generally reserved for light weight "Ut
 5. Click the “Run Gear” button in the upper right corner
 6. Select either "Utility Gear" or "Analysis Gear" (gear methods discussed below)
 
-.. note::
-    Important! Running an "Analysis Gear" will default to running at a :code:`Session Level` even from this menu!
+.. important::
+    Running an "Analysis Gear" will default to running at a :code:`Session Level` even from this menu!
 
 .. image:: imgs/gears_in_UI/running_gears_acquisitionlevel_1.png
    :alt: Running gears from the acquisition level.
@@ -105,7 +105,7 @@ Utility Gears are lightweight analyses usually used only for converting file typ
 .. image:: imgs/gears_in_UI/gear_methods_utility_1.png
    :alt: Selecting Utility gears.
 
-6. Select a Gear and version of the Gear to run
+6. Select a gear and version
 7. Choose a file for the input
 8. Under the configuration tab, select the necessary options for your job
     a. For more information about each configuration setting, hover the mouse over the info icon next to the configuration
@@ -150,7 +150,7 @@ To view the progress of your gear, navigate to the desired session, and then sel
 
 What To Do If Your Gear Failed?
 ++++++++++++++++++++++++++++++++
-If your Gear fails, first check the job log. If there is an obvious error message such as missing or incorrect input, make that change and run the gear again. If a problem persists or you cannot determine why the gear failed, reach out to the INC staff for assistance.
+If your gear fails, first check the job log. If there is an obvious error message such as missing or incorrect input, make that change and run the gear again. If a problem persists or you cannot determine why the gear failed, reach out to the INC staff for assistance.
 
 What To Do If Your Gear Succeeded?
 +++++++++++++++++++++++++++++++++++

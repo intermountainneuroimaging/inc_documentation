@@ -2,7 +2,7 @@
 
 Viewing Data
 =============
-Flywheel has a range of tools that can be used to view the data within the User Interface. These applications are being regularly updated and improved by the Flywheel Support Team. Please understand with the rapid development of viewers and applications in Flywheel some of the documentation contained below and on the Flywheel docs may be out of date. If you have any questions about current features for viewing data, contact INC Staff.
+Flywheel has a range of tools that can be used to view the data within the User Interface. These applications are being regularly updated and improved by the Flywheel Support Team. Please understand with the rapid development of viewers and applications in Flywheel some of the documentation contained below and on Flywheel Docs may be out of date. If you have any questions about current features for viewing data, contact INC Staff.
 
 Viewing DICOMS
 ****************
