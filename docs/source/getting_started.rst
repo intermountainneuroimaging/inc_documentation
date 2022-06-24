@@ -174,7 +174,7 @@ At INC, we use “Groups” to assign a principal investigator or laboratory. He
 
 Accessing My Projects
 *********************
-At INC, “Projects” are used to differentiate studies conducted within a Principal Investigator’s laboratory (ie, studies within a Flywheel "Group"). Users can access all projects they have permissions to view from the left hand ribbon on the projects page:
+At INC, “Projects” are used to differentiate studies conducted within a Principal Investigator’s laboratory (ie, studies within a Flywheel "Group"). Users may be added to multiple projects, and once granted permission will be able to view the each project in Flywheel. All accessible projects may be viewed from the left hand ribbon on the projects page:
 
 .. image:: imgs/getting_started/accessing_my_projects_1.png
    :alt: Flywheel projects view highlighting location of projects tab in left hand ribbon
