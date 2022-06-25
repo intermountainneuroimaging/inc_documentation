@@ -10,7 +10,7 @@ Flywheel Gears are “containers” that package or “bundle” important metad
 
 Running Gears
 ********************
-It is important to note, you can start a gear from multiple levels of the Flywheel hierarchy. This provides the flexibility to run a range of software tools that may need any number of inputs, such as only a single acquisition (:code:`acquisition level`), all acquisitions in a session (:code:`session level`), all sessions for a single subject (:code:`subject level`), multiple or all subjects in a given project (:code:`project level`). Being diligent about the Flywheel hierarchy level you use to run your gear is critical. For example, some gears will only execute if run at a “session” level.
+It is important to note, you can start a gear from multiple levels of the Flywheel hierarchy. This provides the flexibility to run a range of software tools that may need any number of inputs, such as only a single acquisition (:code:`acquisition level`), all acquisitions in a session (:code:`session level`), all sessions for a single subject (:code:`subject level`), multiple or all subjects in a given project (:code:`project level`). Being diligent about the Flywheel hierarchy level you use to run your gear is critical. For example, some gears will only execute if ran at a “session” level.
 
 Running Gears at the Project Level
 ++++++++++++++++++++++++++++++++++++
@@ -150,7 +150,7 @@ To view the progress of your gear, navigate to the desired session, and then sel
 
 What To Do If Your Gear Failed?
 ++++++++++++++++++++++++++++++++
-If your gear fails, first check the job log. If there is an obvious error message such as missing or incorrect input, make that change and run the gear again. If a problem persists or you cannot determine why the gear failed, reach out to the INC staff for assistance.
+If your gear fails, first check the job log. If there is an obvious error message such as missing or incorrect input, make that change and run the gear again. If a problem persists or you cannot determine why the gear failed, reach out to the `INC staff <https://www.colorado.edu/mri/people>`_ for assistance.
 
 What To Do If Your Gear Succeeded?
 +++++++++++++++++++++++++++++++++++
@@ -161,6 +161,6 @@ After your analysis gear completes successfully you can inspect the results  in 
 
 Looking For Other Gears?
 **************************
-The `Flywheel Gear Exchange <https://flywheel.io/gear-exchange/>`_ is a place where you can see other gears created for Flywheel (usually by Flywheel staff). If you wish to add another gear to our Flywheel instance, look on the Gear Exchange and contact a member of the INC staff to request the gear be added to UCB Flywheel instance. If the gear is not in the Gear Exchange, contact INC staff as well for a consultation. INC staff can work with Flywheel to develop the gear, or train/direct you on how to develop your own Flywheel gears.
+The `Flywheel Gear Exchange <https://flywheel.io/gear-exchange/>`_ is a place where you can see other gears created for Flywheel (usually by Flywheel staff). If you wish to add another gear to our Flywheel instance, look on the Gear Exchange and contact a member of the INC staff to request the gear be added to UCB Flywheel instance. If the gear is not in the Gear Exchange, contact INC staff as well for a consultation. `INC staff <https://www.colorado.edu/mri/people>`_ can work with Flywheel to develop the gear, or train/direct you on how to develop your own Flywheel gears.
 
 
