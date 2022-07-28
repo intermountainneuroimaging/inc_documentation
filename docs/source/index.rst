@@ -31,6 +31,7 @@ Contents
    :maxdepth: 1
    :caption: Analysis
 
+   cli_basics.rst
    sdk_basics.rst
 
 .. toctree::
