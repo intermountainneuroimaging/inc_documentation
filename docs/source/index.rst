@@ -33,6 +33,7 @@ Contents
 
    cli_basics.rst
    sdk_basics.rst
+    data_ingestion.rst
 
 .. toctree::
    :maxdepth: 1
