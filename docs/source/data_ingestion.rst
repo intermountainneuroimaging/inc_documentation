@@ -25,12 +25,14 @@ CONN analyses require extensive computational and disk size resources. To ensure
 Archiving Analysis When Complete
 ++++++++++++++++++++++++++++++++++++
 Once a CONN analysis is completed, we recommend users archive their conn analysis. Removing intermediate data files can help manage the size of the archived analysis.
+
 1. Intermediate preprocessing files can be removed. Before removing any preprocessing files, check which dataset files are loaded in CONN. This includes checking the file paths defined in the "Primary Dataset", "Unsmoothed Dataset", ...
+
 .. important::
- Do not remove any input files that are referenced in the "Setup" panel of CONN. Removing these files may result in irreversible errors in the conn menu.
+    Do not remove any input files that are referenced in the "Setup" panel of CONN. Removing these files may result in irreversible errors in the conn menu.
+
 2. Approximately 60%-80% of the data storage requirements of the CONN outputs directory are contained in the "results" subdirectory. These *.mat and *.matc files contain information generated from the denoising, first-level, and second-level modeling steps of the CONN analysis.
 
-::
     Users **can** remove the contents of "results/preprocessing" and "results/firstlevel" without disrupting ability to recover the second level model results already generated for the project. To generate new second level model results, the denoising and first-level modelling step would need to be regenerated.
 
 Zipping Archived Outputs
@@ -49,3 +51,9 @@ Once users have removed all intermediate result files, the conn analysis can be 
     fw = flywheel.Client()
 
     project = fw.lookup('<group>/<project>')
+
+    # create new project level analysis
+    analysis = project.add_analysis(label='CONN Analysis: ' + datetime.now(" %x %X"))
+
+    # upload output zipped directories
+    analysis.upload_output('conn_analysis.zip')
