@@ -19,6 +19,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'myst_parser',
     'sphinx.ext.autosectionlabel',
+    'nbsphinx',
 ]
 
 source_suffix = {
