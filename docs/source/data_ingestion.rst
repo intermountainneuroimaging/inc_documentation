@@ -1,7 +1,9 @@
 .. _data_ingestion:
 
-Flywheel Data Ingestion
-========================
+Working With Your Data Outside Flywheel
+==========================================
+
+Some workflows are not currently supported in Flywheel, and need to be implemented on a local compute environment. Please check out out python SDK tutorials `here <notebooks/download-and-run-locally.ipynb>` to learn more.
 
 
 CONN Functional Connectivity Toolbox
