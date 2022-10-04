@@ -29,6 +29,13 @@ Contents
 
 .. toctree::
    :maxdepth: 1
+   :caption: Access to Petalibrary and Blanca
+
+   pl_and_blanca_basics.rst
+   scratch_space.rst
+
+.. toctree::
+   :maxdepth: 1
    :caption: Analysis
 
    cli_basics.rst
