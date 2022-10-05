@@ -40,18 +40,18 @@ To get started, go to `open ondemand <https://ondemand.rc.colorado.edu>`_.
 
 .. image:: imgs/pl_and_blanca_basics/open-ondemand-coredesktop.png
    :alt: Selecting Core Desktop from Interactive Sessions on Open OnDemand
-   :width: 200pt
+   :width: 600pt
 
 2. Set the compute options for your **Core Desktop** session.
 
 .. image:: imgs/pl_and_blanca_basics/open-ondemand-coredesktop-options.png
    :alt: Selecting Core Desktop from Interactive Sessions on Open OnDemand
-   :width: 200pt
+   :width: 600pt
 
 3. Launch the new Desktop. Here you can start a terminal, or another application.
 .. image:: imgs/pl_and_blanca_basics/open-ondenmand-coredesktop-terminal.png
    :alt: Selecting Core Desktop from Interactive Sessions on Open OnDemand
-   :width: 200pt
+   :width: 600pt
 
 .. note::
     the Desktop is running on a **viz node**. To access filesystems and compute nodes exclusive to Blanca, you must first start a secure shell (SSH) to blanca login nodes.
@@ -93,21 +93,21 @@ To get started, go to `open ondemand <https://ondemand.rc.colorado.edu>`_.
 
 .. image:: imgs/pl_and_blanca_basics/open-ondemand-interactivesessions.png
    :alt: Selecting Jupyter Notebook from Interactive Sessions on Open OnDemand
-   :width: 200pt
+   :width: 600pt
 
 2. Set the compute options for your **Jupyter Notebook** session. Be careful to correctly set both the partition and QOS section, to match the desired cluster. Here are examples of correct partition/QOS settings:
 
-:Blanca Cluster:
-   | Partition:  :code:`blanca-ics`
-   | QOS:        :code:`blanca-ics`
+    :Blanca Cluster:
+       | Partition:  :code:`blanca-ics`
+       | QOS:        :code:`blanca-ics`
 
-:Alpine Cluster:
-   | Partition:  :code:`amilan`
-   | QOS:        <leave blank>
+    :Alpine Cluster:
+       | Partition:  :code:`amilan`
+       | QOS:        <leave blank>
 
 .. image:: imgs/pl_and_blanca_basics/open-ondemand-blanca-jupyterhub.png
    :alt: Setting compute options for jupyter notebook session.
-   :width: 200pt
+   :width: 600pt
 
 .. note::
     The new jupyter notebook session will be launched from a :code:`Blanca` or :code:`Alpine` compute node depending on your preference.
