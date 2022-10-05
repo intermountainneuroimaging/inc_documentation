@@ -29,6 +29,13 @@ Contents
 
 .. toctree::
    :maxdepth: 1
+   :caption: Analysis
+
+   cli_basics.rst
+   sdk_basics.rst
+
+.. toctree::
+   :maxdepth: 1
    :caption: Access to Petalibrary and Blanca
 
    pl_and_blanca_basics.rst
@@ -36,12 +43,9 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Analysis
+   :caption: Developer's Guide
 
-   cli_basics.rst
-   sdk_basics.rst
    data_ingestion.rst
-   jupyter_notebooks/sdk-basics.ipynb
 
 .. toctree::
    :maxdepth: 1
