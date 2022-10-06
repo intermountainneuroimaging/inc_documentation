@@ -5,8 +5,26 @@ The Basics
 
 Don't have a research computing account yet? Please request an account `here <https://www.colorado.edu/rc/>`_.
 
-More to come...
+What is Petalibrary?
+-----------------------
+PetaLibary is a location where data is stored (similar to an external hard drive) and is regularly backed up to ensure data integrity. More accurately, PetaLibrary is a Research Computing managed storage cluster where scanner data and derivative data (i.e. analysis data) live for various projects. Petalibrary is managed using allocations, which are predefined chunks of space allotted for storage to a given lab or group (eg: banich lab, kaiser lab, etc).
 
+All of INC’s scanner data and **Flywheel** database data goes into an allocation titled ics. May labs also choose to purchase storage on a PI-sepcific allocation (eg: the banich allocation). We advise you restirct the storage on CURC's Petalibrary to data you actively use on the high performance compute cluster. Archivable data should be moved to a different "cold storage" system, so you can retain these data at a lower cost.
+
+It is therefore very important to not treat PetaLibrary like you may treat your personal laptop. We are on shared space: adding to one directory on the ICS allocation will decrease the total amount of free space available to everyone else.
+
+What is Blanca?
+-----------------------
+Blanca is one of three high performance compute clusters managed by Research Computing (`alpine <https://curc.readthedocs.io/en/latest/clusters/alpine/index.html>`_ and `summit <https://curc.readthedocs.io/en/latest/clusters/summit/summit.html>`_ are the other HPC clusters) . Most of us are familiar with hard drives, but perhaps less familiar with a computer’s processor. While the hard drive is what stores large amounts of data, the central processing unit (or CPU) is what acts on the data (fetches it, decodes it, performs analysis, etc). You may think of a CPU as the thing in the computer that does all the thinking!
+
+In simplified terms, a compute infrastructure is nothing more than a bunch of these CPUs and the networking structure that supports them.
+
+As INC, we have 12 nodes (essentially 12 dedicated “computers”) on which we can run analyses, collectively known as the blanca-ics cluster. Each node has between 28 and 56 CPUs. The reason we put “computers” in quotation marks is because these nodes don’t have hard drives, unlike computers. In the analogy above, think of these nodes as the processors, the thinkers, but they can’t actually store much information - storage is delegated to PetaLibrary.
+
+INC also has 2 dedicated Blanca login nodes onto which PetaLibrary is mounted/accessible, and through which we can launch compute jobs onto our 12 compute nodes. The image below illustrates how a user interacts with our Blanca nodes.
+
+.. image:: imgs/pl_and_blanca_basics/hpc-schematic.png
+   :width: 600pt
 
 
 High Performance Compute Portal
