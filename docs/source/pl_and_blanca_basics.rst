@@ -115,23 +115,25 @@ To get started, go to `open ondemand <https://ondemand.rc.colorado.edu>`_.
 3. You can use the **Terminal** feature to run any shell scripts, as well as the Python **Console** and Python **Jupyter Notebook** for any python based scripts.
 
 Setting Up Conda Environments
-++++++++++++++++++++++++++++++
+================================
 Our data and analysis team at INC have generated several custom python environments to support the needs of our researchers. Anaconda makes it easy to build and interchange virtual environments for running your python code. If you are new to anaconda, please check out research computing documentation on the `subject <https://curc.readthedocs.io/en/latest/software/python.html>`_.
 
 To get started using the INC anaconda environments, please do the following:
 
-1. Create a text file :code:`~/.condarc` with the contents:
+1. On reserach computing's HPC (summit, blanca, or alpine), create a text file :code:`/home/$USER/.condarc` with the contents:
 
 .. code-block::
+
     pkgs_dirs:
-  - /projects/$USER/.conda_pkgs
-envs_dirs:
-  - /projects/$USER/software/anaconda/envs
-  - /projects/ics/software/anaconda/envs
+      - /projects/$USER/.conda_pkgs
+    envs_dirs:
+      - /projects/$USER/software/anaconda/envs
+      - /projects/ics/software/anaconda/envs
 
-2. Check you can "see" all the shared conda environments:
+2. Next, load the ancaconda software using :code:`module` then confirm you  "see" all the shared conda environments:
 
 .. code-block::
+
     [amhe4269@bnode0301 ~]$ module load anaconda
     (base) [amhe4269@bnode0301 ~]$ conda env list
     # conda environments:
@@ -152,9 +154,10 @@ envs_dirs:
 .. note::
     The output of `conda env list` may look slightly different from what is shown above, but you should see paths that point to :code:`/projects/ics/software/anaconda/envs/`
 
-3. Finally, you need to create a **kernel** to be able to access any of these environments in jupyterhub
+3. Finally, you need to create a **kernel** to be able to access any of these environments in jupyterhub:
 
 .. code-block::
+
     [amhe4269@bnode0301 ~]$ module load anaconda
     (base) [amhe4269@bnode0301 ~]$ conda activate flywheel
     (flywheel) [amhe4269@bnode0301 ~]$ python -m ipykernel install --user --name flywheel --display-name flywheel

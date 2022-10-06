@@ -55,7 +55,7 @@ Contents
    FAQs.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Tutorials
 
    notebooks/sdk-basics.ipynb
