@@ -53,3 +53,11 @@ Contents
 
    resources.rst
    FAQs.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials
+
+   notebooks/sdk-basics.ipynb
+   notebooks/download-and-run-locally.ipynb
+   notebooks/upload-my-analysis.ipynb

@@ -27,10 +27,10 @@ Leverage Scratch Space with Flywheel Storage
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Some neuroimaging analyses and workflows are not yet supported as Flywheel gears. For these workflows, the current workaround is to download your Flywheel analyses (or workflow inputs) run the workflow on your local machine (or HPC), then upload the results (workflow outputs) back to flywheel as a new analysis.
 
-Follow our example tutorial using the Flywheel SDK to `download and run analyses locally <https://github.com/intermountainneuroimaging/inc_documentation/blob/6a99caca02e17462a0a0fc8b11566830605f8885/docs/source/notebooks/download-and-run-locally.ipynb>`_.
+Follow our example tutorial using the Flywheel SDK to :ref:`Download and Run Analysis Locally`.
 
 Uploading Scratch Analyses to Flywheel
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Once you generate an analysis you wish to permanently store. Be sure to move the analysis to Petalibrary, or upload the analysis to Flywheel.
 
-Follow our example tutorial using the Flywheel SDK to `upload my analysis <https://github.com/intermountainneuroimaging/inc_documentation/blob/a7467ada77b52706ec8467878a1f2e990a45e321/docs/source/notebooks/upload-my-analysis.ipynb>`_.
+Follow our example tutorial using the Flywheel SDK to :ref:`Upload My Analysis to Flywheel`.
