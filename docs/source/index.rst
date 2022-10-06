@@ -31,7 +31,21 @@ Contents
    :maxdepth: 1
    :caption: Analysis
 
+   cli_basics.rst
    sdk_basics.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Access to Petalibrary and Blanca
+
+   pl_and_blanca_basics.rst
+   scratch_space.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Developer's Guide
+
+   data_ingestion.rst
 
 .. toctree::
    :maxdepth: 1
@@ -39,3 +53,11 @@ Contents
 
    resources.rst
    FAQs.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Tutorials
+
+   notebooks/sdk-basics.ipynb
+   notebooks/download-and-run-locally.ipynb
+   notebooks/upload-my-analysis.ipynb

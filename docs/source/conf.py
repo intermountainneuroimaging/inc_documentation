@@ -19,6 +19,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'myst_parser',
     'sphinx.ext.autosectionlabel',
+    'nbsphinx',
 ]
 
 source_suffix = {
@@ -40,3 +41,6 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# npsphinx setting
+nbsphinx_allow_errors = True
