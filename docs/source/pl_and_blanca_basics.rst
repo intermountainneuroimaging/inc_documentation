@@ -49,6 +49,7 @@ To get started, go to `open ondemand <https://ondemand.rc.colorado.edu>`_.
    :width: 600pt
 
 3. Launch the new Desktop. Here you can start a terminal, or another application.
+
 .. image:: imgs/pl_and_blanca_basics/open-ondenmand-coredesktop-terminal.png
    :alt: Selecting Core Desktop from Interactive Sessions on Open OnDemand
    :width: 600pt
