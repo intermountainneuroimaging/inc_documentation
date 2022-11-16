@@ -5,14 +5,14 @@ Deidentification
 
 Deidentification Overview
 *************************
-There are many instances in which you would want to de-identify your data before ingesting it into Flywheel. The main reason is if your acquired data from the scanner is not already de-identified (ie, if you don't scan at INC). Below is a brief summary of several ways to de-identify your data before it hits Flywheel, or once it's already in Flywheel.
+There are many instances in which you would want to de-identify your data before ingesting it into Flywheel. The main reason is if your acquired data from the scanner is not already de-identified (ie, if you don't scan at INC). Below is a brief summary of several ways to de-identify your data before it enters Flywheel, or once it's already in Flywheel.
 
 .. warning::
     The UCB instance of Flywheel relies on storage (PetaLibrary) that can have **no personal identifying information** on it. Therefore, it is crucial to de-identify your data if it was collected somewhere outside of INC.
 
 Deidentification on Edge
 ************************
-De-identification on edge refers to wiping out any identifying information in dicom headers at the source (before those dicoms are ever uploaded to Flywheel). That source can be your institution's data storage cluster, or your institution's scanner. In either case, Flywheel will have no record of any PII in your dicom headers if de-identification happens on edge.
+De-identification on edge refers to wiping out any identifying information in dicom headers at the source (before those dicoms are ever uploaded to Flywheel). That source can be your institution's data storage cluster, or your institution's scanner. In either case, Flywheel will have no record of any personal identifying information (PII) in your dicom headers if de-identification happens on edge.
 
 Fortunately, through the Flywheel command line interface tool (CLI), Flywheel can assist in the de-identification process without "knowing" about your data or registering it in the Flywheel database.
 
@@ -20,7 +20,7 @@ Pre-requisites
 ++++++++++++++
 To get started, you'll need to download the Flywheel CLI on the machine where your data resides, or on a machine that has mounted access to where your data resides: visit the :ref:`cli_basics` page.
 
-Before getting started, you'll also need some way to read the existing header information in your dicom files (for example, DCMTK's dcmdump tool). Alternatively, if you already know the header codes and header information, you can forgo looking it up with the dicom header reader.
+Before getting started, you'll also need some way to read the existing header information in your dicom files (for example, `DCMTK's dcmdump tool <https://dicom.offis.de/dcmtk.php.en>`_). Alternatively, if you already know the header codes and header information, you can forgo looking it up with the dicom header reader.
 
 Once the Flywheel CLI is downloaded (and your personal API key generated), you are ready to start ingesting de-identified data into Flywheel.
 
@@ -195,9 +195,9 @@ Alternatively, if you'd rather keep your de-id profile secret, want to apply dif
 The Ingest Config Template
 ++++++++++++++++++++++++++
 
-Now that you've put in the hard work into making the perfect de-id profile, you'd lke to use it for an actual data upload. However, if you opted not to upload the de-id profile to Flywheel, there's one more step: the Ingest Config Template.
+Now that you've put in the hard work into making the perfect de-id profile, you'd like to use it for an actual data upload. However, if you opted not to upload the de-id profile to Flywheel, there's one more step: the Ingest Config Template.
 
-The ingest config template is a broad topic in and of itself (best described in the `Flywheel template documentation. <https://docs.flywheel.io/hc/en-us/articles/4413200627987>`_
+The ingest config template is a broad topic in and of itself (best described in the `Flywheel template documentation <https://docs.flywheel.io/hc/en-us/articles/4413200627987>`_).
 
 Briefly, the ingest template is a configuration YAML file that allows you to control every part of the Flywheel upload process. For example, the ingest template defines the relationship between your local folder structure (where the data exists) and how you want that data to be labelled and mapped onto the Flywheel data hierarchy. Critically, the ingest config template also defines the de-identification profile(s) for the given Project.
 
@@ -325,5 +325,5 @@ It is also possible to create a profile that applies to data coming directly fro
 
 Deidentification Gear in Flywheel
 *********************************
-Lastly, there's an additional option to de-identify the data once it's already in Flywheel by running the de-id gear. However, Flywheel has version control on files (including DICOM files), so a copy of your "identifiable" data before the de-id gear was run will exist somewhere in Flywheel (even if it is not accessible to all users). Since the CUB instance of Flywheel can't have any identifiable information at any time, running the de-id gear is not an option we advertise on our cite.
+Lastly, there's an additional option to de-identify the data once it's already in Flywheel by running the de-id gear. However, Flywheel has version control on files (including DICOM files), so a copy of your "identifiable" data before the de-id gear was run will exist somewhere in Flywheel (even if it is not accessible to all users). Since the CUB instance of Flywheel can't have any identifiable information at any time, running the de-id gear is not an option we advertise on our site.
 
