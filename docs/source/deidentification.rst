@@ -8,7 +8,7 @@ Deidentification Overview
 There are many instances in which you would want to de-identify your data before ingesting it into Flywheel. The main reason is if your acquired data from the scanner is not already de-identified (ie, if you don't scan at INC). Below is a brief summary of several ways to de-identify your data before it hits Flywheel, or once it's already in Flywheel.
 
 .. warning::
-    The UCB instance of Flywheel relies on storage (PetaLibrary) that can have NO PERSONAL IDENTIFYING INFORMATION on it. Therefore, it is crucial to de-identify your data if it was collected somewhere outside of INC.
+    The UCB instance of Flywheel relies on storage (PetaLibrary) that can have **no personal identifying information** on it. Therefore, it is crucial to de-identify your data if it was collected somewhere outside of INC.
 
 Deidentification on Edge
 ************************
@@ -28,13 +28,19 @@ Simple De-identification
 ++++++++++++++++++++++++
 If the only identifiable information in your dicoms exists in the Patient ID, Patient Name, and Patient Birthdate, Flywheel has a pre-built flag that simply removes those dicom header fields from every dicom file that is uploaded.
 
-For example, suppose we want to upload a dicom acquisition from our local computer onto Flywheel. We first inspect the header information in that acquisition (just checking one dicom in the acquisition is enough, i.e.). All of the following commands are run in a Terminal or DOS prompt (aka command line interface):
+Suppose we want to upload a dicom acquisition from our local computer onto Flywheel. We first inspect the header information in that acquisition (just checking one dicom in the acquisition is enough). All of the following commands are run in a Terminal or DOS prompt (aka command line interface):
+
+.. code-block:: bash
+
+    dcmdump <path_to_single_dicom>
+
+For example:
 
 .. code-block:: bash
 
     dcmdump just_t1_dummy_ids/ics/deid/deid02/inc01/anat-T1w_acq-mpr08_run-01/1.3.12.2.1107.5.2.43.67087.2022101911212761306002309.0.0.0.dicom/1.3.12.2.1107.5.2.43.67087.2022101911284077703103114.MR.dcm
 
-The returned results indicate that there is indeed identifying information:
+The returned output below (a partial dump of the dicom header) makes it clear that there is indeed identifying information:
 
 +---------------------+-----------------------------+--------------------------------+
 | Dicom Code          | Field Name                  | Value                          |
@@ -50,22 +56,28 @@ The returned results indicate that there is indeed identifying information:
 | (0010,1010)         | Patient's Age               | 121Y                           |
 +---------------------+-----------------------------+--------------------------------+
 
-To upload this acquisition but *without* the Patient's Name, Patient ID, or Patient's Birth Date, the Flywheel command is simply to add the :code:`--de-identify` flag onto the :code:`fw ingest dicom` command. For example:
+To upload this acquisition but *without* the Patient's Name, Patient ID, or Patient's Birth Date, the Flywheel command is simply to add the :code:`--de-identify` flag onto the :code:`fw ingest dicom` command.
 
 .. code-block:: bash
 
-    fw ingest dicom --de-identify --subject deid01 --session inc01 just_t1_dummy_ids/ics/deid/deid02/inc01/anat-T1w_acq-mpr08_run-01/1.3.12.2.1107.5.2.43.67087.2022101911212761306002309.0.0.0.dicom ics internal_testing
+    fw ingest dicom --de-identify --subject <subject_ID> --session <session_ID> <path_to_dicom_directory> <Flywheel Group> <Flywheel Project>
+
+For example:
+
+.. code-block:: bash
+
+    fw ingest dicom --de-identify --subject deid01 --session inc01 just_t1_dummy_ids/ics/deid/deid02/inc01/anat-T1w_acq-mpr08_run-01/1.3.12.2.1107.5.2.43.67087.2022101911212761306002309.0.0.0.dicom ics deid
 
 More details about the :code:`fw ingest dicom` command are given on our :ref:`cli_basics` page.
 
-If you now check your upload in Flywheel and click on the information button next to the dicom, you'll see that the Patient's Name, Patient ID, and Patient Birth Date simply don't exist as metadata.
+If you now check your upload in Flywheel by clicking on the information button next to the dicom, you'll see that the Patient's Name, Patient ID, and Patient Birth Date simply don't exist as metadata.
 
 .. note::
     While the Patient's Name, Patient ID, and Patient's Birthdate have been de-identified, if you had any other identifying information in your dicom header, it is now in Flywheel. Not good. For scrubbing other identifying metadata from the dicom header, read on.
 
 De-identification Profile
 +++++++++++++++++++++++++
-Creating a de-identification profile allows you to have maximum control over how *each and every* piece of metadata in your dicom header is handled. Creating a de-identification profile can be a daunting task at first, not because it's difficult, but because of how many different options you have at every decision. Some of the basic options include: do nothing, increment all age-related numbers by some given amount, delete the data entirely, replace the data with something different, jitter the data if it's a number, and hash the data.
+Creating a de-identification profile allows you to have maximum control over how *each and every* piece of metadata in your dicom header is handled. Creating a de-identification profile can be a daunting task at first - not because it's difficult - but because of how many different options you have at every decision. Some of the basic options include: do nothing, increment all age-related numbers by some given amount, delete the data entirely, replace the data with something different, jitter the data if it's a number, and hash the data.
 
 Flywheel has extensive information about how to create a de-identification profile on their `de-id documentation website. <https://docs.flywheel.io/hc/en-us/articles/1500003050521>`_
 
@@ -159,13 +171,19 @@ Once you've created your de-identification profile, Flywheel also has a command 
 
 Extensive documentation on testing your de-id profile exists on the `Flywheel site <https://docs.flywheel.io/hc/en-us/articles/1500010369681#UUID-474d115b-d8d5-11e4-ff51-f9e22b5359bd>`_ as well as a brief summary below.
 
-In the previous section, we created a de-identification profile that we called :code:`deid_profile.yaml`. Now suppose we wanted to test how this profile would transform on one of our example dicom files, and store the results of this transformation in a directory we call *deid_test_dir*. Below is the Flywheel command line call that performs the aforementioned steps:
+In the previous section, we created a de-identification profile that we called :code:`deid_profile.yaml`. Suppose we now want to test how this profile transforms one of our example dicom directories, and store the results of this transformation in a directory we call *deid_test_dir*. Below is the Flywheel command line call that performs the aforementioned steps:
+
+.. code-block:: bash
+
+    fw deid test <path_to_dicom_directory_to_deid> <path_to_deid_yaml_profile> <path_to_directory_for_test_results> --session <session_ID> --subject <subject_ID>
+
+For example:
 
 .. code-block:: bash
 
     fw deid test just_t1_dummy_ids/1.3.12.2.1107.5.2.43.67087.2022101911212761306002309.0.0.0.dicom deid_profile.yaml deid_test_dir --session inc01 --subject deid02
 
-The result of this call from the terminal creates a csv file called :code:`deid_log.csv` in the directory *deid_test_dir*. The CSV file shows a before and after (what each dicom header field was before the transformation, and what it became after the transformation).  When you first build a de-id profile, it'll be an iterative process of testing the profile to make sure you haven't captured all the desired transformations and haven't left out any intended changes to the dicom header.
+The result of this call from the terminal creates a csv file called :code:`deid_log.csv` in the directory *deid_test_dir*. The CSV file shows a before and after (what each dicom header field was before the transformation, and what it became after the transformation).  When you first build a de-id profile, it'll be an iterative process of testing the profile to make sure you have captured all the desired transformations and haven't left any identifying information in the dicom header.
 
 Uploading the De-ID Profile To You Flywheel Project
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -179,7 +197,7 @@ The Ingest Config Template
 
 Now that you've put in the hard work into making the perfect de-id profile, you'd lke to use it for an actual data upload. However, if you opted not to upload the de-id profile to Flywheel, there's one more step: the Ingest Config Template.
 
-The ingest config template is a broad topic in and of itself (best described in the `Flywheel template documentation. <https://docs.flywheel.io/hc/en-us/articles/4413200627987>`_ ):
+The ingest config template is a broad topic in and of itself (best described in the `Flywheel template documentation. <https://docs.flywheel.io/hc/en-us/articles/4413200627987>`_
 
 Briefly, the ingest template is a configuration YAML file that allows you to control every part of the Flywheel upload process. For example, the ingest template defines the relationship between your local folder structure (where the data exists) and how you want that data to be labelled and mapped onto the Flywheel data hierarchy. Critically, the ingest config template also defines the de-identification profile(s) for the given Project.
 
@@ -287,6 +305,19 @@ The ingest template is its own topic and won't be covered in this section; howev
 
 Putting it All Together
 +++++++++++++++++++++++
+The last step once the de-id profile and the template config YAML are ready, is to make the actual call to Flywheel to upload your dicoms. This is done either with a call to :code:`fw ingest dicom` or with :code:`fw ingest template`.
+
+To use :code:`fw ingest dicom` to upload the example data to Flywheel Group ics, Flywheel Project deid, Flywheel Subject deid03, and Flywheel Session inc01, using our created config file :code:`config.yaml` which includes the de-ide profile named :code:`Anschutz`, we use the following command line call:
+
+.. code-block:: bash
+
+    fw ingest dicom --config-file config.yaml --de-identify --deid-profile Anschutz --subject deid03 --session inc01 ./just_t1_dummy_ids/ics/deid/deid02/inc01/anat-T1w_acq-mpr08_run-01/1.3.12.2.1107.5.2.43.67087.2022101911212761306002309.0.0.0.dicom ics deid
+
+More options are available with :code:`fw ingest template`, but to accomplish the same upload as above, the command line argument is:
+
+.. code-block:: bash
+
+    fw ingest template -C config.yaml ./just_t1_dummy_ids --group ics --project deid --de-identify --deid-profile Anschutz
 
 Deidentification From the Scanner
 *********************************
