@@ -29,10 +29,11 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Analysis
+   :caption: Beyond the Basics
 
    cli_basics.rst
    sdk_basics.rst
+   deidentification.rst
 
 .. toctree::
    :maxdepth: 1
@@ -55,7 +56,7 @@ Contents
    FAQs.rst
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 0
    :caption: Tutorials
 
    notebooks/sdk-basics.ipynb
