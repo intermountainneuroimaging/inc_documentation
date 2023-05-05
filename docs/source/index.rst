@@ -34,6 +34,7 @@ Contents
    cli_basics.rst
    sdk_basics.rst
    deidentification.rst
+   common_gears.rst
 
 .. toctree::
    :maxdepth: 1
