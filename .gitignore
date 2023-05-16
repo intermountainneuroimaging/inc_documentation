@@ -160,3 +160,6 @@ cython_debug/
 
 #mac specific
 .DS_Store
+
+#jupyterhub files
+jupyterhub*

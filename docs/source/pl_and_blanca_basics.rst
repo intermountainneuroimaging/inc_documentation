@@ -73,42 +73,53 @@ To get started, go to `open ondemand <https://ondemand.rc.colorado.edu>`_.
    :width: 600pt
 
 .. note::
-    the Desktop is running on a **viz node**. To access filesystems and compute nodes exclusive to Blanca, you must first start a secure shell (SSH) to blanca login nodes.
+    the Desktop is running on a **viz node**. To access filesystems and compute nodes exclusive to Blanca or alpine, will need to load the slurm module.
 
-Scratch and Blanca Compute From Desktop
+Alpine (and Blanca) Scratch Filesystem
 ********************************************
-At present, some CURC resources are not accessible directly from the viz nodes used to house Core Desktop sessions. Therefore, we must first move to either a :code:`Blanca head node` or :code:`Alpine compile node` to access scratch filesystem and run compute jobs.
+Research computing supports a large gpfs `scratch filesystem. <https://curc.readthedocs.io/en/latest/compute/filesystems.html>`_ Scratch space should be used for all compute jobs run on Alpine or Blanca. These high-performance scratch directories are not backed up, and are not appropriate for long-term storage. Data may be purged at any time subject to overall system needs. Files are automatically removed 90 days after their initial creation. Once an analysis is complete, please move all data files to Flywheel or a Petalibrary Allocation for permanent storage.
 
-The easiest way to do this is using secure shell (SSH)
+    :Apline Scratch: :code:`/scratch/alpine/<identikey>/`
+
+    :Blanca Scratch: :code:`/scratch/blanca/<identikey>/`
+
+:Important: Alpine Scratch is mounted to all Blanca compute nodes using a sshfs mount at the file path `/scratch/blanca/`. This means you can access the same scratch files from both alpine and blanca computing using these two filepaths.
+
+Alpine scratch may also be viewed from the **vis nodes** on open ondemand.
+
+Alpine (and Blanca) Compute
+********************************************
+To run compute jobs on Alpine and Blanca compute nodes, we use a SLURM job scheduler. From **vis nodes**, simply load the correct slurm module to get started.
 
 .. code-block::
 
-    # to log into Blanca head nodes
-    ssh -X blogin01
-
-    # to log into Alpine compile nodes
+    # to launch alpine compute jobs
+    module use /curc/sw/modules/slurm
     module load slurm/alpine
-    acompile
 
-Finally, some filesystems and software should only be used on compute nodes (the "workhorses" of HCP). You may start an interactive session in order to access these resources using Slurm's interactive session.
+    # to launch blanca compute jobs
+    module use /curc/sw/modules/slurm
+    module load slurm/blanca
+
+Some filesystems and software should only be used on compute nodes (the "workhorses" of HCP). You may start an interactive session in order to access these resources using Slurm's interactive session.
 
 .. code-block::
 
-    # to start a blanca interactive session (from blogin01 or blogin-ics2)
+    # to start an interactive session (blanca)
     sinteractive --partition=blanca-ics --qos=blanca-ics -c <number of cores> --mem <memory 1K/1M/1G> -t <time> --export=NONE
 
-    # to start a alpine interactive session (from an alpine compile node)
+    # to start an interactive session (alpine)
     sinteractive --partition=amilan -c <number of cores> --mem <memory 1K/1M/1G> -t <time> --export=NONE
 
 Looking for more information on using Slurm scheduler, blanca priority accounts, and more check out <placeholder>
 
-Using Jupyter Notebook (New)
+Using Jupyter Notebook (New!)
 ++++++++++++++++++++++++++++++
-In most cases, actions you need to take on the HPC can be done using a terminal or within python using a Jupyter Notebook or Console. Want to learn more about Jupyter Notebooks? read up `here <https://curc.readthedocs.io/en/latest/gateways/jupyterhub.html>`_.
+In most cases, actions you need to take on the HPC can be done using a terminal or within python using a Jupyter Notebook or Console. Want to learn more about Jupyter Notebooks? read up `here <https://curc.readthedocs.io/en/latest/gateways/OnDemand.html#jupyterhub>`_.
 
 To get started, go to `open ondemand <https://ondemand.rc.colorado.edu>`_.
 
-1. From the dropdown list of "Interactive Sessions", Select **Jupyter Notebook (New)**
+1. From the dropdown list of "Interactive Sessions", Select **JupyterHub 2 (Custom)**
 
 .. image:: imgs/pl_and_blanca_basics/open-ondemand-interactivesessions.png
    :alt: Selecting Jupyter Notebook from Interactive Sessions on Open OnDemand

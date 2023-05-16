@@ -160,7 +160,7 @@ What are Containers in Flywheel?
 ********************************
 Containers are the data storage building blocks within Flywheel. Why does this matter? If you are thinking about retrieving data, running analyses, or even reviewing data already stored, you need to think about how to retrieve this data from a container. In layman's terms, a container could be thought of as a “folder” on your computer which can contain other “folders” or containers, as well as files or metadata. If you are unfamiliar with the concept of metadata, think of it as information about that folder, such as when it was created or modified, its name, etc.
 
-In Flywheel containers are used to store “groups”, “projects”, “subjects”, “sessions”, “acquisitions”, and “analyses”. We get into the meaning of each of these containers below, but you can think of these containers as folders of Flywheel that bundle metadata and data together.
+In Flywheel containers are used to store “groups”, “projects”, “subjects”, “sessions”, “acquisitions”, and “analyses”. We get into the meaning of each of these containers below, but you can think of these containers as folders in Flywheel that bundle metadata and data together.
 
 .. image:: imgs/getting_started/flywheel_architecture.png
    :alt: Basic Schematic describing flywheel architecture
@@ -212,6 +212,24 @@ Finally, acquisitions are Flywheel containers within a session, and hold any fil
 
 .. note::
     It's easy to confuse Acquisitions for Files because of how we use the term colloquially at the scanner. But don't be fooled, Acquisitions are not Files in Flywheel, they're still containers. In other words, an Acquisition's metadata (the information tab) will be different than the File's metadata.
+
+
+Accessing My Analyses and Provenance
+*************************************
+
+Analyses are Flywheel containers that can be attached to a :code:`project`, :code:`subject`, :code:`session`, or :code:`acqusition`. For the purpose of exploring the user interface, we will focus on :code:`Session` level analyses. In the session view within Flywheel, all analyses are visible from the "Analysis" tab as shown below.
+
+.. image:: imgs/getting_started/session_view_analysis_panel.png
+   :alt: Flywheel session view highlighting session's analyses.
+
+Analyses are stored in order from most recent to oldest. Analysis labels may be changed, and analyses may be deleted using the options menu at the right hand side of each analysis object.
+
+Provenance is discussed more in the :ref:`Provenance` section. As an introduction, its good to be familiar with the provenance tab. You can review a history of all analyses run on your data in this tab, as well as view analysis logs and cancel or re-run analysis gears.
+
+.. image:: imgs/getting_started/session_view_provenance_panel.png
+   :alt: Flywheel session view highlighting session's provenance.
+
+What to learn more about how to run gears in flywheel? visit ":ref:`Gears`" Basics. Also check out our documentation on running commonly used gears at INC in ":ref:`Running Commonly Used Gears`"
 
 Collections
 ***********
