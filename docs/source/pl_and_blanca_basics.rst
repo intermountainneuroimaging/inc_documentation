@@ -155,10 +155,11 @@ To get started using the INC anaconda environments, please do the following:
 .. code-block::
 
     pkgs_dirs:
+      - /projects/ics/.conda_pkgs_writeable
       - /projects/$USER/.conda_pkgs
     envs_dirs:
-      - /projects/$USER/software/anaconda/envs
       - /projects/ics/software/anaconda/envs
+      - /projects/$USER/software/anaconda/envs
 
 2. Next, load the ancaconda software using :code:`module` then confirm you  "see" all the shared conda environments:
 
@@ -173,13 +174,9 @@ To get started using the INC anaconda environments, please do the following:
     globus                   /curc/sw/anaconda3/2020.11/envs/globus
     synoptic_f22             /curc/sw/anaconda3/2020.11/envs/synoptic_f22
     datalad                  /projects/ics/software/anaconda/envs/datalad
-    dcm2BIDS                 /projects/ics/software/anaconda/envs/dcm2BIDS
     flywheel                 /projects/ics/software/anaconda/envs/flywheel
     incenv                   /projects/ics/software/anaconda/envs/incenv
-    jupyter                  /projects/ics/software/anaconda/envs/jupyter
-    nda-tools                /projects/ics/software/anaconda/envs/nda-tools
-    pysurfer                 /projects/ics/software/anaconda/envs/pysurfer
-    sahahn_neurotools        /projects/ics/software/anaconda/envs/sahahn_neurotools
+
 
 .. note::
     The output of `conda env list` may look slightly different from what is shown above, but you should see paths that point to :code:`/projects/ics/software/anaconda/envs/`
