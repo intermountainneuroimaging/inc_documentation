@@ -3,7 +3,7 @@
 Working With Your Data Outside Flywheel
 ==========================================
 
-Some workflows are not currently supported in Flywheel, and need to be implemented on a local compute environment. Please check out out python SDK tutorials `here <notebooks/download-and-run-locally.ipynb>` to learn more.
+Some workflows are not currently supported in Flywheel, and need to be implemented on a local compute environment. We have developed example scripts for commonly requested actions (analysis tracking and download). Check out these example scripts on github `here <https://github.com/intermountainneuroimaging/flywheel_sdk>`_.
 
 
 CONN Functional Connectivity Toolbox

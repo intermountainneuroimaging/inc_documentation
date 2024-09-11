@@ -28,7 +28,7 @@ For your convenience, the Flywheel CLI is already installed in a Conda environme
 
     2. Load the latest Anaconda3 module:
 
-         :code:`source /curc/sw/anaconda3/latest`
+         :code:`module load anaconda`
 
     3. Activate the *flywheel* conda environment:
 
