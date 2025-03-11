@@ -5,7 +5,7 @@ Starting A New Study?
 
 Starting a new study in Flywheel is quick and easy! The infrastructure in place streamlines study concept to final analysis results faster than ever!
 
-INC staff will set up your project in Flywheel. Be sure to contact INC staff to setup time to Pilot your study protocol on the MRI scanner. Pilotting data can be found in the newly created Flywheel project. Here are the steps to take once your project is created:
+INC staff will set up your project in Flywheel. Be sure to contact INC staff to setup time to Pilot your study protocol on the MRI scanner. Piloting data can be found in the newly created Flywheel project. Here are the steps to take once your project is created:
 
 **Step 1:** Permissions: Add all study personnel who needs access to study data within Flywheel. Check out `User Permissions` for more information.
 
@@ -14,9 +14,22 @@ INC staff will set up your project in Flywheel. Be sure to contact INC staff to 
 **Step 3:** Add or enable gear rules for basic data processing (classifier, dcm2niix, brain souvenirs)
 
 **Step 4:** Upload generic and commonly used files to the project:
-  - .bidsignore
-  - license.txt (freesurfer license file) `generate here <https://surfer.nmr.mgh.harvard.edu/fswiki/License>`_
-  - scanner protocol pdf (INC staff will provide)
+
+    (1) .bidsignore
+
+    .. code-block::
+
+        *.txt
+        gear*.json
+        *.pdf
+        *.fsf
+        *.zip
+        *ignore-BIDS.json
+
+
+    (2) license.txt (freesurfer license file) `generate here <https://surfer.nmr.mgh.harvard.edu/fswiki/License>`_
+
+    (3) scanner protocol (INC staff will provide)
 
 **Step 5:** Setup completeness worksheet.
 
