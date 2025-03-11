@@ -31,6 +31,7 @@ Contents
    :maxdepth: 1
    :caption: Beyond the Basics
 
+   new_study_launch.rst
    cli_basics.rst
    sdk_basics.rst
    deidentification.rst
@@ -47,6 +48,7 @@ Contents
    :maxdepth: 1
    :caption: Developer's Guide
 
+   nda_uploads.rst
    data_ingestion.rst
 
 .. toctree::
@@ -61,5 +63,3 @@ Contents
    :caption: Tutorials
 
    notebooks/sdk-basics.ipynb
-   notebooks/download-and-run-locally.ipynb
-   notebooks/upload-my-analysis.ipynb

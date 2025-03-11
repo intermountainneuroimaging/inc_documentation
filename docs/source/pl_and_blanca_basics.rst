@@ -45,7 +45,7 @@ In your *use case* will you need to interact with a graphical user interface (GU
 
 
   :If you answer "No":
-    Without a desktop, we recommend you use an interactive "Jupyter Notebook" session. Follow the instructions in :ref:`Using Jupyter Notebook (New)` to get started.
+    Without a desktop, we recommend you use an interactive "Jupyter Notebook" session. Follow the instructions in :ref:`Jupyter Notebook` to get started.
 
 
 Using Core Desktop
@@ -79,13 +79,9 @@ Alpine (and Blanca) Scratch Filesystem
 ********************************************
 Research computing supports a large gpfs `scratch filesystem. <https://curc.readthedocs.io/en/latest/compute/filesystems.html>`_ Scratch space should be used for all compute jobs run on Alpine or Blanca. These high-performance scratch directories are not backed up, and are not appropriate for long-term storage. Data may be purged at any time subject to overall system needs. Files are automatically removed 90 days after their initial creation. Once an analysis is complete, please move all data files to Flywheel or a Petalibrary Allocation for permanent storage.
 
-    :Apline Scratch: :code:`/scratch/alpine/<identikey>/`
+    :Scratch: :code:`/scratch/alpine/<identikey>/`
 
-    :Blanca Scratch: :code:`/scratch/blanca/<identikey>/`
-
-:Important: Alpine Scratch is mounted to all Blanca compute nodes using a sshfs mount at the file path `/scratch/blanca/`. This means you can access the same scratch files from both alpine and blanca computing using these two filepaths.
-
-Alpine scratch may also be viewed from the **vis nodes** on open ondemand.
+Alpine scratch may also be viewed from the **viz nodes** on open ondemand.
 
 Alpine (and Blanca) Compute
 ********************************************
@@ -113,7 +109,7 @@ Some filesystems and software should only be used on compute nodes (the "workhor
 
 Looking for more information on using Slurm scheduler, blanca priority accounts, and more check out <placeholder>
 
-Using Jupyter Notebook (New!)
+Using Jupyter Notebook
 ++++++++++++++++++++++++++++++
 In most cases, actions you need to take on the HPC can be done using a terminal or within python using a Jupyter Notebook or Console. Want to learn more about Jupyter Notebooks? read up `here <https://curc.readthedocs.io/en/latest/gateways/OnDemand.html#jupyterhub>`_.
 
