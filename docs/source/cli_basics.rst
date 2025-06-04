@@ -28,6 +28,15 @@ Common Use Cases
 
     :code:`fw export bids <path_to_your_dicom_folder> sample TEST --subject 101 --session S1`
 
+
+4. **Export Analysis Derivatives**. In many cases, users may elect to export analysis output files to a local server.
+
+    :code:`fw download <flywheel_lookup_path_to_file>`
+  Example...
+    :code:`fw download "ics/flanker/01/S1/analyses/(lower run-01) bids-feat 11/13/24 13:56:15/files/feat_6735126f5911e143e4ce26d6.zip"`
+
+  Most *.zip analysis outputs are stored in the format <analysis-id>/<gear-name>/...contents... Users who wish to learn more about handling this directory convention should visit our Flywheel SDK Examples repository `here <https://github.com/intermountainneuroimaging/flywheel_sdk_examples/tree/main/3_tables_and_downloads>`_
+
 :IMPORTANT: Notice that the example commands above use the flywheel client "fw", the "fw-beta" command does not have the same functionality.
 
 For a full list of other Flywheel command line features (including checking login status, managing server jobs, exporting and downloading data, and much more), review the `Flywheel CLI Overview <https://docs.flywheel.io/hc/en-us/articles/4536067900435-Command-Line-Interface-Overview>`_
