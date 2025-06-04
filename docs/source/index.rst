@@ -37,6 +37,7 @@ Contents
    sdk_basics.rst
    deidentification.rst
    common_gears.rst
+   upload_event_files.rst
 
 .. toctree::
    :maxdepth: 1
