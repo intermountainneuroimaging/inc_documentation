@@ -24,6 +24,7 @@ Contents
    user_permissions.rst
    hierarchy.rst
    viewing_data.rst
+   data_and_metadata.rst
    version_control.rst
    gears_in_UI.rst
 
