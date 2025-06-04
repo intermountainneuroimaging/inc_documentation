@@ -2,7 +2,7 @@
 
 Overview
 ========
-Flywheel.io is an imaging platform used to receive, curate, manage, and analyze data from scientific facilities. Intermountain Neuroimaging Consortium (INC) is excited to host an “on premise” deployment of Flywheel.io for clinical, industry, and academic researchers within the region. The “on premise” instance means all data storage as well as computation is completed using University of Colorado services. INC at CU Boulder has leveraged the power of Flywheel.io and the considerable resources available through University of Colorado Research Computing to provide a seamless experience for all researchers from data collection at our MRI facilities to data analysis, visualization, and publication.
+Flywheel.io is an imaging platform used to receive, curate, manage, and analyze data from scientific facilities. Intermountain Neuroimaging Consortium (INC) is excited to host a “cloud” deployment of Flywheel.io for clinical, industry, and academic researchers within the region. Deidentified research imaging data may be stored in the Flywheel.io data management system which is deployed on AWS cloud services and AWS's S3 data storage. INC at CU Boulder has leveraged the power of Flywheel.io and the considerable resources available through University of Colorado Research Computing to provide a seamless experience for all researchers from data collection at our MRI facilities to data visualization, data analysis on CURC's high performance compute clusters, and data publication.
 
 For those familiar with other “PACS” systems, Flywheel also provides a service to receive and view data directly from the Intermountain Neuroimaging Consortium's 3T Prisma Fit MR scanner.
 
@@ -57,8 +57,6 @@ Study A has enrolled John Snow into their study, this is a longitudinal study, w
 
     :StudyA/101/S01:  The participant is assigned a subject-id of 101 and session-id of S01.
 
-Importantly, Flywheel is different from COINS in that you do not need to pre-register your participants with his/her ID apriori (before the scan). In fact, INC recommends that the participants are not pre-registered in Flywheel, but rather that the studies check Flywheel after the scan completes to make sure there was no typo at the scanner. **No personally identifiable information can exist on the Flywheel platform (see MOU)**. In short, this means study teams must retain the key to their *Coded* data in a secure location outside Flywheel such as REDCap or on paper. Please consult the University of Colorado Institutional Review Board (IRB) regarding appropriate steps that must be taken to secure *Coded* and Personally Identifiable Information for human subject research.
-
 Study B has enrolled Snow White into their study. This participant has already participated in another study conducted in the same laboratory. This study is cross-sectional with a single cohort, and therefore the study does not want to include a session flag.
 
     :Incorrect: StudyB/102/ or StudyB/102
@@ -74,9 +72,9 @@ Flywheel naming convention is rigid and requires Project, Subject, **and** Sessi
 .. note::
     *What happens if this naming goes wrong?* If a flywheel session was incorrectly named, all acquisitions associated with that session will be stored in an "Unsorted" project. This project is unique to each Principal Investigator (Flywheel "Group"). Study teams should take great care to ensure any missing or incorrectly named scans are caught quickly! Once a study has identified an incorrectly labelled scan, they should contact INC personnel immediately who will correct the error.
 
-What is Pre-Registration? and Why it Matters?
-**********************************************
-For current INC users, you are likely accustom to storing participant information and subject-ids in COINS. COINS uses pre-registration to check that images generated on the scanner "match" coded information already entered into the COINS database. With this protocol, INC staff could immediately identify and flag scanning sessions with incorrectly entered participant codes. Flywheel provides a more streamlined approach that does not necessitate pre-registration. The bottom line here: in Flywheel, INC staff can no longer play any role in the confirmation that participant information was entered correctly at the scanner.
+We highly recommend that lab staff checks the Flywheel data repository after every scan session to make sure there was no typo at the scanner.
+
+**No personally identifiable information can exist on the Flywheel platform (see MOU)**. Study teams must retain the key to their *Coded* data in a secure location outside Flywheel such as REDCap or on paper. Please consult the University of Colorado Institutional Review Board (IRB) regarding appropriate steps that must be taken to secure *Coded* and Personally Identifiable Information for human subject research.
 
 .. warning::
     Users should check all scans entering Flywheel **immediately** after the scan session is complete. Closely inspect that all participant information is correct and matches the information stored in your participant key outside Flywheel!
@@ -87,13 +85,13 @@ All studies who wish to continue pre-registering and importing your data into CO
 
 What Information Can I Include in Flywheel?
 *******************************************
-INC at University of Colorado supports an "on premise" deployment of Flywheel.io. As all data and compute is conducted within UCB systems, we must conform to all data and privacy polices set forth by University of Colorado Research Computing (CURC) and Flywheel.io. As such, data must be de-identified before entering Flywheel. **NO** protected health information (PHI) and **NO** personally identifiable information (PII) may be stored in Flywheel. Examples of protected information includes:
+INC at University of Colorado supports a "cloud" deployment of Flywheel.io. All data are stored in AWS S3 data storage and subject to the data security agreements in place by University of Colorado and Flywheel.io (ref here). As such, data must be de-identified before entering Flywheel. **NO** protected health information (PHI) and **NO** personally identifiable information (PII) may be stored in Flywheel. Examples of protected information includes:
 
  - first or last name
  - email address
  - phone number
  - mailing address
- - study enrollment or collection date (when paired with other identifying information)
+ - study enrollment or collection date (when paired with other identifying information such as specific disease diagnoses)
  - detailed health history
 
 Not sure if your data is correctly de-identified?  Please contact your IRB representative before placing any data in Flywheel!

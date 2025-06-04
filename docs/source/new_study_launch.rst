@@ -43,4 +43,4 @@ Here is where you can define the full analysis pipeline to run for complete sess
 
 Feel free to contact INC staff for support to complete any of the steps above.
 
-<add video>
+<video link>

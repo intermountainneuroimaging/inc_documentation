@@ -45,8 +45,8 @@ Viewing spreadsheets
 -------------------------
 Spreadsheets may also be viewed within Flywheel. At this time, spreadsheets cannot be modified in the interface. Instead, if changes are needed, a new version of the spreadsheet must be uploaded to the Flywheel instance.
 
-Adding and Modifying Metadata
-*******************************
+Viewing Metadata
+===============================
 
 Metadata is simply information about your data or "data about data". Metadata does not include the contents of your data such as the image itself. Instead, metadata is generally descriptive information about the data such as when the file was created or modified, the file owner, etc. Flywheel metatdata is stored at each level of the Flywheel hierarchy, with descriptive information about the :code:`Project`, :code:`Subject`, :code:`Session`, :code:`Acquisition`, :code:`Analysis`, or :code:`File`.
 
