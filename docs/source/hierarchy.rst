@@ -15,7 +15,7 @@ Flywheel Connector
 ********************
 One important function of Flywheel is its role as a 'PACS' system. The :code:`Flywheel Core` houses the main flywheel database and software. This system *accepts* imaging data from the INC Prisma Fit Scanner via the :code:`Flywheel Connector`. Imaging data, primarily dicom images, are passed from the scanner to the :code:`Flywheel Core`. For investigators using our scanning facilities, all sessions will be automatically imported into Flywheel. A set of images collected on a single day for a single participant will be organized into a :code:`Session`. An :code:`Acquisition` generally contain a set of dicom images, and any other accompanying data sent directly from the scanner.
 
-.. image:: imgs/hierarchy/inc_workflow_diagram.png
+.. image:: imgs/hierarchy/aws_inc_workflow_diagram.png
    :alt: Basic Schematic for On-Premise INC Flywheel Implementation
 
 Basic schematic of INC's deployment of Flywheel.io infrastructure. Data is sent from the scanner at INC to the :code:`Flywheel Connector` (a virtual machine running on CU Boulder's computer science network). The :code:`Flywheel Connector` then sends data to the :code:`Flywheel Core` (where data are permanently stored and which runs the "user interface"). Different types of analysis requests can then trigger jobs to be run on either AWS virtual machines, or on our on-premise HPC clusters (Blanca, and Alpine). The :code:`Flywheel Core` database is stored on AWS S3 Cloud Object Storage, where intelligent tiering is used to automatically transition infrequently used files to cost effective archive storage.

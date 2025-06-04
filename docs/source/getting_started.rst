@@ -83,7 +83,7 @@ I Started my Study in COINS, What Happens Now?
 **********************************************
 All studies who wish to continue pre-registering and importing your data into COINS have the option to do so. All studies opting to continue using COINS will also have all new acquisitions stored in Flywheel. All scanner fields necessary for COINS convention are compatible with Flywheel convention. The one notable exception: while COINS has no restrictions on the value entered into "Accession Number", this field **MUST** conform to the Flywheel naming convention to comply with both COINS and Flywheel requirements.
 
-What Information Can I Include in Flywheel?
+Information Prohibited from Flywheel.io
 *******************************************
 INC at University of Colorado supports a "cloud" deployment of Flywheel.io. All data are stored in AWS S3 data storage and subject to the data security agreements in place by University of Colorado and Flywheel.io (ref here). As such, data must be de-identified before entering Flywheel. **NO** protected health information (PHI) and **NO** personally identifiable information (PII) may be stored in Flywheel. Examples of protected information includes:
 

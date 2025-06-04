@@ -12,11 +12,7 @@ Where to find :code:`Scratch` for each Cluster.
 +----------+------------------------------------+--------+---------------------------------------------------------------------------+
 | Cluster  | Scratch Filesystem                 | Size   | Mounted Locations                                                         |
 +==========+====================================+========+===========================================================================+
-| Summit   | :code:`/summit/scratch/<user>/`    | 10 TB  | Mounted read-write on all SUMMIT nodes (login, compute)                   |
-+----------+------------------------------------+--------+---------------------------------------------------------------------------+
-| Blanca   | :code:`/scratch/blanca/<user>/`    | 15 TB  | Mounted read-write on all BLANCA (compute only) nodes                     |
-+----------+------------------------------------+--------+---------------------------------------------------------------------------+
-| Alpine   | :code:`/scratch/alpine/<user>/`    | 15 TB  | Mounted read-write on all ALPINE nodes (compile, compute)                 |
+| Alpine   | :code:`/scratch/alpine/<user>/`    | 10 TB  | Mounted read-write on all nodes (blogin-ics2, compute nodes)                 |
 +----------+------------------------------------+--------+---------------------------------------------------------------------------+
 
 Using my Scratch Space
