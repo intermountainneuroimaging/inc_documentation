@@ -24,6 +24,7 @@ Contents
    user_permissions.rst
    hierarchy.rst
    viewing_data.rst
+   data_and_metadata.rst
    version_control.rst
    gears_in_UI.rst
 
@@ -36,6 +37,7 @@ Contents
    sdk_basics.rst
    deidentification.rst
    common_gears.rst
+   upload_event_files.rst
 
 .. toctree::
    :maxdepth: 1
@@ -49,7 +51,7 @@ Contents
    :caption: Developer's Guide
 
    nda_uploads.rst
-   data_ingestion.rst
+   auto_analysis.rst
 
 .. toctree::
    :maxdepth: 1

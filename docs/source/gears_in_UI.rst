@@ -135,7 +135,7 @@ To run an Analysis Gear, follow the steps below:
 
 Running High Performance Compute (HPC) Analysis Gears
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-In order to run Gears on the HPC environment (instead of the CUmulus virtual machines), add a job tag “hpc” when setting up the analysis. This job tag is case sensitive. Additional settings including SLURM resources configurations may be available in the gear's configuration settings.
+In order to run Gears on the HPC environment (instead of the AWS virtual machines), add a job tag “hpc” when setting up the analysis. This job tag is case sensitive. Additional settings including SLURM resources configurations may be available in the gear's configuration settings.
 
 .. image:: imgs/gears_in_UI/gear_methods_hpc_1.png
    :alt: Running gears on hpc.

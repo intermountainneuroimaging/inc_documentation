@@ -44,25 +44,3 @@ In the viewer you can make changes to the text and save, or simply view the cont
 Viewing spreadsheets
 -------------------------
 Spreadsheets may also be viewed within Flywheel. At this time, spreadsheets cannot be modified in the interface. Instead, if changes are needed, a new version of the spreadsheet must be uploaded to the Flywheel instance.
-
-Adding and Modifying Metadata
-*******************************
-
-Metadata is simply information about your data or "data about data". Metadata does not include the contents of your data such as the image itself. Instead, metadata is generally descriptive information about the data such as when the file was created or modified, the file owner, etc. Flywheel metatdata is stored at each level of the Flywheel hierarchy, with descriptive information about the :code:`Project`, :code:`Subject`, :code:`Session`, :code:`Acquisition`, :code:`Analysis`, or :code:`File`.
-
-For example, each subject has rich metadata associated with that "container".
-
-.. image:: imgs/viewing_data/subject_metadata_1.png
-   :alt: subject metadata
-
-Acquisition and file metadata can be viewed in Flywheel by first expanding the menu options, and selecting Information.
-
-.. image:: imgs/viewing_data/acquisition_metadata_1.png
-   :alt: acquisition metadata
-
-Adding Custom Metadata
------------------------
-It is also possible to add your own metadata within the “Custom Information” section. Users may add different “types” of metadata such as strings, lists, boolean values, numbers, and complex objects containing additional metadata. For more information about adding your own metadata visit the flywheel documentation (`here <https://docs.flywheel.io/hc/en-us/articles/360015412973-Add-and-edit-custom-metadata#:~:text=Subject%20and%20session%20custom%20metadata,click%20%2B%20next%20to%20Custom%20Information.>`_).
-
-.. image:: imgs/viewing_data/custom_metadata_1.png
-   :alt: custom metadata

@@ -9,15 +9,14 @@ We encourage all users to utilize the large scratch filesystem mounted on :code:
 
 Where to find :code:`Scratch` for each Cluster.
 
-+----------+------------------------------------+--------+---------------------------------------------------------------------------+
-| Cluster  | Scratch Filesystem                 | Size   | Mounted Locations                                                         |
-+==========+====================================+========+===========================================================================+
-| Summit   | :code:`/summit/scratch/<user>/`    | 10 TB  | Mounted read-write on all SUMMIT nodes (login, compute)                   |
-+----------+------------------------------------+--------+---------------------------------------------------------------------------+
-| Blanca   | :code:`/scratch/blanca/<user>/`    | 15 TB  | Mounted read-write on all BLANCA (compute only) nodes                     |
-+----------+------------------------------------+--------+---------------------------------------------------------------------------+
-| Alpine   | :code:`/scratch/alpine/<user>/`    | 15 TB  | Mounted read-write on all ALPINE nodes (compile, compute)                 |
-+----------+------------------------------------+--------+---------------------------------------------------------------------------+
++----------+------------------------------------+-------+---------------------------------------------------------------------------+
+| Cluster  | Scratch Filesystem                 | Size  | Mounted Locations                                                         |
++==========+====================================+=======+===========================================================================+
+| Blanca   | :code:`/scratch/alpine/<user>/`    | 10 TB | Mounted read-write on all BLANCA (login and compute) nodes                |
++----------+------------------------------------+-------+---------------------------------------------------------------------------+
+| Alpine   | :code:`/scratch/alpine/<user>/`    | 10 TB | Mounted read-write on all ALPINE nodes (compile, compute)                 |
++----------+------------------------------------+-------+---------------------------------------------------------------------------+
+
 
 Using my Scratch Space
 ------------------------
@@ -33,4 +32,6 @@ Uploading Scratch Analyses to Flywheel
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Once you generate an analysis you wish to permanently store. Be sure to move the analysis to Petalibrary, or upload the analysis to Flywheel.
 
-Follow our example tutorial using the Flywheel SDK to :ref:`Upload My Analysis to Flywheel`.
+Follow our example tutorial using the Flywheel SDK to upload files to Flywheel :ref:`Upload My Analysis to Flywheel`
+
+

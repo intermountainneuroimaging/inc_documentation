@@ -15,10 +15,10 @@ Flywheel Connector
 ********************
 One important function of Flywheel is its role as a 'PACS' system. The :code:`Flywheel Core` houses the main flywheel database and software. This system *accepts* imaging data from the INC Prisma Fit Scanner via the :code:`Flywheel Connector`. Imaging data, primarily dicom images, are passed from the scanner to the :code:`Flywheel Core`. For investigators using our scanning facilities, all sessions will be automatically imported into Flywheel. A set of images collected on a single day for a single participant will be organized into a :code:`Session`. An :code:`Acquisition` generally contain a set of dicom images, and any other accompanying data sent directly from the scanner.
 
-.. image:: imgs/hierarchy/inc_workflow_diagram.png
+.. image:: imgs/hierarchy/aws_inc_workflow_diagram.png
    :alt: Basic Schematic for On-Premise INC Flywheel Implementation
 
-Basic schematic of INC on-premise Flywheel infrastructure. Data is sent from the scanner at INC to the :code:`Flywheel Connector` (a virtual machine running on CU Boulder's private hybrid cloud, CUmulus). The :code:`Flywheel Connector` then passes data to the :code:`Flywheel Core` (which runs a web instance or "user interface" of Flywheel). Different types of analysis requests can then trigger jobs to be run on either CUmulus virtual machines, or on our on-premise HPC resources (Blanca, Alpine, Summit). The :code:`Flywheel Core` database (where the data is stored) lives on Research Computing's PetaLibrary, while backups of the data are sent to an INC-managed AWS S3 bucket.
+Basic schematic of INC's deployment of Flywheel.io infrastructure. Data is sent from the scanner at INC to the :code:`Flywheel Connector` (a virtual machine running on CU Boulder's computer science network). The :code:`Flywheel Connector` then sends data to the :code:`Flywheel Core` (where data are permanently stored and which runs the "user interface"). Different types of analysis requests can then trigger jobs to be run on either AWS virtual machines, or on our on-premise HPC clusters (Blanca, and Alpine). The :code:`Flywheel Core` database is stored on AWS S3 Cloud Object Storage, where intelligent tiering is used to automatically transition infrequently used files to cost effective archive storage.
 
 Uploading Files
 *****************
@@ -68,14 +68,6 @@ Finally, files can be attached to an acquisition. If your study is using DICOM i
    :alt: Projects view, showing where to upload acquisition files from the acquisition panel.
 
 To upload files, (1) navigate to the Projects view, (2) select the "Sessions" panel, show all sessions by list, and select the session of interest from the list, (3) Select the Acquisition from within "Sessions" panel, (4) Identify the Acquisition of interest, scroll to the far right, and select the ellipsis, (5) From the drop down menu, select "Upload Data to Acquisition".
-
-Required Project Files
-***********************
-AS UCB users of Flywheel, each laboratory has autonomy in the types of data and format to use for their projects. There are a few exceptions. There is a minimum set of Project Files that must be retained in each Flywheel Project. These files include:
-
-    1. :code:`UCB Memorandum of Use - <Project Label>`
-    2. :code:`UCB Prisma Fit Scanner Protocol - <Project Label>`
-    3. :code:`acquisition_label_remapping.csv`  (this file may be excluded in some cases if acquisitions are labeled using a ReproIn compliant naming at the scanner)
 
 Modifying and Creating Files
 *****************************
