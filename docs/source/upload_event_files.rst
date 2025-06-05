@@ -82,7 +82,7 @@ Please consult INC Staff for assistance importing event files or other datatypes
 
 3. COMPLETENESS CHECKS
 ***************************
-Many studies using automatic analysis workflows (see section ...), will rely on the :code:`COMPLETENESS` metadata object to control which analysis stages can be run. Once event files have been uploaded for the data collection session, users should indicate the change in the :code:`COMPLETENESS` metadata object.
+Many studies using automatic analysis workflows (see section :ref:`Automated Analysis Workflow`), will rely on the :code:`COMPLETENESS` metadata object to control which analysis stages can be run. Once event files have been uploaded for the data collection session, users should indicate the change in the :code:`COMPLETENESS` metadata object.
 
 .. image:: imgs/common_gears/completeness_mark_stim_complete.png
        :alt: mark stimulus complete

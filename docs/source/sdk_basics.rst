@@ -3,7 +3,7 @@
 SDK Basics
 ============
 
-Software Developer Kits (SDKs) are virtual "toolboxs" used to integrate or build applications. SDKs include ready-to-use resources for developers such as pre-made functions to help write, test and fix code, manuals and examples to explain usage, and pre-written code libraries.
+Software Developer Kits (SDKs) are virtual "toolboxes" used to integrate or build applications. SDKs include ready-to-use resources for developers such as pre-made functions to help write, test and fix code, manuals and examples to explain usage, and pre-written code libraries.
 
     .. image:: imgs/sdk_basics/What-is-SDK-banner.jpg
        :alt: what is sdk

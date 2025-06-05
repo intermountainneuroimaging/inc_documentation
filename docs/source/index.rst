@@ -51,7 +51,7 @@ Contents
    :caption: Developer's Guide
 
    nda_uploads.rst
-   data_ingestion.rst
+   auto_analysis.rst
 
 .. toctree::
    :maxdepth: 1
