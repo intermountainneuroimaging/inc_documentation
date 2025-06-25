@@ -20,6 +20,7 @@ Using CURC resources (OpenOndemand)?
 
       module load anaconda
       conda activate nda-tools-2025
+      cd /scratch/alpine/<identikey>
 
 (Extra Steps) Prerequisite software packages
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -36,6 +37,24 @@ Easily export all of your unprocessed nifti imaging files (and event timing, dic
     :code:`fw export bids <target_path_for_bids> --project PROJECT --group GROUPID --subject [subjects] --session [sessions]`
 
  - Be sure to include your event timing data! The event timing data may automatically be exported in the BIDS export or you may need to manually export depending on the project settings. If you have questions or concerns, contact INC staff
+
+Here is an example to download a single subject using BIDS formatting.
+
+   .. code-block:: bash
+
+      # load conda environment (including python) on CURC
+      module load anaconda
+      conda activate nda-tools-2025
+
+      # define paths
+      BIDSDIR="/scratch/alpine/<identikey>/nda_submission_data/bids"
+      mkdir -p $BIDSDIR
+
+      # export bids data
+      fw export bids --group ics --project flanker --subject 01 $BIDSDIR
+
+      # check downloads
+      ls -l $BIDSDIR
 
 
 Generate image03.csv file
@@ -56,10 +75,21 @@ Generate :code:`manifest.json`
 
 After downloading necessary fMRI data and organizing entries in the image03 format, you will need to generate a unique :code:`manifest.json` for each image03.csv file entry (generally on data collection *session*). Uploading fMRI data using :code:`manifest.json` instead of a single zipped archive has a few advantages. It improves visibility within NDA's registry and affords users wishing to download the dataset flexibility to select a subset of the full imaging protocol. To learn more about generate the :code:`manifest.json` files, check out NDAR's repo `manifest-data. <https://github.com/NDAR/manifest-data/tree/master>`_
 
-   :code:`python /projects/ics/software/NDA/manifest-data/nda_manifests.py -id sub-[ID] -of manifest_[ID].json`
+   .. code-block:: bash
+      :linenos:
+
+      # load conda environment (including python) on CURC
+      module load anaconda
+      conda activate nda-tools-2025
+
+      # define paths
+      BIDSPATH="<path-to-bids>"            # path containing all BIDS data
+      MANIFESTPATH="<path-to-manifests>"   # output path where manifest files are written
+      SUBJECTID="sub-1001"
+      python /projects/ics/software/NDA/manifest-data/nda_manifests.py -id $BIDSPATH/$SUBJECTID -of MANIFESTPATH/$SUBJECTID.json
 
 
-Check out this example to pull BIDS data from Flywheel.io and generate manifest files using some BASH scripting.
+Check out another example to pull BIDS data from Flywheel.io and generate manifest files using some BASH scripting.
 
    .. code-block:: bash
       :linenos:
@@ -69,18 +99,22 @@ Check out this example to pull BIDS data from Flywheel.io and generate manifest 
 
       #setup file paths
       BIDSDIR=/scratch/alpine/$USER/nda_submission_data/bids
+      MANIFESTDIR=/scratch/alpine/$USER/nda_submission_data/manifests
       #make bids and manifest directories if missing
       mkdir –p $BIDSDIR
-      mkdir –p $BIDSDIR/manifests
+      mkdir –p $MANIFESTDIR
 
       # Loop through file list, subject by subject
       while IFS= read -r SUBJECT; do
          echo "Processing subject: ${SUBJECT}"
+         # strip the "sub-" prefix for flywheel
+         fw_subject=`echo $SUBJECT | cut -d"-" -f2`
+
          # download BIDS formatted fmri data from Flywheel.io
-         fw  bids $BIDSDIR --project PROJECT --group GROUP --subject ${SUBJECT}"
+         fw  bids $BIDSDIR --project PROJECT --group GROUP --subject ${fw_subject}
 
          # generate a manifest files containing all bids formated data for subject XX
-         python /projects/ics/software/NDA/manifest-data/nda_manifests.py -id sub-${SUBJECT} -of manifest_${SUBJECT}.json
+         python /projects/ics/software/NDA/manifest-data/nda_manifests.py -id $BIDSDIR/${SUBJECT} -of $/MANIFESTDIR/${SUBJECT}.json
 
       done < "$FILE"
 
@@ -91,10 +125,30 @@ Validate and Upload
 
 NIMH Data Archive (NDAR) retains a set of python packages which can be used to batch upload fMRI neuroimaging data. The nda-tools code base can come with software bugs. Feel free to reach out to INC staff for support troubleshooting any nda-tools error or warning messages.
 
- - Start by ensuring your credentials are stored in your working environment (`looking for help? <https://github.com/NDAR/nda-tools/blob/main/README.md#step-4-authenticate-with-nda-tools>`_)
+ - Start by ensuring your credentials are stored in your working environment (`looking for help? <https://github.com/NDAR/nda-tools/blob/main/README.md#step-4-authenticate-with-nda-tools>`_). You can also just enter your password when prompted from the command line. Never share or store your password in a group readable file!
  - You are ready for the data submission! Have your :code:`image03.csv` submission file handy, directory with all :code:`manifest.json` files, and of course access to path with the fMRI data.
 
-   :code:`vtcmd sample_image03.csv  -m <path/to/manifests>`
+   :code:`vtcmd sample_image03.csv -m <path/to/manifests>`
+
+Once you are ready to validate and upload fMRI data to NDA, check out this example code.
+
+   .. code-block:: bash
+      :linenos:
+
+      # load conda environment (including python) on CURC
+      module load anaconda
+      conda activate nda-tools-2025
+
+      # define paths
+      BIDSPATH="<path-to-bids>"            # path containing all BIDS data
+      MANIFESTPATH="<path-to-manifests>"   # output path where manifest files are written
+      COLLECTIONID="XXXX"                  # collection-ID can be found on NDA portal. It
+                                           #   is a 4 digit number starting with "C". For example,
+                                           #   C1234, you will pass 1234.
+
+      # validation and upload command. Test with 1 subject first!!
+      # title and description should be descriptive for each unique upload (e.g. image_03_year)
+      vtcmd <image03.csv> -m $MANIFESTPATH -w -j -c $COLLECTIONID -b -t <title> -d <description>
 
 INC generally maintains a error free version of the nda-tools software package. Please contact INC staff for instructions to access the shared code environment.
 
