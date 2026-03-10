@@ -93,7 +93,7 @@ This setup connects your MRI acquisitions directly to analysis pipelines through
      FIX: @input for single-choice is an integer, not a quoted string.
           Compare as integer: @input === 1  -->
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const correct = @input === 1;
 fetch(SHEET_URL, {
@@ -121,7 +121,7 @@ correct;
 [( )] Only for new participants, not returning ones
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const correct = @input === 1;
 fetch(SHEET_URL, {
@@ -151,7 +151,7 @@ correct;
 <!-- FIX: @input for a text quiz is a plain string — no quotes needed around
      the macro. Wrap in String() for safety before calling string methods. -->
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const ans = "@input".toLowerCase().trim();
 const correct = ans.includes("outside") || ans.includes("redcap");
@@ -216,7 +216,7 @@ Beyond the Accession Number, a small amount of additional participant/session me
 [( )] `<session-label> / <subject-label> / <project-label>`
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const correct = @input === 2;
 fetch(SHEET_URL, {
@@ -244,7 +244,7 @@ correct;
 [( )] It is held in a COINS database
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const correct = @input === 2;
 fetch(SHEET_URL, {
@@ -272,7 +272,7 @@ correct;
 [( )] Free-form text with no restrictions
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const correct = @input === 2;
 fetch(SHEET_URL, {
@@ -297,7 +297,7 @@ correct;
 [[Scanner Requisition Form]]
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const ans = "@input".toLowerCase().trim();
 const correct = ans.includes("requisition");
@@ -368,7 +368,7 @@ To switch to a subject-centric view, select the **Subjects icon** within the pro
 [( )] Group → Subject → Project → Acquisition → Session
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const correct = @input === 2;
 fetch(SHEET_URL, {
@@ -398,7 +398,7 @@ correct;
 <!-- FIX: Correct option is index 1 (second item, 0-based). Original script
      had @input === "1" as a string — now corrected to integer comparison. -->
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const correct = @input === 1;
 fetch(SHEET_URL, {
@@ -426,7 +426,7 @@ correct;
 [( )] A metadata tag applied to a project
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const correct = @input === 2;
 fetch(SHEET_URL, {
@@ -451,7 +451,7 @@ correct;
 [[Accession Number]]
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const ans = "@input".toLowerCase().trim();
 const correct = ans.includes("accession");
@@ -501,7 +501,7 @@ If INC's Flywheel platform has contributed to your publication, you are required
 [( )] A URL to the INC website
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const correct = @input === 2;
 fetch(SHEET_URL, {
@@ -533,7 +533,7 @@ correct;
 [[ ]] CU Anschutz Medical Campus
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 // @input is substituted as a JS array literal, e.g. [1, 1, 0, 0]
 const sel = @input;
@@ -560,7 +560,7 @@ correct;
 [[SCR_025079]]
 
 <script>
-const SHEET_URL = "https://prod-XX.westus.logic.azure.com/workflows/YOUR_POWER_AUTOMATE_URL";
+const SHEET_URL = "https://default3ded8b1b070d462982e4c0b019f460.57.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8836ac9cd8b94c34954b57393aa9e84d/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yRogStaTOJ7jLX3hOuhktEjsUoIFQxk_2KiBxd7WYXE";
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const ans = "@input".trim().replace(/\s/g, "");
 const correct = ans.toUpperCase().includes("SCR_025079");
