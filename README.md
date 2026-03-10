@@ -8,4 +8,4 @@ Read the tutorial here:
 <https://docs.readthedocs.io/en/stable/tutorial/>
 
 
-Quizlet for INC Documentation can be found via LiaScript Web Interface [here](https://liascript.github.io/course/?https://raw.githubusercontent.com/intermountainneuroimaging/inc-flywheel-quiz/refs/heads/main/getting-started_quizlet#20)
+Quizlet for INC Documentation can be found via LiaScript Web Interface [here](https://liascript.github.io/course/?https://raw.githubusercontent.com/intermountainneuroimaging/inc_documentation/refs/heads/main/inc-flywheel-getting-started_quizlet.md#1)
