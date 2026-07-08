@@ -70,7 +70,7 @@ Flywheel naming convention is rigid and requires Project, Subject, **and** Sessi
         While this example study has only one session, we must enter all three labels: project, subject, and session every time!
 
 .. note::
-    *What happens if this naming goes wrong?* If a flywheel session was incorrectly named, all acquisitions associated with that session will be stored in an "Unsorted" project. This project is unique to each Principal Investigator (Flywheel "Group"). Study teams should take great care to ensure any missing or incorrectly named scans are caught quickly! Once a study has identified an incorrectly labelled scan, they should contact INC personnel immediately who will correct the error.
+    *What happens if this naming goes wrong?* If a Flywheel session was incorrectly named, all acquisitions associated with that session will be stored in an "Unsorted" project. This project is unique to each Principal Investigator (Flywheel "Group"). Study teams should take great care to ensure any missing or incorrectly named scans are caught quickly! Once a study has identified an incorrectly labelled scan, they should contact INC personnel immediately who will correct the error.
 
 We highly recommend that lab staff checks the Flywheel data repository after every scan session to make sure there was no typo at the scanner.
 
@@ -161,7 +161,7 @@ Containers are the data storage building blocks within Flywheel. Why does this m
 In Flywheel containers are used to store “groups”, “projects”, “subjects”, “sessions”, “acquisitions”, and “analyses”. We get into the meaning of each of these containers below, but you can think of these containers as folders in Flywheel that bundle metadata and data together.
 
 .. image:: imgs/getting_started/flywheel_architecture.png
-   :alt: Basic Schematic describing flywheel architecture
+   :alt: Basic Schematic describing Flywheel architecture
    :width: 200pt
 
 Image duplicated from docs.flywheel.io
@@ -227,7 +227,7 @@ Provenance is discussed more in the :ref:`Provenance` section. As an introductio
 .. image:: imgs/getting_started/session_view_provenance_panel.png
    :alt: Flywheel session view highlighting session's provenance.
 
-What to learn more about how to run gears in flywheel? visit ":ref:`Gears`" Basics. Also check out our documentation on running commonly used gears at INC in ":ref:`Running Commonly Used Gears`"
+Want to learn more about how to run gears in Flywheel? Visit ":ref:`Gears`" Basics. Also check out our documentation on running commonly used gears at INC in ":ref:`Running Commonly Used Gears`"
 
 Collections
 ***********
@@ -239,7 +239,7 @@ Collections in Flywheel allow users to curate data from a range of projects or b
 
 Data Views and Project Reports
 *******************************
-Data Views and Project Reports can be used to compile metadata from any project. Data Views provide the most flexibility to generate tabular views of any metadata within flywheel such as age, race, sex, acquisition info, and more. These views can be shared or exported for 3rd party statistical packages.
+Data Views and Project Reports can be used to compile metadata from any project. Data Views provide the most flexibility to generate tabular views of any metadata within Flywheel such as age, race, sex, acquisition info, and more. These views can be shared or exported for 3rd party statistical packages.
 
 Project Reports provide a summary of all sessions collected over a specific time range. Basic descriptive statistics are computed on all demographic information described in each session.
 
@@ -266,8 +266,8 @@ Collaborators:
 
 Contact Us
 ***********
-Interesting in getting started? Contact us `here <https://www.colorado.edu/mri/contact-us>`_ to request a copy of INC's Memorandum of Use and to set up a one on one consultation.
+Interested in getting started? Contact us `here <https://www.colorado.edu/mri/contact-us>`_ to request a copy of INC's Memorandum of Use and to set up a one on one consultation.
 
-That’s it folks! Tune in for more information and tutorial regarding Flywheel at UCB!
+That’s it folks! Tune in for more information and tutorials regarding Flywheel at UCB!
 
 .. sectionauthor:: Amy Hegarty <amy.hegarty@colorado.edu>

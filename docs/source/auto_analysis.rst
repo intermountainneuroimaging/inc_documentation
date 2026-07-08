@@ -15,7 +15,7 @@ Template File
 ----------------
 "Gear conditions" and run configurations are set using a `JSON` file. The optional and required json dictionary keys are described in detail below.
 
-The json file must contain an `analysis` dictionary, where all workflow steps are detailed. Here, each analysis should be it's own `JSON` object and are ordered in a list as shown below.::
+The json file must contain an `analysis` dictionary, where all workflow steps are detailed. Here, each analysis should be its own `JSON` object and are ordered in a list as shown below.::
 
     "__comment__": "example template",
     "analysis":
@@ -54,7 +54,7 @@ Gear Template Descriptors
 
 :code:`inputs`
 
-    __(optional)__ if input files are required in the current analysis, each input file should be detailed here. The inputs should be formated as a `JSON` object. Each key must exactly match the input name for the flywheel gear. If you are not sure the input name for the flywheel gear, you can find the placeholder in the gear info. In the example below we are passing two input files, one that will be passed as "template" and a second that will be passed as "freesurfer-license". For each input file, there are additional dictionary settings that can be passed to point to the correct file in flywheel.
+    __(optional)__ if input files are required in the current analysis, each input file should be detailed here. The inputs should be formatted as a `JSON` object. Each key must exactly match the input name for the Flywheel gear. If you are not sure the input name for the Flywheel gear, you can find the placeholder in the gear info. In the example below we are passing two input files, one that will be passed as "template" and a second that will be passed as "freesurfer-license". For each input file, there are additional dictionary settings that can be passed to point to the correct file in Flywheel.
 
     Two options can be used to point to a file name: (1) :code:`regex` uses python's regular expression syntax to return matching files by regular expression. If more than one file is found, an error will be logged and the current analysis will not run; (2) :code:`value` which will look for an exact filename match in flywheel. It is also required to identify `parent-container` where the particular file should be located (:code:`project` | :code:`subject` | :code:`session` | :code:`analysis`).
 
@@ -67,7 +67,7 @@ Gear Template Descriptors
                         "optional": true
                     },
                     "freesurfer-license": {
-                      "value": "license.txt"
+                      "value": "license.txt",
                       "parent-container": "project",
                       "optional": false
                     }
@@ -75,7 +75,7 @@ Gear Template Descriptors
 
 :code:`config`
 
-    __(optional)__ if configuration settings differ from the gear defaults, the configuration for the current analysis is detailed here. The configurations should be written exactly as they appear in the gear info, and must be formated as a `JSON` object.::
+    __(optional)__ if configuration settings differ from the gear defaults, the configuration for the current analysis is detailed here. The configurations should be written exactly as they appear in the gear info, and must be formatted as a `JSON` object.::
 
         "config": {
                     "reset": true,
@@ -122,14 +122,14 @@ Other Options - Setting :code:`RUN` conditions
 
 :code:`count-failures`
 
-    __(optional)__ by default, the worflow will not re-run gears that are currently running or have completed sucessfully. In the case, were a prior analysis failed, you can automatically re-try the analysis up to the number defined here (e.g. count-failures: 2 ... would re-try the gear once resulting in 2 total attempts).::
+    __(optional)__ by default, the workflow will not re-run gears that are currently running or have completed successfully. In the case, were a prior analysis failed, you can automatically re-try the analysis up to the number defined here (e.g. count-failures: 2 ... would re-try the gear once resulting in 2 total attempts).::
 
         "count-failures": 2
 
 
 :code:`sleep_seconds`
 
-    __(optional)__ for some light weight gears, it can be nice to hold the program open for a period of time to check if the gear finishes before proceeding. This is recommended only for light weight gears where downstream analyses are held due to prerequisite conditions.::
+    __(optional)__ for some lightweight gears, it can be nice to hold the program open for a period of time to check if the gear finishes before proceeding. This is recommended only for light weight gears where downstream analyses are held due to prerequisite conditions.::
 
         "sleep_seconds": 30
 
@@ -148,19 +148,19 @@ We have recently added the option in the auto analysis workflow to include data 
 
 :code:`download-locally`
 
-    __(optional)__ Boolean flag (true | false) to indicate weather analysis stage should be donwloaded locally. If this template descriptor is not include, assumed :code:`false`. ::
+    __(optional)__ Boolean flag (true | false) to indicate whether analysis stage should be downloaded locally. If this template descriptor is not include, assumed :code:`false`. ::
 
         "download-locally": true
 
 :code:`download-path`
 
-    __(linked)__ The descriptor must be included if the :code:`download-locally == true`. The is a writable file-path where data should be downloaded. Important to note, the auto_workflow.py jobs are typically run on CURC's compute resources permitting access to CURC's :code:`/scratch/alpine/` and :code:`/pl/active/` directory paths. Other directory paths (such as a user's local computer) can ONLY be used if the user creates a unique "workflow template" and runs the auto_workflow.py script on their local machine. For users desiring this setting, contact INC Staff to ensure correct implementation. ::
+    __(linked)__ The descriptor must be included if the :code:`download-locally == true`. The is a writable file-path where data should be downloaded. Important to note, the auto_workflow.py jobs are typically run on CURC's compute resources permitting access to CURC's :code:`/scratch/alpine/` and :code:`/pl/active/` directory paths. Other directory paths (such as a user's local computer) can ONLY be used if the user creates a unique "workflow template" and runs the auto_workflow.py script on their local machine. For users desiring this setting, contact INC staff to ensure correct implementation. ::
 
         "download-path": "/pl/active/ics/flanker/analysis",
 
 :code:`custom-download-script`
 
-    __(optional)__ For workflows requiring data manipulation after download (e.g. file renaming, resampling to new datatype, etc), users can include a single shell script stored in the :code:`Project` files in Flywheel. Users wishing to use this option should contact INC Staff for consultation.::
+    __(optional)__ For workflows requiring data manipulation after download (e.g. file renaming, resampling to new datatype, etc), users can include a single shell script stored in the :code:`Project` files in Flywheel. Users wishing to use this option should contact INC staff for consultation.::
 
             "custom-download-script": "custom_download_script-fmriprep.txt"
 

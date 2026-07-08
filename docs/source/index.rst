@@ -1,4 +1,4 @@
-INC FLywheel has its documentation hosted on Read the Docs.
+INC Flywheel has its documentation hosted on Read the Docs.
 
 Welcome to INC Flywheel documentation!
 ======================================

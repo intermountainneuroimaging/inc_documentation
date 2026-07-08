@@ -34,7 +34,7 @@ Adding users to projects
 
     a. Multiple roles can be selected for one user by checking several of the drop down boxes next to each possible role; however, we recommend that only one appropriate role is selected. If you're not sure what each role can do, click on the Roles tab on the left-hand ribbon. Then select the role in question, and a long list of actions that can and can't be performed by that Role will appear.
 
-    b. Looking for more flexibility? Contact INC Staff to set up custom user roles for your Group.
+    b. Looking for more flexibility? Contact INC staff to set up custom user roles for your Group.
 
 7. Click "Add" to save the changes to your project
 
@@ -57,11 +57,11 @@ Adding users to groups (adding them to all projects within a group)
 .. image:: imgs/user_permissions/add_users_to_group_2.png
    :alt: (image 5)
 
-3. Select from the list of Users added to UCB Flywheel. If you don't see the person you are looking for, they haven't been added as a Flywheel user yet. Contact INC Staff.
+3. Select from the list of Users added to UCB Flywheel. If you don't see the person you are looking for, they haven't been added as a Flywheel user yet. Contact INC staff.
 
 4. To add New User to **all** existing and future projects, Check the box that says "Add user to all projects in this group"
 
-5. Select the new user's role. Multiple roles can be selected for one user by checking several of the drop down boxes next to each possible role. Looking for more flexibility? Contact INC Staff to setup custom user roles for your laboratory.
+5. Select the new user's role. Multiple roles can be selected for one user by checking several of the drop down boxes next to each possible role. Looking for more flexibility? Contact INC staff to set up custom user roles for your laboratory.
 
 .. image:: imgs/user_permissions/add_users_to_group_3.png
    :alt: (image 6)
@@ -72,7 +72,7 @@ Permissions
 *************
 Default User roles include: read-write, read-only, and admin. The read-write role allows users to view, create, modify, and delete files or analysis, but does not allow them to delete projects, modify permissions, or project settings. The read-only role allows users to view files and metadata, but prevents adding/modifying files or running analyses. The admin role allows users to view, create, modify, or delete anything within the project, including users and metadata.
 
-How do I appropriate assign user permissions? Research assistants and students who are working with data and data analysis would fit well into the read-write role, while an external collaborator who is only looking at the data without analysis would fit best in the read-only role.
+How do I appropriately assign user permissions? Research assistants and students who are working with data and data analysis would fit well into the read-write role, while an external collaborator who is only looking at the data without analysis would fit best in the read-only role.
 
 Modifying assignments
 -----------------------
@@ -89,4 +89,4 @@ To delete a user, (a) hover the mouse over the user of interest, (b) select the 
 
 Creating New Roles
 --------------------
-Interested in creating new/custom roles for you Group? This is a simple process, initiated by contacting INC Staff.
+Interested in creating new/custom roles for your Group? This is a simple process, initiated by contacting INC staff.

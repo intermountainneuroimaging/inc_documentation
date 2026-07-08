@@ -1,4 +1,4 @@
-.. _resources.rst:
+.. _resources:
 
 Resources
 =========
@@ -19,7 +19,7 @@ Flywheel Documentation Resources
 * `Flywheel CLI Documentation <https://docs.flywheel.io/hc/en-us/articles/360008162214-Installing-the-Flywheel-Command-Line-Interface-CLI->`_
     * A guide to using the Flywheel Command Line Interface (CLI) tool for everything from data ingestion to running gears
 * `Flywheel CLI Beta Version Documentation <https://flywheel-io.gitlab.io/tools/app/cli/fw-beta/gear/>`_
-    * A beta (second) version of the CLI that included additional userful tools
+    * A beta (second) version of the CLI that included additional useful tools
 
 Flywheel Code Resources
 +++++++++++++++++++++++

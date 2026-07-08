@@ -1,4 +1,4 @@
-.. _petalibrary_and_blanca:
+.. _scratch_space:
 
 Get to Know Your Scratch Space
 ===============================
@@ -24,7 +24,7 @@ If you are not sure how to log on to CU Boulder Research Computing resources, pl
 
 Leverage Scratch Space with Flywheel Storage
 ++++++++++++++++++++++++++++++++++++++++++++++++
-Some neuroimaging analyses and workflows are not yet supported as Flywheel gears. For these workflows, the current workaround is to download your Flywheel analyses (or workflow inputs) run the workflow on your local machine (or HPC), then upload the results (workflow outputs) back to flywheel as a new analysis.
+Some neuroimaging analyses and workflows are not yet supported as Flywheel gears. For these workflows, the current workaround is to download your Flywheel analyses (or workflow inputs), run the workflow on your local machine (or HPC), then upload the results (workflow outputs) back to Flywheel as a new analysis.
 
 Follow our example tutorial using the Flywheel SDK to :ref:`Download and Run Analysis Locally`.
 

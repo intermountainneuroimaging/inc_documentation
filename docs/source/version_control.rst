@@ -34,7 +34,7 @@ Each analysis that was run is also assigned a "Job ID". This is a unique ID with
 
 To view the Job ID, open an analysis log and look for the Job ID in the bottom left corner of the logs page.
 
-.. Note::
+.. note::
     To view the Job ID, start from the provenance tab to look at the logs.
 
 .. image:: imgs/version_control_and_provenance/viewing_jobid.png
