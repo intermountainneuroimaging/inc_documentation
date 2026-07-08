@@ -3,13 +3,13 @@
 NDA Data Submissions
 ========================
 
-Most data collected through an NIH funded grant mechanisms are required to share complete study data with the National Data Archive (NDA).
+Most data collected through NIH-funded grant mechanisms are required to share complete study data with the National Data Archive (NDA).
 
 Please confirm with your program officer if your grant is required to submit data to the NDA. If so, please review requirements **before** data collection on the NDA website.
 
 Once study personnel have generated GUID (global participant identifiers) for each study participant, you may proceed with neuroimaging data upload. Follow the guidance below to get started. We also highly recommend consulting with an INC staff member for guidance on the most up to date methods and standards.
 
-We recommend working within CURC's compute and data storage resources for NDA data submissions. INC manages a communal code repository with up-to-date NDAR tools for data submission. If users elect to use a local compute envrionment, you will need to be sure to install the prerequisite code environments before getting started.
+We recommend working within CURC's compute and data storage resources for NDA data submissions. INC manages a communal code repository with up-to-date NDAR tools for data submission. If users elect to use a local compute environment, you will need to be sure to install the prerequisite code environments before getting started.
 
 Using CURC resources (OpenOndemand)?
 ++++++++++++++++++++++++++++++++++++++++++
@@ -60,7 +60,7 @@ Here is an example to download a single subject using BIDS formatting.
 Generate image03.csv file
 ++++++++++++++++++++++++++++++++
 
-Consult the NDA official documentation on the best practices of uploading neuroimaging and BIDS formatted data. Current recommendations are to upload data as :code:`image03` or :code:`fmriresults01` format. :code:`image03` data submission spreadsheets require addtional dicom related metadata to be associated with each file/manifest entry. We recommend using the dicom metadata from the main fMRI acquisition.
+Consult the NDA official documentation on the best practices of uploading neuroimaging and BIDS formatted data. Current recommendations are to upload data as :code:`image03` or :code:`fmriresults01` format. :code:`image03` data submission spreadsheets require additional dicom related metadata to be associated with each file/manifest entry. We recommend using the dicom metadata from the main fMRI acquisition.
 
 Sample image03 table. Notice, using the manifest requires an entry for the :code:`manifest` column and requires :code:`image_file` column to be left empty.
 
@@ -101,8 +101,8 @@ Check out another example to pull BIDS data from Flywheel.io and generate manife
       BIDSDIR=/scratch/alpine/$USER/nda_submission_data/bids
       MANIFESTDIR=/scratch/alpine/$USER/nda_submission_data/manifests
       #make bids and manifest directories if missing
-      mkdir –p $BIDSDIR
-      mkdir –p $MANIFESTDIR
+      mkdir -p $BIDSDIR
+      mkdir -p $MANIFESTDIR
 
       # Loop through file list, subject by subject
       while IFS= read -r SUBJECT; do
@@ -111,10 +111,10 @@ Check out another example to pull BIDS data from Flywheel.io and generate manife
          fw_subject=`echo $SUBJECT | cut -d"-" -f2`
 
          # download BIDS formatted fmri data from Flywheel.io
-         fw  bids $BIDSDIR --project PROJECT --group GROUP --subject ${fw_subject}
+         fw export bids $BIDSDIR --project PROJECT --group GROUP --subject ${fw_subject}
 
-         # generate a manifest files containing all bids formated data for subject XX
-         python /projects/ics/software/NDA/manifest-data/nda_manifests.py -id $BIDSDIR/${SUBJECT} -of $/MANIFESTDIR/${SUBJECT}.json
+         # generate a manifest files containing all bids formatted data for subject XX
+         python /projects/ics/software/NDA/manifest-data/nda_manifests.py -id $BIDSDIR/${SUBJECT} -of $MANIFESTDIR/${SUBJECT}.json
 
       done < "$FILE"
 

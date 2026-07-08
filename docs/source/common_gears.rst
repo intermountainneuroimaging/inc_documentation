@@ -31,7 +31,7 @@ MY BRAIN SOUVENIR
        :alt: analysis prompt
 
 +------------------------+-----------------------------------------------+
-| Filename               | Conte                                         |
+| Filename               | Contents                                      |
 +========================+===============================================+
 | <anat-acq>.gif         | Native Anatomical Scan (GIF Format)           |
 +------------------------+-----------------------------------------------+
@@ -75,7 +75,7 @@ In the configuration tab, you may need to add following options:
 
 EVENT CURATOR
 *****************
-The event curator is a derivative analysis using the `hierarchy curator <https://github.com/intermountainneuroimaging/hierarchy-curator>`_. A custom python script should be written to handle event creation from either an eprime or PychoPy simulus file. After uploading the recordings (see ":ref:`Uploading Event Files`"), this gear is used to generate derivative event data from the stimulus recordings. For help generating a python script for use with the hierarchy curator, contact INC staff.
+The event curator is a derivative analysis using the `hierarchy curator <https://github.com/intermountainneuroimaging/hierarchy-curator>`_. A custom python script should be written to handle event creation from either an eprime or PsychoPy stimulus file. After uploading the recordings (see ":ref:`Uploading Event Files`"), this gear is used to generate derivative event data from the stimulus recordings. For help generating a python script for use with the hierarchy curator, contact INC staff.
 
 1.	After uploading the raw timing files for all applicable acquisitions, you can generate event data using the “Hierarchy Curator” gear. You must have supporting curator code uploaded to your project. If you do not have an “events_curator.py” file in your project contact the INC Data and Analysis Team for assistance!
 
@@ -120,8 +120,8 @@ MRIQC is automatically run for all new sessions on INC Flywheel. If you need to 
     .. image:: imgs/common_gears/run_bids_mriqc_3.png
        :alt: analysis prompt
 
-6.	Set the HPC slurm scheduler settings as needed. By default the gear will run on blanca-ics with appropriate memory, RAM and wall time.
+5.	Set the HPC slurm scheduler settings as needed. By default the gear will run on blanca-ics with appropriate memory, RAM and wall time.
 
-7.	That’s it! Select the “Run Gear” button. Once the gear starts you should see the analysis in the list of session analyses. The icon next to the analysis will change from a spinning gear to a green check once it completes successfully.
+6.	That’s it! Select the “Run Gear” button. Once the gear starts you should see the analysis in the list of session analyses. The icon next to the analysis will change from a spinning gear to a green check once it completes successfully.
 
 .. sectionauthor:: Amy Hegarty <amy.hegarty@colorado.edu>

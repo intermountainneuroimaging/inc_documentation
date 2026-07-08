@@ -37,7 +37,8 @@ Common Use Cases
 
   Most *.zip analysis outputs are stored in the format <analysis-id>/<gear-name>/...contents... Users who wish to learn more about handling this directory convention should visit our Flywheel SDK Examples repository `here <https://github.com/intermountainneuroimaging/flywheel_sdk_examples/tree/main/3_tables_and_downloads>`_
 
-:IMPORTANT: Notice that the example commands above use the flywheel client "fw", the "fw-beta" command does not have the same functionality.
+.. important::
+    Notice that the example commands above use the Flywheel client :code:`fw`; the :code:`fw-beta` command does not have the same functionality.
 
 For a full list of other Flywheel command line features (including checking login status, managing server jobs, exporting and downloading data, and much more), review the `Flywheel CLI Overview <https://docs.flywheel.io/hc/en-us/articles/4536067900435-Command-Line-Interface-Overview>`_
 
@@ -56,7 +57,7 @@ For your convenience, the Flywheel CLI is already installed in a Conda environme
 
      :code:`conda activate flywheel`
 
-4. Check the flywheel status to ensure you are logged in as the correct user:
+4. Check the Flywheel status to ensure you are logged in as the correct user:
 
      :code:`fw status`
 
@@ -66,6 +67,6 @@ For your convenience, the Flywheel CLI is already installed in a Conda environme
 
 6. Now you are ready to run any FW API command (refer to the section above for specific commands)
 
-.. note:: **Special Instructions for Large Uploads**: Even though the Flywheel CLI lives on PetaLibrary in the conda environment called *flywheel*, the cache for all temporary data is hard coded to go to your *home* directory on PetaLibrary. However, because your *home* directory is so small, this cache can quickly fill up resulting in the upload failing and your *home* directory full. To avoid this issue, you should create a soft link between your *home* cache directory and your *projects* cache directory, which is much large, ie:
+.. note:: **Special Instructions for Large Uploads**: Even though the Flywheel CLI lives on PetaLibrary in the conda environment called *flywheel*, the cache for all temporary data is hard coded to go to your *home* directory on PetaLibrary. However, because your *home* directory is so small, this cache can quickly fill up resulting in the upload failing and your *home* directory full. To avoid this issue, you should create a soft link between your *home* cache directory and your *projects* cache directory, which is much larger, ie:
 
          :code:`/home/<identiKey>/.cache/flywheel -> /projects/<identiKey>/.cache/flywheel`

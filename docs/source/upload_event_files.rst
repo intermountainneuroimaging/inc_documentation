@@ -3,13 +3,13 @@
 Uploading Event Files
 ===========================
 
-A critical step to ensure all relevant fMRI data is stored and accessible within Flywheel requires users to upload accompanying stimulus data. Users may upload the data from the user interface or from the command line. Please review both options below. **Important** Check with INC staff to confirm if stimulus log files for your project needs to follow reproin naming convention.
+A critical step to ensure all relevant fMRI data is stored and accessible within Flywheel requires users to upload accompanying stimulus data. Users may upload the data from the user interface or from the command line. Please review both options below. **Important** Check with INC staff to confirm if stimulus log files for your project need to follow reproin naming convention.
 
 1. USER INTERFACE
 ************************
-UPLOAD RAW EVENT TIMING DATA (PYSCHOPY or EPRIME)
+UPLOAD RAW EVENT TIMING DATA (PSYCHOPY or EPRIME)
 
-1.	From the stimulus computer, use the experimentation software (e.g. pyschopy or eprime) to export event data in a spreadsheet format (e.g. *.csv, *.tsv).
+1.	From the stimulus computer, use the experimentation software (e.g. psychopy or eprime) to export event data in a spreadsheet format (e.g. *.csv, *.tsv).
 
 2.	You will need to upload the event file to Flywheel, to do so: navigate to your project, and go the sessions panel. Select the session of interest.
 
@@ -31,12 +31,14 @@ UPLOAD RAW EVENT TIMING DATA (PYSCHOPY or EPRIME)
 
 2. COMMAND LINE INTERFACE
 ***************************
-UPLOAD RAW EVENT TIMING DATA (PYSCHOPY or EPRIME)
+UPLOAD RAW EVENT TIMING DATA (PSYCHOPY or EPRIME)
 
-If you are looking to upload many stimulus files together, or are intersted in scripting the upload for a crontab (automatically run for new sessions). Consider using the command line interface to upload stimulus files.
+If you are looking to upload many stimulus files together, or are interested in scripting the upload for a crontab (automatically run for new sessions). Consider using the command line interface to upload stimulus files.
 
 Before using the Flywheel CLI, first organize your stimulus files into the structured hierarchy enforced by Flywheel.
+
 ::
+
     PROJECT
     |-- SUBJECT
         |-- SESSION
@@ -48,37 +50,43 @@ Before using the Flywheel CLI, first organize your stimulus files into the struc
                 |-- Stim file
 
 For example the file tree could look like...
+
 ::
+
     my-directory
     |-- my-project
         |-- 001
             |-- S1
                 |-- func-bold_task-motor_dir-ap_run-01
-                    |-- func-bold_task-motor_dir-ap_run-01_recording-pyschopy_stim.tsv
+                    |-- func-bold_task-motor_dir-ap_run-01_recording-psychopy_stim.tsv
                 |-- func-bold_task-motor_dir-ap_run-02
-                    |-- func-bold_task-motor_dir-ap_run-02_recording-pyschopy_stim.tsv
+                    |-- func-bold_task-motor_dir-ap_run-02_recording-psychopy_stim.tsv
                 |-- func-bold_task-nback_dir-ap_run-01
                     |-- func-bold_task-nback_dir-ap_run-01_recording-eprime_stim.tsv
         |-- 002
             |-- S1
                 |-- func-bold_task-motor_dir-ap_run-01
-                    |-- func-bold_task-motor_dir-ap_run-01_recording-pyschopy_stim.tsv
+                    |-- func-bold_task-motor_dir-ap_run-01_recording-psychopy_stim.tsv
                 |-- func-bold_task-motor_dir-ap_run-02
-                    |-- func-bold_task-motor_dir-ap_run-02_recording-pyschopy_stim.tsv
+                    |-- func-bold_task-motor_dir-ap_run-02_recording-psychopy_stim.tsv
                 |-- func-bold_task-nback_dir-ap_run-01
                     |-- func-bold_task-nback_dir-ap_run-01_recording-eprime_stim.tsv
 
-Notice in the above example, stimulus files are labeled using reproin naming convention to match naming of the fMRI acquisition. The stimulus file must include the suffix :code:`_recording-[pyschopy,eprime,other]` to indicate its a raw recording file. Multiple session files can be stored and should conform to the Flywheel hierarchy (project -> subject -> session -> acquisition). If events are non-unqiue across all participants, the stimulus files can be uploaded at a project level.
+Notice in the above example, stimulus files are labeled using reproin naming convention to match naming of the fMRI acquisition. The stimulus file must include the suffix :code:`_recording-[psychopy,eprime,other]` to indicate its a raw recording file. Multiple session files can be stored and should conform to the Flywheel hierarchy (project -> subject -> session -> acquisition). If events are non-unique across all participants, the stimulus files can be uploaded at a project level.
 
 Once files are properly named and organized in the Flywheel hierarchy, use the following CLI command to upload to flywheel. **Important** Be sure to include the :code:`--skip-existing` argument to avoid overwriting previously uploaded data.
+
 ::
+
     fw ingest folder -g [group-id] -p [project-label] --skip-existing --symlinks --no-audit-log --yes [path-to-source-data]
 
 For the above example...
+
 ::
+
     fw ingest folder -g ics -p my-project --skip-existing --symlinks --no-audit-log --yes /home/ics/my-directory/my-project/
 
-Please consult INC Staff for assistance importing event files or other datatypes.
+Please consult INC staff for assistance importing event files or other datatypes.
 
 3. COMPLETENESS CHECKS
 ***************************

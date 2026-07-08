@@ -2,7 +2,7 @@
 
 Viewing Data
 =============
-Flywheel has a range of tools that can be used to view the data within the User Interface. These applications are being regularly updated and improved by the Flywheel Support Team. Please understand with the rapid development of viewers and applications in Flywheel some of the documentation contained below and on Flywheel Docs may be out of date. If you have any questions about current features for viewing data, contact INC Staff.
+Flywheel has a range of tools that can be used to view the data within the User Interface. These applications are being regularly updated and improved by the Flywheel Support Team. Please understand with the rapid development of viewers and applications in Flywheel some of the documentation contained below and on Flywheel Docs may be out of date. If you have any questions about current features for viewing data, contact INC staff.
 
 Viewing DICOMS
 ****************
@@ -15,7 +15,7 @@ Using the "Picture" icon located next to subject, session, or file will automati
 
 Viewing NIFTIs
 ****************
-The same viewer can be used to view  NIFTI formatted files. Just as above, navigate to the image of interest, then select the "Picture" icon to open the viewer. Want to learn more? Visit the Flywheel `docs <https://docs.flywheel.io/hc/en-us/articles/360052083993-View-and-annotate-images>`_.
+The same viewer can be used to view NIFTI formatted files. Just as above, navigate to the image of interest, then select the "Picture" icon to open the viewer. Want to learn more? Visit the Flywheel `docs <https://docs.flywheel.io/hc/en-us/articles/360052083993-View-and-annotate-images>`_.
 
 Viewing Other File Formats
 ****************************

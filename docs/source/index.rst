@@ -1,4 +1,4 @@
-INC FLywheel has its documentation hosted on Read the Docs.
+INC Flywheel has its documentation hosted on Read the Docs.
 
 Welcome to INC Flywheel documentation!
 ======================================
@@ -16,6 +16,9 @@ Contents
    :caption: Getting Started
 
    getting_started.rst
+   at_the_scanner.rst
+   navigating_ui.rst
+   citing_inc.rst
 
 .. toctree::
    :maxdepth: 1

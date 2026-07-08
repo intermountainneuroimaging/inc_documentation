@@ -7,9 +7,9 @@ Don't have a research computing account yet? Please request an account `here <ht
 
 What is Petalibrary?
 -----------------------
-PetaLibary is a location where data is stored (similar to an external hard drive) and is regularly backed up to ensure data integrity. More accurately, PetaLibrary is a Research Computing managed storage cluster where scanner data and derivative data (i.e. analysis data) live for various projects. Petalibrary is managed using allocations, which are predefined chunks of space allotted for storage to a given lab or group (eg: banich lab, kaiser lab, etc).
+PetaLibrary is a location where data is stored (similar to an external hard drive) and is regularly backed up to ensure data integrity. More accurately, PetaLibrary is a Research Computing managed storage cluster where scanner data and derivative data (i.e. analysis data) live for various projects. PetaLibrary is managed using allocations, which are predefined chunks of space allotted for storage to a given lab or group (eg: banich lab, kaiser lab, etc).
 
-All of INC’s scanner data and **Flywheel** database data goes into an allocation titled ics. May labs also choose to purchase storage on a PI-sepcific allocation (eg: the banich allocation). We advise you restirct the storage on CURC's Petalibrary to data you actively use on the high performance compute cluster. Archivable data should be moved to a different "cold storage" system, so you can retain these data at a lower cost.
+All of INC’s scanner data and **Flywheel** database data goes into an allocation titled ics. Many labs also choose to purchase storage on a PI-specific allocation (eg: the banich allocation). We advise you restrict the storage on CURC's PetaLibrary to data you actively use on the high performance compute cluster. Archivable data should be moved to a different "cold storage" system, so you can retain these data at a lower cost.
 
 It is therefore very important to not treat PetaLibrary like you may treat your personal laptop. We are on shared space: adding to one directory on the ICS allocation will decrease the total amount of free space available to everyone else.
 
@@ -30,7 +30,7 @@ INC also has 2 dedicated Blanca login nodes onto which PetaLibrary is mounted/ac
 High Performance Compute Portal
 ================================
 
-CU Boulder Reserach Computing (CURC) supports a browser based HPC Portal, **Open OnDemand** `here <https://curc.readthedocs.io/en/latest/gateways/OnDemand.html>`_. This browser based portal allows users to navigate and interact with CURC's HPC from any anywhere with an internet connection! Its fast and easy one stop shop for your HPC needs.
+CU Boulder Research Computing (CURC) supports a browser based HPC Portal, **Open OnDemand** `here <https://curc.readthedocs.io/en/latest/gateways/OnDemand.html>`_. This browser based portal allows users to navigate and interact with CURC's HPC from any anywhere with an internet connection! It's a fast and easy one stop shop for your HPC needs.
 
 Please visit CURC documentation on `Open OnDemand <https://curc.readthedocs.io/en/latest/gateways/OnDemand.html>`_ for a step by step guide.
 
@@ -45,7 +45,7 @@ In your *use case* will you need to interact with a graphical user interface (GU
 
 
   :If you answer "No":
-    Without a desktop, we recommend you use an interactive "Jupyter Notebook" session. Follow the instructions in :ref:`Jupyter Notebook` to get started.
+    Without a desktop, we recommend you use an interactive "Jupyter Notebook" session. Follow the instructions in :ref:`Using Jupyter Notebook` to get started.
 
 
 Using Core Desktop
@@ -77,7 +77,7 @@ To get started, go to `open ondemand <https://ondemand.rc.colorado.edu>`_.
 
 Alpine (and Blanca) Scratch Filesystem
 ********************************************
-Research computing supports a large gpfs `scratch filesystem. <https://curc.readthedocs.io/en/latest/compute/filesystems.html>`_ Scratch space should be used for all compute jobs run on Alpine or Blanca. These high-performance scratch directories are not backed up, and are not appropriate for long-term storage. Data may be purged at any time subject to overall system needs. Files are automatically removed 90 days after their initial creation. Once an analysis is complete, please move all data files to Flywheel or a Petalibrary Allocation for permanent storage.
+Research Computing supports a large GPFS `scratch filesystem. <https://curc.readthedocs.io/en/latest/compute/filesystems.html>`_ Scratch space should be used for all compute jobs run on Alpine or Blanca. These high-performance scratch directories are not backed up, and are not appropriate for long-term storage. Data may be purged at any time subject to overall system needs. Files are automatically removed 90 days after their initial creation. Once an analysis is complete, please move all data files to Flywheel or a Petalibrary Allocation for permanent storage.
 
     :Scratch: :code:`/scratch/alpine/<identikey>/`
 
@@ -85,7 +85,7 @@ Alpine scratch may also be viewed from the **viz nodes** on open ondemand.
 
 Alpine (and Blanca) Compute
 ********************************************
-To run compute jobs on Alpine and Blanca compute nodes, we use a SLURM job scheduler. From **vis nodes**, simply load the correct slurm module to get started.
+To run compute jobs on Alpine and Blanca compute nodes, we use a SLURM job scheduler. From **viz nodes**, simply load the correct slurm module to get started.
 
 .. code-block::
 
@@ -107,7 +107,7 @@ Some filesystems and software should only be used on compute nodes (the "workhor
     # to start an interactive session (alpine)
     sinteractive --partition=amilan -c <number of cores> --mem <memory 1K/1M/1G> -t <time> --export=NONE
 
-Looking for more information on using Slurm scheduler, blanca priority accounts, and more check out <placeholder>
+Looking for more information on using the Slurm scheduler, Blanca priority accounts, and more, contact INC staff
 
 Using Jupyter Notebook
 ++++++++++++++++++++++++++++++
@@ -146,7 +146,7 @@ Our data and analysis team at INC have generated several custom python environme
 
 To get started using the INC anaconda environments, please do the following:
 
-1. On reserach computing's HPC (summit, blanca, or alpine), create a text file :code:`/home/$USER/.condarc` with the contents:
+1. On research computing's HPC (summit, blanca, or alpine), create a text file :code:`/home/$USER/.condarc` with the contents:
 
 .. code-block::
 
@@ -157,7 +157,7 @@ To get started using the INC anaconda environments, please do the following:
       - /projects/ics/software/anaconda/envs
       - /projects/$USER/software/anaconda/envs
 
-2. Next, load the ancaconda software using :code:`module` then confirm you  "see" all the shared conda environments:
+2. Next, load the anaconda software using :code:`module` then confirm you "see" all the shared conda environments:
 
 .. code-block::
 
@@ -190,6 +190,6 @@ To get started using the INC anaconda environments, please do the following:
 
 That's it! You are ready to start developing!
 
-Keep Reading to learn more about about leveraging the large :code:`Scratch` filesystem with Flywheel for local analyses. Go to :ref:`Get to Know Your Scratch Space`
+Keep Reading to learn more about leveraging the large :code:`Scratch` filesystem with Flywheel for local analyses. Go to :ref:`Get to Know Your Scratch Space`
 
 

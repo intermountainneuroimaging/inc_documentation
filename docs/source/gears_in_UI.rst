@@ -113,7 +113,7 @@ Utility Gears are lightweight analyses usually used only for converting file typ
 9. Click “Run Gear”
 
 .. image:: imgs/gears_in_UI/gear_methods_utility_2.png
-   :alt: Selecting gears and versions from dropdown list available for the flywheel instance.
+   :alt: Selecting gears and versions from dropdown list available for the Flywheel instance.
 
 Running Analysis Gears
 +++++++++++++++++++++++
@@ -146,7 +146,7 @@ View Gear Status
 To view the progress of your gear, navigate to the desired session, and then select the "Provenance" tab. Provenance shows a list of all gears for a specific session. To view the results of your *Analysis* Gears, navigate to the "Analyses" tab.
 
 .. image:: imgs/gears_in_UI/gear_provenance_1.png
-   :alt: XXX
+   :alt: Viewing gear status from the provenance tab
 
 What To Do If Your Gear Failed?
 ++++++++++++++++++++++++++++++++
@@ -154,7 +154,7 @@ If your gear fails, first check the job log. If there is an obvious error messag
 
 What To Do If Your Gear Succeeded?
 +++++++++++++++++++++++++++++++++++
-After your analysis gear completes successfully you can inspect the results  in the "Analyses" tab. Select the analysis container of interest. You should see a "Results" tab with all data created during the analysis. From this container, you may also review the records of all inputs, configurations, gear information, and logs.
+After your analysis gear completes successfully you can inspect the results in the "Analyses" tab. Select the analysis container of interest. You should see a "Results" tab with all data created during the analysis. From this container, you may also review the records of all inputs, configurations, gear information, and logs.
 
 .. image:: imgs/gears_in_UI/gear_status_1.png
    :alt: Reviewing the status of your job.

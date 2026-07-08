@@ -6,8 +6,8 @@ project = 'INC Flywheel Documentation'
 copyright = '2022, Internmountain Imaging Consortium'
 author = 'Lena & Amy'
 
-release = '0.1'
-version = '0.1.0'
+release = '0.2'
+version = '0.2.0'
 
 # -- General configuration
 
