@@ -36,7 +36,9 @@ UPLOAD RAW EVENT TIMING DATA (PSYCHOPY or EPRIME)
 If you are looking to upload many stimulus files together, or are interested in scripting the upload for a crontab (automatically run for new sessions). Consider using the command line interface to upload stimulus files.
 
 Before using the Flywheel CLI, first organize your stimulus files into the structured hierarchy enforced by Flywheel.
+
 ::
+
     PROJECT
     |-- SUBJECT
         |-- SESSION
@@ -48,7 +50,9 @@ Before using the Flywheel CLI, first organize your stimulus files into the struc
                 |-- Stim file
 
 For example the file tree could look like...
+
 ::
+
     my-directory
     |-- my-project
         |-- 001
@@ -71,11 +75,15 @@ For example the file tree could look like...
 Notice in the above example, stimulus files are labeled using reproin naming convention to match naming of the fMRI acquisition. The stimulus file must include the suffix :code:`_recording-[psychopy,eprime,other]` to indicate its a raw recording file. Multiple session files can be stored and should conform to the Flywheel hierarchy (project -> subject -> session -> acquisition). If events are non-unique across all participants, the stimulus files can be uploaded at a project level.
 
 Once files are properly named and organized in the Flywheel hierarchy, use the following CLI command to upload to flywheel. **Important** Be sure to include the :code:`--skip-existing` argument to avoid overwriting previously uploaded data.
+
 ::
+
     fw ingest folder -g [group-id] -p [project-label] --skip-existing --symlinks --no-audit-log --yes [path-to-source-data]
 
 For the above example...
+
 ::
+
     fw ingest folder -g ics -p my-project --skip-existing --symlinks --no-audit-log --yes /home/ics/my-directory/my-project/
 
 Please consult INC staff for assistance importing event files or other datatypes.

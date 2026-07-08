@@ -16,6 +16,9 @@ Contents
    :caption: Getting Started
 
    getting_started.rst
+   at_the_scanner.rst
+   navigating_ui.rst
+   citing_inc.rst
 
 .. toctree::
    :maxdepth: 1
