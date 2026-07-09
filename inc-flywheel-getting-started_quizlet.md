@@ -92,12 +92,6 @@ Flywheel is built to **organize**, **store**, and **share** research and medical
 <script>
 const correct = @input === 1;
 
-if (correct) {
-  console.log("✅ Correct! INC's Flywheel data is stored on AWS cloud infrastructure (S3), while analysis runs on CURC's on-premise HPC clusters.");
-} else {
-  console.log("❌ Not quite — INC's Flywheel data lives on AWS cloud infrastructure (S3), not on a local workstation, the scanner console, or a personal cloud account.");
-}
-
 // Record locally — rolled into the completion email sent at the end of the course
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "1 - Overview";
@@ -121,12 +115,6 @@ correct;
 <script>
 const correct = @input === 1;
 
-if (correct) {
-  console.log("✅ Correct! Flywheel does not require pre-registration — just check Flywheel after the scan to catch any typos.");
-} else {
-  console.log("❌ Not quite — Flywheel does NOT require pre-registration. INC recommends checking Flywheel after the scan session to catch any typos instead.");
-}
-
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "1 - Overview";
 if (!progress[module]) progress[module] = { correct: 0, total: 0 };
@@ -141,17 +129,13 @@ correct;
 
 **Q3:** True or False: The key linking coded Subject IDs to personally identifiable information (PII) **may** be stored somewhere within Flywheel.
 
+[[?]] Re-read "Key things to know" above — where must the key to coded participant data be stored?
+
 [( )] True
 [(X)] False
 
 <script>
 const correct = @input === 1;
-
-if (correct) {
-  console.log("✅ Correct! The key must always be stored outside Flywheel — e.g. in REDCap or on paper — never inside Flywheel itself.");
-} else {
-  console.log("❌ Not quite — this statement is actually False. The key linking coded Subject IDs to PII must always be stored outside Flywheel (e.g. REDCap or on paper).");
-}
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "1 - Overview";
@@ -167,6 +151,8 @@ correct;
 
 **Q4:** Which of the following is **NOT** one of Flywheel's core value propositions for managing imaging data?
 
+[[?]] Three of these options are the "Organize / Store / Share" pillars from "Why use Flywheel?" above — one option describes something Flywheel does not do.
+
 [( )] Organize — a consistent, searchable data hierarchy
 [( )] Store — versioned, backed-up storage with full provenance
 [( )] Share — fine-grained permissions, Collections, and Data Views
@@ -174,12 +160,6 @@ correct;
 
 <script>
 const correct = @input === 3;
-
-if (correct) {
-  console.log("✅ Correct! Flywheel organizes, stores, and shares your data — but analysis still relies on CURC's Blanca/Alpine HPC clusters.");
-} else {
-  console.log("❌ Not quite — Organize, Store, and Share are all real Flywheel value props. Flywheel does NOT replace the need for HPC compute; that still runs on CURC's Blanca/Alpine clusters.");
-}
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "1 - Overview";
@@ -245,12 +225,6 @@ Beyond the `accession number`, a small amount of additional participant/session 
 <script>
 const correct = @input === 2;
 
-if (correct) {
-  console.log("✅ Correct! <project-label> / <subject-label> / <session-label> is the required Accession Number format.");
-} else {
-  console.log("❌ Not quite — the correct format is <project-label> / <subject-label> / <session-label>.");
-}
-
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "2 - At the Scanner";
 if (!progress[module]) progress[module] = { correct: 0, total: 0 };
@@ -272,12 +246,6 @@ correct;
 
 <script>
 const correct = @input === 2;
-
-if (correct) {
-  console.log("✅ Correct! Mis-entered data lands in an \"Unsorted\" project in the PI's Flywheel Group — it isn't deleted, emailed, or auto-renamed.");
-} else {
-  console.log("❌ Not quite — mis-entered data lands in an \"Unsorted\" project in the PI's Flywheel Group. It is not deleted, emailed, or auto-renamed.");
-}
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "2 - At the Scanner";
@@ -301,12 +269,6 @@ correct;
 <script>
 const correct = @input === 2;
 
-if (correct) {
-  console.log("✅ Correct! INC recommends BIDS-compliant labels like sub-101 and ses-01.");
-} else {
-  console.log("❌ Not quite — INC recommends BIDS-compliant labels (e.g. sub-101, ses-01) for subject and session naming.");
-}
-
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "2 - At the Scanner";
 if (!progress[module]) progress[module] = { correct: 0, total: 0 };
@@ -326,12 +288,6 @@ correct;
 
 <script>
 const correct = @input === 0;
-
-if (correct) {
-  console.log("✅ Correct! The Scanner Requisition Form must be submitted before each scan session.");
-} else {
-  console.log("❌ Not quite — this statement is actually True. The Scanner Requisition Form must be submitted before every scan session.");
-}
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "2 - At the Scanner";
@@ -405,6 +361,8 @@ To switch to a subject-centric view, select the **Subjects icon** within the pro
 
 **Q9:** What is the correct order of the Flywheel data hierarchy?
 
+[[?]] Start from the broadest container (a PI or lab) and work down to the narrowest (a single scanner sequence).
+
 [( )] Project → Group → Subject → Acquisition → Session
 [( )] Subject → Session → Project → Group → Acquisition
 [(X)] Group → Project → Subject → Session → Acquisition
@@ -412,12 +370,6 @@ To switch to a subject-centric view, select the **Subjects icon** within the pro
 
 <script>
 const correct = @input === 2;
-
-if (correct) {
-  console.log("✅ Correct! Group → Project → Subject → Session → Acquisition is Flywheel's strict data hierarchy.");
-} else {
-  console.log("❌ Not quite — the correct order is Group → Project → Subject → Session → Acquisition.");
-}
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "3 - Navigating UI";
@@ -441,12 +393,6 @@ correct;
 <script>
 const correct = @input === 1;
 
-if (correct) {
-  console.log("✅ Correct! All accessible projects appear in the left-hand ribbon on the Projects page.");
-} else {
-  console.log("❌ Not quite — accessible projects appear in the left-hand ribbon on the Projects page, not the top menu, a profile dropdown, or Admin settings.");
-}
-
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "3 - Navigating UI";
 if (!progress[module]) progress[module] = { correct: 0, total: 0 };
@@ -469,12 +415,6 @@ correct;
 <script>
 const correct = @input === 2;
 
-if (correct) {
-  console.log("✅ Correct! An Acquisition is a single scanner sequence within a session, holding files and metadata.");
-} else {
-  console.log("❌ Not quite — an Acquisition is a single scanner sequence within a session, holding files and metadata (not a group of projects, a full participant history, or a metadata tag).");
-}
-
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "3 - Navigating UI";
 if (!progress[module]) progress[module] = { correct: 0, total: 0 };
@@ -489,17 +429,13 @@ correct;
 
 **Q12:** If you cannot see data in your project, what is the most likely cause?
 
+[[?]] Think back to what has to be typed correctly at the scanner console for data to land in the right project.
+
 [[Accession Number]]
 
 <script>
 const ans = "@input".toLowerCase().trim();
 const correct = ans.includes("accession");
-
-if (correct) {
-  console.log("✅ Correct! An incorrectly entered Accession Number is the most common reason data doesn't show up where you expect.");
-} else {
-  console.log("❌ Not quite — the most likely cause is an incorrectly entered Accession Number at the scanner, which sends the data to the \"Unsorted\" project instead.");
-}
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "3 - Navigating UI";
@@ -522,12 +458,6 @@ correct;
 
 <script>
 const correct = @input === 1;
-
-if (correct) {
-  console.log("✅ Correct! CU Boulder users log in with their University of Colorado credentials via CILogon.");
-} else {
-  console.log("❌ Not quite — CU Boulder users log in with their University of Colorado credentials through CILogon, not a separate Flywheel password or access code.");
-}
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "3 - Navigating UI";
@@ -572,12 +502,6 @@ If INC's Flywheel platform has contributed to your publication, you are required
 <script>
 const correct = @input === 2;
 
-if (correct) {
-  console.log("✅ Correct! Cite INC using its Research Resource Identifier: RRID SCR_025079.");
-} else {
-  console.log("❌ Not quite — cite INC using its Research Resource Identifier (RRID): SCR_025079, not a DOI, ORCID, or URL.");
-}
-
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "4 - How to Cite";
 if (!progress[module]) progress[module] = { correct: 0, total: 0 };
@@ -592,6 +516,8 @@ correct;
 
 **Q15:** Which TWO collaborators must also be acknowledged alongside INC? Select all that apply.
 
+[[?]] Select exactly two — check the "Also acknowledge the following collaborators" list above.
+
 [[X]] CU Boulder Research Computing (CURC)
 [[X]] Flywheel.io
 [[ ]] Amazon Web Services
@@ -601,12 +527,6 @@ correct;
 // @input is substituted as a JS array literal, e.g. [1, 1, 0, 0]
 const sel = @input;
 const correct = sel[0] === 1 && sel[1] === 1 && sel[2] === 0 && sel[3] === 0;
-
-if (correct) {
-  console.log("✅ Correct! CU Boulder Research Computing (CURC) and Flywheel.io are the two collaborators to acknowledge.");
-} else {
-  console.log("❌ Not quite — the two collaborators to acknowledge are CU Boulder Research Computing (CURC) and Flywheel.io, not AWS or CU Anschutz Medical Campus.");
-}
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "4 - How to Cite";
@@ -627,12 +547,6 @@ correct;
 <script>
 const ans = "@input".trim().replace(/\s/g, "");
 const correct = ans.toUpperCase().includes("SCR_025079");
-
-if (correct) {
-  console.log("✅ Correct! INC's RRID is SCR_025079.");
-} else {
-  console.log("❌ Not quite — INC's RRID is SCR_025079.");
-}
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 const module = "4 - How to Cite";
