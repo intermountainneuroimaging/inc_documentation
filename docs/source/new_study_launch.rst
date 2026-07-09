@@ -37,4 +37,26 @@ We highly recommend documenting your full protocol using completeness.csv and us
 
 You can also set up a session template in Flywheel, which provides a limited check of session completeness. For more information about Flywheel's study templates visit their website `here <http://docs.flywheel.io/admin/project_config/admin_session_templates/#view-sessions-that-dont-follow-the-template>`_
 
+Brain Souvenirs
+******************
+As a thank-you for participating in research, INC generates "brain souvenir" images for study participants using the `My Brain Souvenir <https://github.com/intermountainneuroimaging/my-brain-souvenir>`_ gear (see :ref:`Running Commonly Used Gears`).
+
+Electronic Souvenirs
+++++++++++++++++++++++
+Electronic brain souvenirs are generated automatically for all study participants — no gear needs to be manually launched. Lab staff should access and download the souvenir from the list of session analyses for that participant's session.
+
+.. image:: imgs/new_study_launch/brain_souvenir_example.jpg
+   :alt: Example electronic brain souvenir - sagittal MRI slice
+   :width: 350pt
+
+.. note::
+    Flywheel does not email or share the souvenir on your behalf. Communicate with the participant directly about how you'll share their electronic souvenir with them — check with your IRB coordinator about appropriate sharing methods.
+
+3D Printed Souvenirs
+++++++++++++++++++++++
+Looking for something more lasting? INC also offers 3D printed brain souvenirs, which can be picked up within 2 weeks of the scan.
+
+.. note::
+    Interest in a 3D printed souvenir should be noted on the Scanner Requisition Form at the time of scheduling.
+
 For more information about how to get started with a new Study in Flywheel, check out our video: *Starting a New Study* (coming soon).
