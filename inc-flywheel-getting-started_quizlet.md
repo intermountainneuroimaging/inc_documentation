@@ -129,8 +129,6 @@ correct;
 
 **Q3:** True or False: The key linking coded Subject IDs to personally identifiable information (PII) **may** be stored somewhere within Flywheel.
 
-[[?]] Re-read "Key things to know" above — where must the key to coded participant data be stored?
-
 [( )] True
 [(X)] False
 
@@ -150,8 +148,6 @@ correct;
 ---
 
 **Q4:** Which of the following is **NOT** one of Flywheel's core value propositions for managing imaging data?
-
-[[?]] Three of these options are the "Organize / Store / Share" pillars from "Why use Flywheel?" above — one option describes something Flywheel does not do.
 
 [( )] Organize — a consistent, searchable data hierarchy
 [( )] Store — versioned, backed-up storage with full provenance
@@ -361,8 +357,6 @@ To switch to a subject-centric view, select the **Subjects icon** within the pro
 
 **Q9:** What is the correct order of the Flywheel data hierarchy?
 
-[[?]] Start from the broadest container (a PI or lab) and work down to the narrowest (a single scanner sequence).
-
 [( )] Project → Group → Subject → Acquisition → Session
 [( )] Subject → Session → Project → Group → Acquisition
 [(X)] Group → Project → Subject → Session → Acquisition
@@ -428,8 +422,6 @@ correct;
 ---
 
 **Q12:** If you cannot see data in your project, what is the most likely cause?
-
-[[?]] Think back to what has to be typed correctly at the scanner console for data to land in the right project.
 
 [[Accession Number]]
 
@@ -515,8 +507,6 @@ correct;
 ---
 
 **Q15:** Which TWO collaborators must also be acknowledged alongside INC? Select all that apply.
-
-[[?]] Select exactly two — check the "Also acknowledge the following collaborators" list above.
 
 [[X]] CU Boulder Research Computing (CURC)
 [[X]] Flywheel.io
