@@ -4,7 +4,7 @@ How To Cite Us
 ===============
 Using INC resources to collect or analyze neuroimaging data? Please cite us using the center's research resource identifier (RRID): `SCR_025079 <https://coremarketplace.org/?FacilityID=2661>`_.
 
-This on-premise Flywheel platform is made possible by the hard work of many groups. Please cite us (Intermountain Neuroimaging Consortium) and the following collaborators if this platform has helped you produce your publication.
+This cloud deployment of the Flywheel platform is made possible by the hard work of many groups. Please cite us (Intermountain Neuroimaging Consortium) and the following collaborators if this platform has helped you produce your publication.
 Collaborators:
 
 * CU Boulder Research Computing (on top of who's platform we have deployed Flywheel)
