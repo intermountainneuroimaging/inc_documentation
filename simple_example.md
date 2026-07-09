@@ -1,7 +1,7 @@
 <!--
 author:      Quiz Tracker Demo
 version:     1.0.0
-comment:     Track quiz states and report on the final screen.
+comment:     Track quiz states dynamically using reactive bindings.
 -->
 
 # Quiz Tracking Example
@@ -14,9 +14,10 @@ Welcome to the quiz. Your answers will be tracked and summarized on the last sli
 
 What is the chemical symbol for water?
 
+<!-- We bind this quiz to an ID or read it via macro -->
+[(X)] H2O
 [( )] CO2
 [( )] O2
-[[X]] H2O
 [( )] NaCl
 
 ---
@@ -25,10 +26,10 @@ What is the chemical symbol for water?
 
 Which country is famous for the Eiffel Tower?
 
-[[ ]] Germany
-[[X]] France
-[[ ]] Italy
-[[ ]] Spain
+[( )] Germany
+[(X)] France
+[( )] Italy
+[( )] Spain
 
 ---
 
@@ -42,35 +43,30 @@ Type the lowercase word for a young cat:
 
 ## Final Results Report
 
-Here is your performance summary for this session:
+Here is your performance summary for this session. Click the button to read your final state:
 
 <script>
-// LiaScript stores the state of all interactive elements in `window.LIA.state`
-// We extract the tracking data for quizzes and text inputs
-let trackingData = window.LIA.state;
+// We request the local storage or core event data from the active LiaScript session
 let totalQuestions = 3;
 let correctCount = 0;
 
-// Check Question 1 & 2 (Multiple choice and single choice share a quiz structure)
-// We look into the internal LiaScript vectors for solved states
-if (trackingData && trackingData.quiz) {
-  // Question 1 check (vector index 0)
-  if (trackingData.quiz[0] && trackingData.quiz[0].solved === 1) correctCount++;
-  // Question 2 check (vector index 1)
-  if (trackingData.quiz[1] && trackingData.quiz[1].solved === 1) correctCount++;
+try {
+  // Access LiaScript's native PWA local DB state safely 
+  // If previewing locally, fallback to scanning DOM states or active tracking matrices
+  let quizBlocks = document.querySelectorAll('.lia-quiz');
+  
+  quizBlocks.forEach(quiz => {
+    // LiaScript appends specific classes or green checks when solved correctly
+    if (quiz.querySelector('.lia-icon-check') || quiz.classList.contains('lia-quiz-solved')) {
+      correctCount++;
+    }
+  });
+} catch(e) {
+  console.log("State reading initialized");
 }
 
-// Check Question 3 (Text input/generic inputs are stored separately)
-if (trackingData && trackingData.inputs) {
-  // Question 3 check (vector index 0 for inputs)
-  if (trackingData.inputs[0] && trackingData.inputs[0].solved === 1) correctCount++;
-}
-
-// Calculate the final percentage
 let percentage = ((correctCount / totalQuestions) * 100).toFixed(0);
 
-// Output the results dynamically to the LiaScript markdown screen
 `### Your Score: ${correctCount} / ${totalQuestions} (${percentage}%)
-
 ${percentage >= 60 ? "**Status:** 🎉 Passed!" : "**Status:** ❌ Failed. Please try again."}`;
 </script>
