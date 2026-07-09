@@ -94,10 +94,10 @@ const correct = @input === 1;
 
 // Record locally — rolled into the completion email sent at the end of the course
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "1 - Overview";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "1 - Overview";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -116,10 +116,10 @@ correct;
 const correct = @input === 1;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "1 - Overview";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "1 - Overview";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -136,10 +136,10 @@ correct;
 const correct = @input === 1;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "1 - Overview";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "1 - Overview";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -158,10 +158,10 @@ correct;
 const correct = @input === 3;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "1 - Overview";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "1 - Overview";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -222,10 +222,10 @@ Beyond the `accession number`, a small amount of additional participant/session 
 const correct = @input === 2;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "2 - At the Scanner";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "2 - At the Scanner";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -244,10 +244,10 @@ correct;
 const correct = @input === 2;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "2 - At the Scanner";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "2 - At the Scanner";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -266,10 +266,10 @@ correct;
 const correct = @input === 2;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "2 - At the Scanner";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "2 - At the Scanner";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -286,10 +286,10 @@ correct;
 const correct = @input === 0;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "2 - At the Scanner";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "2 - At the Scanner";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -366,10 +366,10 @@ To switch to a subject-centric view, select the **Subjects icon** within the pro
 const correct = @input === 2;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "3 - Navigating UI";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "3 - Navigating UI";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -388,10 +388,10 @@ correct;
 const correct = @input === 1;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "3 - Navigating UI";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "3 - Navigating UI";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -410,10 +410,10 @@ correct;
 const correct = @input === 2;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "3 - Navigating UI";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "3 - Navigating UI";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -430,10 +430,10 @@ const ans = "@input".toLowerCase().trim();
 const correct = ans.includes("accession");
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "3 - Navigating UI";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "3 - Navigating UI";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -452,10 +452,10 @@ correct;
 const correct = @input === 1;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "3 - Navigating UI";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "3 - Navigating UI";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -495,10 +495,10 @@ If INC's Flywheel platform has contributed to your publication, you are required
 const correct = @input === 2;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "4 - How to Cite";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "4 - How to Cite";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -519,10 +519,10 @@ const sel = @input;
 const correct = sel[0] === 1 && sel[1] === 1 && sel[2] === 0 && sel[3] === 0;
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "4 - How to Cite";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "4 - How to Cite";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -539,10 +539,10 @@ const ans = "@input".trim().replace(/\s/g, "");
 const correct = ans.toUpperCase().includes("SCR_025079");
 
 const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
-const module = "4 - How to Cite";
-if (!progress[module]) progress[module] = { correct: 0, total: 0 };
-progress[module].total += 1;
-if (correct) progress[module].correct += 1;
+const topicModule = "4 - How to Cite";
+if (!progress[topicModule]) progress[topicModule] = { correct: 0, total: 0 };
+progress[topicModule].total += 1;
+if (correct) progress[topicModule].correct += 1;
 sessionStorage.setItem("lia_progress", JSON.stringify(progress));
 
 correct;
@@ -599,10 +599,10 @@ const progress = JSON.parse(sessionStorage.getItem("lia_progress") || "{}");
 let totalCorrect = 0;
 let totalQuestions = 0;
 let summaryLines = "";
-for (const [module, stats] of Object.entries(progress)) {
+for (const [topicModule, stats] of Object.entries(progress)) {
   totalCorrect += stats.correct;
   totalQuestions += stats.total;
-  summaryLines += `- ${module}: ${stats.correct}/${stats.total}\n`;
+  summaryLines += `- ${topicModule}: ${stats.correct}/${stats.total}\n`;
 }
 
 const completedOn = new Date().toLocaleString();
