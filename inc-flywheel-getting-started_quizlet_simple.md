@@ -88,8 +88,6 @@ Flywheel is built to **organize**, **store**, and **share** research and medical
 [( )] Directly on the MRI scanner console
 [( )] On a personal Google Drive or Dropbox account
 
-<script output="q1">@input === 1</script>
-
 ---
 
 **Q2:** Does Flywheel require you to pre-register participants before a scan session?
@@ -99,16 +97,12 @@ Flywheel is built to **organize**, **store**, and **share** research and medical
 [( )] Yes — but only for longitudinal studies
 [( )] Only for new participants, not returning ones
 
-<script output="q2">@input === 1</script>
-
 ---
 
 **Q3:** True or False: The key linking coded Subject IDs to personally identifiable information (PII) **may** be stored somewhere within Flywheel.
 
 [( )] True
 [(X)] False
-
-<script output="q3">@input === 1</script>
 
 ---
 
@@ -118,8 +112,6 @@ Flywheel is built to **organize**, **store**, and **share** research and medical
 [( )] Store — versioned, backed-up storage with full provenance
 [( )] Share — fine-grained permissions, Collections, and Data Views
 [(X)] Compute — Flywheel replaces the need for any HPC or compute cluster
-
-<script output="q4">@input === 3</script>
 
 ---
 
@@ -172,8 +164,6 @@ Beyond the `accession number`, a small amount of additional participant/session 
 [(X)] `<project-label> / <subject-label> / <session-label>`
 [( )] `<session-label> / <subject-label> / <project-label>`
 
-<script output="q5">@input === 2</script>
-
 ---
 
 **Q6:** Where does data go if the `accession number` is entered incorrectly?
@@ -182,8 +172,6 @@ Beyond the `accession number`, a small amount of additional participant/session 
 [( )] It is emailed to the PI
 [(X)] It lands in an "Unsorted" project in the PI's Flywheel Group
 [( )] It is renamed automatically to match Flywheel's naming convention
-
-<script output="q6">@input === 2</script>
 
 ---
 
@@ -194,16 +182,12 @@ Beyond the `accession number`, a small amount of additional participant/session 
 [(X)] BIDS-compliant labels (e.g. `sub-101`, `ses-01`)
 [( )] Free-form text with no restrictions
 
-<script output="q7">@input === 2</script>
-
 ---
 
 **Q8:** True or False: The Scanner Requisition Form must be submitted before each scan session.
 
 [(X)] True
 [( )] False
-
-<script output="q8">@input === 0</script>
 
 ---
 
@@ -272,8 +256,6 @@ To switch to a subject-centric view, select the **Subjects icon** within the pro
 [(X)] Group → Project → Subject → Session → Acquisition
 [( )] Group → Subject → Project → Acquisition → Session
 
-<script output="q9">@input === 2</script>
-
 ---
 
 **Q10:** Where can you view all of your accessible projects in Flywheel?
@@ -282,8 +264,6 @@ To switch to a subject-centric view, select the **Subjects icon** within the pro
 [(X)] In the left-hand ribbon on the Projects page
 [( )] In a dropdown under your user profile
 [( )] In the Admin settings panel
-
-<script output="q10">@input === 1</script>
 
 ---
 
@@ -294,15 +274,11 @@ To switch to a subject-centric view, select the **Subjects icon** within the pro
 [(X)] A single scanner sequence within a session, holding files and metadata
 [( )] A metadata tag applied to a project
 
-<script output="q11">@input === 2</script>
-
 ---
 
 **Q12:** If you cannot see data in your project, what is the most likely cause?
 
-[[Accession Number]]
-
-<script output="q12">"@input".toLowerCase().includes("accession")</script>
+[[Accession Number|accession number]]
 
 ---
 
@@ -312,8 +288,6 @@ To switch to a subject-centric view, select the **Subjects icon** within the pro
 [(X)] With their University of Colorado credentials via CILogon
 [( )] By requesting a one-time access code from INC staff
 [( )] Flywheel does not require login for CU Boulder users
-
-<script output="q13">@input === 1</script>
 
 ---
 
@@ -345,8 +319,6 @@ If INC's Flywheel platform has contributed to your publication, you are required
 [(X)] INC's Research Resource Identifier (RRID): SCR_025079
 [( )] A URL to the INC website
 
-<script output="q14">@input === 2</script>
-
 ---
 
 **Q15:** Which TWO collaborators must also be acknowledged alongside INC? Select all that apply.
@@ -356,15 +328,11 @@ If INC's Flywheel platform has contributed to your publication, you are required
 [[ ]] Amazon Web Services
 [[ ]] CU Anschutz Medical Campus
 
-<script output="q15">@input[0] === 1 && @input[1] === 1 && @input[2] === 0 && @input[3] === 0</script>
-
 ---
 
 **Q16:** What is INC's RRID number?
 
-[[SCR_025079]]
-
-<script output="q16">"@input".toUpperCase().includes("SCR_025079")</script>
+[[SCR_025079|scr_025079]]
 
 ---
 
@@ -404,7 +372,7 @@ Congratulations — you've completed the **INC Flywheel Getting Started** traini
 
 ### 📧 Confirm Your Completion
 
-Course completion is confirmed by email, not an automatic submission. Type **send** in the box below and press **Check** — this reveals a link to open a pre-filled email in your default mail client, addressed to INC, with your IdentiKey and score already populated in the subject and body. If your mail client doesn't open automatically, the text is also shown below for you to copy and paste. Review it and hit **Send** in your mail client to complete the training.
+Course completion is confirmed by email, not an automatic submission. Type **send** in the box below and press **Check** — this reveals a link to open a pre-filled email in your default mail client, addressed to INC, with your IdentiKey and completion date already populated in the subject and body. If your mail client doesn't open automatically, the text is also shown below for you to copy and paste. Review it and hit **Send** in your mail client to complete the training.
 
 > **ℹ️ Missing your IdentiKey?** If you skipped the "Before You Begin" step, scroll back to the top and enter it there first — it's read from the same session storage used to build this email.
 
@@ -414,20 +382,10 @@ Course completion is confirmed by email, not an automatic submission. Type **sen
 const identityKey = sessionStorage.getItem("lia_identitykey") || "unknown";
 const completedOn = new Date().toLocaleString();
 
-const results = [
-  @input(`q1`), @input(`q2`), @input(`q3`), @input(`q4`),
-  @input(`q5`), @input(`q6`), @input(`q7`), @input(`q8`),
-  @input(`q9`), @input(`q10`), @input(`q11`), @input(`q12`),
-  @input(`q13`), @input(`q14`), @input(`q15`), @input(`q16`)
-];
-const totalCorrect = results.filter(function (r) { return r === true; }).length;
-const totalQuestions = results.length;
-
 const subject = "INC Flywheel Training Completed - " + identityKey;
 const body = "INC Flywheel Getting Started training - completion confirmation"
   + "\n\nIdentiKey:      " + identityKey
   + "\nCompleted on:   " + completedOn
-  + "\nScore:          " + totalCorrect + " / " + totalQuestions
   + "\n\nThis email confirms I have completed the INC Flywheel Getting Started training.";
 
 const mailtoLink = "mailto:inc@colorado.edu"
@@ -435,8 +393,7 @@ const mailtoLink = "mailto:inc@colorado.edu"
   + "&body=" + encodeURIComponent(body);
 
 send.liascript(
-  "**Score: " + totalCorrect + " / " + totalQuestions + "**\n\n"
-  + "[📧 Click here to send your completion email](" + mailtoLink + ")\n\n"
+  "[📧 Click here to send your completion email](" + mailtoLink + ")\n\n"
   + "If that doesn't open your mail client, copy the text below into a new email addressed to **inc@colorado.edu**:\n\n"
   + "```\nSubject: " + subject + "\n\n" + body + "\n```"
 );
